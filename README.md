@@ -1,2 +1,2 @@
 # Site
-The Source Code for the TSA Webmaster site
+The source code for Ithaca High School TSA's Webmaster site
