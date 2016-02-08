@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+﻿@charset 'UTF-8';
 
 /* Main */
 html
@@ -198,6 +198,8 @@ ul.style .first
 
 #nav > ul > li
 {
+  vertical-align: top;
+  position: static;
   font-family: 'Roboto', sans-serif;
   font-size: 13pt;
   font-weight: 400;
@@ -211,8 +213,7 @@ ul.style .first
   border-right: none;
 }
 
-#nav > ul > li > a,
-#nav > ul > li > span
+#nav > ul > li > a
 {
   color: #FFF;
   display: inline-block;
@@ -221,19 +222,25 @@ ul.style .first
   padding: 20px;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
-  border-radius: 35px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
-#nav > ul > li > a:before,
-#nav > ul > li > span:before {
+
+.menu-parent a,
+.menu-parent span
+{
+  border-radius: 10px;
+}
+
+.menu-parent a:before {
   content: "";
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   left: 50%;
   right: 50%;
   bottom: 0;
@@ -246,12 +253,9 @@ ul.style .first
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-#nav > ul > li > a:hover:before,
-#nav > ul > li > span:hover:before, 
-#nav > ul > li > a:focus:before, 
-#nav > ul > li > span:focus:before, 
-#nav > ul > li > a:active:before 
-#nav > ul > li > span:active:before {
+
+.menu-parent > a:hover:before
+{
   left: 0;
   right: 0;
 }
@@ -259,14 +263,70 @@ ul.style .first
 {
   background: rgba(0,0,0,0.75);
 }
-#nav > ul > li > a:hover
+
+.menu-parent > a:hover
 {
-  background: rgba(0,0,0,0.75);
+  background: #000;
 }
 
-#nav > ul > li > ul
+.sub-menu-parent > a:hover:before
 {
-  display: none;
+  bottom: 0;
+}
+
+.sub-menu-parent > a:hover
+{
+  background: #000;
+}
+
+.sub-menu
+{
+  left: 50%;
+  right: 50%;
+  list-style: none;
+  overflow: hidden;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 150px;
+  padding-right: 35px;
+  z-index: 3;
+  font-size: 13px;
+  opacity: 0;
+  background: #000;
+  padding-left: 35px;
+  visibility: hidden;
+  top: 35px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s ease;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.sub-menu > li > a
+{
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+}
+
+.sub-menu-parent a:hover + .sub-menu
+{
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sub-menu:hover
+{
+  border-radius: 10px;
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  right: 0;
 }
 
 /* Logo/ Main Header */
