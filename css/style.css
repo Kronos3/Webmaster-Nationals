@@ -339,22 +339,9 @@ ul.style .first
   height: 100%;
 }
 
-#logo.full
-{
-  margin-top: 25%;
-  position: relative;
-  z-index: 1;
-  height: 100%;
-}
-
 #logo h1
 {
-  color: #000;
-}
-
-#logo.full h1
-{
-  color: #000;
+  color: #FFF;
 }
 
 #logo a
@@ -372,28 +359,7 @@ ul.style .first
   margin: 0 0 0.125em 0;
 }
 
-#logo.full a
-{
-  display: block;
-  position: relative;
-  z-index: 1;
-  font-size: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1em;
-  font-size: 4em;
-  color: #FFF !important;
-  letter-spacing: -0.05em;
-  margin: 0 0 0.125em 0;
-}
-
 #logo span
-{
-  font-size: 30px;
-  color: #FFF;
-}
-
-#logo.full span
 {
   font-size: 30px;
   color: #FFF;
