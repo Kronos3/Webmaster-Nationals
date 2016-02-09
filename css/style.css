@@ -166,7 +166,7 @@ ul.style .first
   background: url(../images/header.jpg) no-repeat center fixed;
   z-index: -1;
   transform-origin: top left;
-  -webkit-filter: blur(3px);
+  -webkit-filter: blur(3px) grayscale(70%);
   -webkit-background-size: cover;
   -webkit-height: cover;
   -moz-background-size: cover;
