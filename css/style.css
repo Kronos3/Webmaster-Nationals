@@ -227,8 +227,8 @@ ul.style .first
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .menu-parent a,
@@ -256,10 +256,10 @@ ul.style .first
 
 .menu-parent > a:hover:before
 {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   left: 0;
   right: 0;
 }
