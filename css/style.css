@@ -200,7 +200,8 @@ ul.style .first
 {
   vertical-align: top;
   position: static;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montalban Condensed', sans-serif;
+  font-style: italic;
   font-size: 13pt;
   font-weight: 400;
   display: inline-block;
@@ -272,21 +273,22 @@ ul.style .first
 {
   background: #000;
 }
-
-.sub-menu-parent > a:hover:before
+.sub-menu-parent
 {
-  bottom: 0;
+  background: rgba(0,0,0,0);
+}
+.sub-menu-parent a
+{
+  background: rgba(0,0,0,0);
 }
 
-.sub-menu-parent > a:hover
+.sub-menu-parent:hover a
 {
   background: #000;
 }
-
-li.menu-parent a,
-li.active a
+.sub-menu-parent > a:hover
 {
-  border-radius: 10px;
+  background: #000;
 }
 
 .sub-menu
@@ -294,17 +296,15 @@ li.active a
   left: 50%;
   right: 50%;
   list-style: none;
-  overflow: hidden;
   padding-top: 10px;
   padding-bottom: 10px;
   width: 200px;
   padding-right: 35px;
   z-index: 3;
   font-size: 13px;
-  opacity: 0;
   background: #000;
   padding-left: 35px;
-  visibility: hidden;
+  display: none;
   top: 35px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -322,21 +322,9 @@ li.active a
   color: #FFF;
 }
 
-.sub-menu-parent a:hover + .sub-menu
+.sub-menu-parent:hover .sub-menu
 {
-  top: 50px;
-  opacity: 1;
-  visibility: visible;
-}
-
-.sub-menu:hover
-{
-  border-radius: 10px;
-  top: 50px;
-  opacity: 1;
-  visibility: visible;
-  left: 0;
-  right: 0;
+  display: block;
 }
 
 /* Logo/ Main Header */
