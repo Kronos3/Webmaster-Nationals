@@ -17,7 +17,7 @@ body
 
 body,input,textarea,select
 {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Palatino Linotype';
   font-size: 11pt;
   font-weight: 300;
   line-height: 1.75em;
@@ -200,8 +200,7 @@ ul.style .first
 {
   vertical-align: top;
   position: static;
-  font-family: 'Montalban Condensed', sans-serif;
-  font-style: italic;
+  font-family: Arial;
   font-size: 13pt;
   font-weight: 400;
   display: inline-block;
