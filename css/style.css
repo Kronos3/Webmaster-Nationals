@@ -365,6 +365,11 @@ ul.style .first
   z-index: -1;
 }
 
+.full #logo
+{
+  margin-top: 25%;
+}
+
 .full
 {
   height: 100%;
