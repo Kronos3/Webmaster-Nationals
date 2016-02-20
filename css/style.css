@@ -715,3 +715,62 @@ img:hover
   margin: 0 auto;
   text-align: center;
 }
+
+.external
+{
+  position: absolute;
+  z-index: 10;
+  margin: 15px;
+  margin-top: 20px;
+  float: left;
+  border-radius: 5px;
+}
+
+.external .links
+{
+  position: absolute;
+  font-size: 25px;
+  padding: 10px;
+  padding-bottom: 0;
+  margin: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+.external ul
+{
+  background-color: #000;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 300%;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+
+.external > ul > li,
+.external > ul > li > a 
+{
+  text-align: left;
+  font-size: 20px;
+  color: #FFF;
+}
+
+.external > ul > li > a:hover
+{
+  color: rgb(0, 111, 255);
+}
+
+.external:hover > ul
+{
+  display:block;
+}
+
+.external:hover > i
+{
+  background-color: #000;
+  left: 0;
+}
