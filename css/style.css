@@ -690,10 +690,9 @@ hr
   position: fixed;
   right: 0;
   bottom: 10%;
-  width: 350px;
+  width: 15%;
   list-style: none;
   padding: 20px;
-  padding-right: 20px;
   padding-left: 20px;
   background: #c7c7c7;
   border-bottom-left-radius: 5px;
@@ -705,7 +704,7 @@ hr
   padding: 0;
   padding-bottom: 10px;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .contents a
