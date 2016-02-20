@@ -662,25 +662,15 @@ hr
   margin-right: 5px;
 }
 
-.img-hvr-gnome, .img-hvr-kde
+.img
 {
-  width: 500px;
-  height: 281px;
+  width: 100%;
+  height: 100%;
   -webkit-transition: opacity 0.25s ease-in-out;
   opacity: 1;
 }
 
-.img-hvr-gnome
-{
-  background: url(images/gnome.jpg);
-}
-
-.img-hvr-kde
-{
-  background: url(images/kde.jpg);
-}
-
-.img-hvr-gnome:hover, .img-hvr-kde:hover
+.img:hover
 {
   opacity: 0.65;
 }
