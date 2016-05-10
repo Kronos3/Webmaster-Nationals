@@ -743,7 +743,6 @@ img:hover
   left: 0;
   border-radius: 5px;
 }
-
 .external ul
 {
   background-color: #000;
@@ -761,25 +760,9 @@ img:hover
 .external > ul > li,
 .external > ul > li > a 
 {
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   color: #FFF;
-}
-
-.external > ul > li > a:hover
-{
-  color: rgb(0, 111, 255);
-}
-
-.external:hover > ul
-{
-  display:block;
-}
-
-.external:hover > i
-{
-  background-color: #000;
-  left: 0;
 }
 
 .main-content
