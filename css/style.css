@@ -193,7 +193,7 @@ ul.style .first
 
 #nav
 {
-  z-index: 2;
+  z-index: 3;
 }
 
 #nav-wrapper
@@ -711,19 +711,15 @@ img:hover
   padding: 20px;
   width: 100%;
   background: #c7c7c7;
+  z-index: 2;
   display: table;
   text-align: center;
   padding-left: 0px !important;
 }
 
-#conhead
+#con
 {
-  padding: 0;
-  padding-bottom: 10px;
-  padding-top: 25px;
-  background-color: #c7c7c7;
-  margin: 0;
-  text-align: center;
+  -webkit-transition: all 0.25s ease-in-out;
 }
 
 .contents li
@@ -735,6 +731,7 @@ img:hover
 
 .contents a
 {
+  font-family: Sans-Serif;
   margin: 0 auto;
   text-align: center;
   display: block;

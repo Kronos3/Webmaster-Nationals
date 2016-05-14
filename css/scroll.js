@@ -25,7 +25,7 @@ $(window).ready(function()
 
 $(window).scroll(function() {
     wS = $(window).scrollTop();
-    if ( wS < hT - hH ){
+    if ( wS < hT ){
         console.log ( wS + "<" + ( hT + hH ) );
         $("#con").css('top', '0px');
         $("#con").css('position', 'relative');
