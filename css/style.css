@@ -834,6 +834,11 @@ img:hover
   background-color: #620000 !important;
 }
 
+.ex > a
+{
+  border-radius: 5px !important;
+}
+
 .ex > ul > li:hover > a
 {
   background-color: #FFF !important;
