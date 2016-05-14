@@ -826,3 +826,14 @@ img:hover
   color: #FFF;
   display: block;
 }
+
+.ex > a,
+.ex > ul,
+.ex > ul > li > a
+{
+  background-color: #620000 !important;
+}
+
+.ex > ul > li:hover > a
+{
+  background-color: #FFF !important;
