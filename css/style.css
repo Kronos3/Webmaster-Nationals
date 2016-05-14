@@ -707,16 +707,10 @@ img:hover
 
 .contents
 {
-  position: fixed;
-  right: 0;
-  bottom: 10%;
-  width: 15%;
+  position: relative;
   list-style: none;
   padding: 20px;
-  padding-left: 20px;
-  background: #c7c7c7;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  /*background: #c7c7c7; */
 }
 
 .contents h1
@@ -731,6 +725,18 @@ img:hover
 {
   margin: 0 auto;
   text-align: center;
+}
+
+.contents i
+{
+  padding-left: 8px;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.contents a:hover > i
+{
+  opacity: 1;
 }
 
 .external
