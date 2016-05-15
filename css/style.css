@@ -191,8 +191,8 @@ ul.style .first
   position: fixed;
   z-index: 20;
   width: 100%;
-  height: 82px;
-  background-color: rgba(255,255,255,0);
+  height: 72px;
+  background-color: #585858;
   -webkit-transition: background-color .3s; /* Safari */
   transition: background-color .3s;
 }
@@ -204,7 +204,6 @@ ul.style .first
 
 #nav-wrapper
 {
-  padding: 5px;
   position: fixed;
   top: 0;
   left: 0;
@@ -250,15 +249,6 @@ ul.style .first
   -moz-osx-font-smoothing: grayscale;
   position: relative;
   overflow: hidden;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-}
-
-.menu-parent a,
-.menu-parent span
-{
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
 }
 
 .menu-parent a:before {
@@ -280,13 +270,11 @@ ul.style .first
 
 .menu-parent > a:hover:before
 {
-  border-radius: 5px;
   left: 0;
   right: 0;
 }
 .active > a
 {
-  border-radius: 5px;
   background: rgba(0,0,0,1) !important;
 }
 
@@ -310,8 +298,6 @@ ul.style .first
 .sub-menu-parent > a:hover
 {
   background: #000;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
 }
 
 .sub-menu
@@ -328,8 +314,6 @@ ul.style .first
   background: #000;
   padding-left: 0px;
   display: none;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
@@ -367,7 +351,6 @@ ul.style .first
 
 .sub-menu > li:hover
 {
-  border-radius: 5px;
   background: #FFF;
 }
 
@@ -688,7 +671,7 @@ hr
 img
 {
   width: 300px;
-  height: 300px;
+  height: 100%;
   -webkit-transition: opacity 0.25s ease-in-out;
   opacity: 1;
   border-radius: 4px;
@@ -714,7 +697,7 @@ img:hover
 .contents
 {
   list-style-type: none;
-  padding: 20px;
+  padding: 0px;
   width: 100%;
   background: #c7c7c7;
   z-index: 2;
@@ -874,11 +857,7 @@ img:hover
   background-color: #620000 !important;
 }
 
-.ex > a
-{
-  border-radius: 5px !important;
-}
-
 .ex > ul > li:hover > a
 {
   background-color: #FFF !important;
+}
