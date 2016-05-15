@@ -16,8 +16,8 @@ var hT = 0,
     wH = 0,
     wS = 0;
 
-$(window).ready(function()
-{
+$(window).ready(function(){
+    hT = $('#con').offset().top;
     hH = $('#con').outerHeight();
     wH = $(window).height();
 });
