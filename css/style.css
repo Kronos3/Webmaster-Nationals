@@ -15,6 +15,12 @@ body
   background: #fafafa;
 }
 
+.cite
+{
+  padding-left: 40px;
+  text-indent: -40px !important;
+}
+
 body,input,textarea,select
 {
   font-family: 'Palatino Linotype';
