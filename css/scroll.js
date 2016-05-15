@@ -18,7 +18,6 @@ var hT = 0,
 
 $(window).ready(function()
 {
-    hT = $('#con').offset().top;
     hH = $('#con').outerHeight();
     wH = $(window).height();
 });
@@ -34,3 +33,14 @@ $(window).scroll(function() {
         $("#con").css('position', 'fixed');
     }
 });
+
+function open_bib(){
+    console.log ( "open" )
+    $("#bibs").css("visibility", "visible");
+    $("#overlay").css("visibility", "visible");
+};
+
+function close_bib(){
+    $("#bibs").css("visibility", "collapse");
+    $("#overlay").css("visibility", "collapse");
+};
