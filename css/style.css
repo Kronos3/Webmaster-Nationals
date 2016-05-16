@@ -51,12 +51,12 @@ h1
 
 h1,h2,h3,h4,h5,h6
 {
-  font-family: 'Droid Sans Mono';
+  font-family: 'Droid Sans Mono' !important;
 }
 
 p
 {
-  font-family: 'Droid Serif Mono';
+  font-family: 'Droid Serif Mono' !important;
   font-size: 20px !important;
 }
 
