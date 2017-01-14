@@ -140,19 +140,32 @@ body {
     height: 48px;
     width: auto;
     display: block;
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
 }
 
 .nav-l {
     display: inline-block;
     margin: 0;
     position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 70vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    min-width: 225px;
 }
 
 .nav-item {
     display: inline-block;
+}
+
+.spec {
+    margin: 0 auto;
+    width: 140px;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 12px);
+    transform: translateX(-50%);
 }
 
 .nav-item > a {
