@@ -1,1 +1,170 @@
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: Roboto;
+}
 
+@media screen and (min-width: 600px) {
+
+.landing-back {
+    position: absolute;
+    height: 87.5vh;
+    width: 100vw;
+    background: #ff6161;
+}
+
+.nav {
+    font-size: 16px;
+    color: #fff;
+    margin: 14px auto;
+    max-width: 960px;
+}
+
+.nav-inner {
+    position: relative;
+    height: 48px;
+    margin: 0 30px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    display: inline-block;
+}
+
+.nav-l {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item > a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 12px;
+}
+
+.spec > a {
+    background: #fff;
+    color: #ff6161;
+    border-radius: 1.5px;
+}
+
+}
+@media screen and (min-width: 600px) {
+
+.landing-back {
+    position: absolute;
+    height: 87.5vh;
+    width: 100vw;
+    background: #ff6161;
+}
+
+.nav {
+    font-size: 16px;
+    color: #fff;
+    margin: 14px auto;
+    max-width: 960px;
+}
+
+.nav-inner {
+    position: relative;
+    height: 48px;
+    margin: 0 30px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    display: inline-block;
+}
+
+.nav-l {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item > a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 12px;
+}
+
+.spec > a {
+    background: #fff;
+    color: #ff6161;
+    border-radius: 1.5px;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+
+.landing-back {
+    position: absolute;
+    height: 81vh;
+    width: 100vw;
+    background: #ff6161;
+}
+
+.nav {
+    font-size: 16px;
+    color: #fff;
+    margin: 14px auto;
+    max-width: 960px;
+}
+
+.nav-inner {
+    position: relative;
+    height: 48px;
+    margin: 0 30px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+.nav-l {
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item > a {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 10px 12px;
+}
+
+.spec > a {
+    background: #fff;
+    color: #ff6161;
+    border-radius: 1.5px;
+}
+
+}
