@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    height: 100%;
+    background: #eee;
+}
+
+@media screen and (min-width: 500px) {
+
+.landing {
+    background: rgb(255,255,255);
+    max-width: 1440px;
+    position: relative;
+    margin: 0 auto 0 auto;
+}
+
+.cover {
+    height: 100vh;
+    position: relative;
+    padding: 150px 140px 15vh 140px;
+    color: #fff;
+}
+
+.cover-head {
+    letter-spacing: -2px;
+    left: 0;
+    margin: 0;
+    max-width: 350px;
+    font-size: 55px;
+}
+
+.cover-text {
+    max-width: 345px;
+    left: 0;
+    margin: 30px 0 20px 0;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 1300px) {
+
+.vr-img {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.landing-text-wrapper {
+    bottom: 160px;
+    left: 80px;
+    position: absolute;
+}
+
+}
+
+@media screen and (max-width: 1300px) {
+
+.vr-img {
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    bottom: -50%;
+    left: 50%;
+}
+
+.landing-text-wrapper {
+    bottom: 160px;
+    left: 80px;
+    position: absolute;
+}
+
+}
+
+.landing-back {
+    background: #404040;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 32px 40px 140px 60px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.landing-text-wrapper > paper-button {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.made-by {
+    top: 100vh;
+    max-width: 1160px !important;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.land-icon {
+    font-size: 210px;
+    width: 100%;
+}
+
+.d {
+    max-width: 210px;
+    margin: auto;
+    font-size: 14px;
+}
+
+.l {
+    text-align: right;
+}
+
+.m {
+    text-align: center;
+}
+
+.r {
+    text-align: left;
+}
+
+.l > .d {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.r > .d {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+}
