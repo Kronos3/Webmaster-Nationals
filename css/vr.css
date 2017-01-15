@@ -10,6 +10,8 @@ body {
 .landing-back {
     position: absolute;
     height: 87.5vh;
+    top: 0;
+    left: 0;
     width: 100vw;
     background: #ff6161;
 }
@@ -17,7 +19,7 @@ body {
 .nav {
     font-size: 16px;
     color: #fff;
-    margin: 14px auto;
+    margin: 15px auto;
     max-width: 960px;
 }
 
@@ -36,8 +38,8 @@ body {
 .nav-l {
     display: inline-block;
     margin: 0;
-    position: absolute;
     right: 0;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -48,77 +50,27 @@ body {
 
 .nav-item > a {
     color: #fff;
-    text-transform: uppercase;
     padding: 10px 12px;
+    text-transform: uppercase;
 }
 
 .spec > a {
     background: #fff;
     color: #ff6161;
     border-radius: 1.5px;
-}
-
-}
-@media screen and (min-width: 600px) {
-
-.landing-back {
-    position: absolute;
-    height: 87.5vh;
-    width: 100vw;
-    background: #ff6161;
-}
-
-.nav {
-    font-size: 16px;
-    color: #fff;
-    margin: 14px auto;
-    max-width: 960px;
-}
-
-.nav-inner {
-    position: relative;
-    height: 48px;
-    margin: 0 30px;
-}
-
-.logo {
-    height: 48px;
-    width: auto;
-    display: inline-block;
-}
-
-.nav-l {
-    display: inline-block;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.nav-item {
-    display: inline-block;
-}
-
-.nav-item > a {
-    color: #fff;
     text-transform: uppercase;
     padding: 10px 12px;
 }
 
-.spec > a {
-    background: #fff;
-    color: #ff6161;
-    border-radius: 1.5px;
 }
 
-}
-
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
 
 .landing-back {
     position: absolute;
-    height: 81vh;
+    top: 0;
+    left: 0;
+    height: 95vh;
     width: 100vw;
     background: #ff6161;
 }
@@ -142,16 +94,16 @@ body {
     display: block;
     position: absolute;
     left: 50vw;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
 }
 
 .nav-l {
     display: inline-block;
     margin: 0;
     position: absolute;
-    top: 70vh;
+    top: 65vh;
     left: 50vw;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     min-width: 225px;
 }
 
@@ -163,9 +115,8 @@ body {
     margin: 0 auto;
     width: 140px;
     position: absolute;
-    left: 50%;
-    top: calc(100% + 12px);
-    transform: translateX(-50%);
+    left: 90%;
+    top: calc(-65vh + 12%);
 }
 
 .nav-item > a {
@@ -178,6 +129,123 @@ body {
     background: #fff;
     color: #ff6161;
     border-radius: 1.5px;
+    margin: 0;
+}
+
+}
+
+.cover-img {
+    max-width: 760px;
+    width: 35vw;
+    height: auto;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+@media (min-width: 600px) {
+
+.title {
+    position: relative;
+    top: 24vw;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.title-desc {
+    position: relative;
+    top: 24vw;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 22px;
+    color: #fff;
+}
+
+}
+
+
+@media (max-width: 800px) {
+
+.cover-img {
+    width: 85vw;
+}
+
+.title {
+    position: relative;
+    top: 41vh;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 44px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.title-desc {
+    position: relative;
+    top: 42vh;
+    max-width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #fff;
+}
+
+}
+
+.rmore {
+    position: absolute;
+    top: 71vh;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.spec > a {
+    border-width: 2px;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.rmore > div {
+    display: inline-block;
+}
+
+.rmore > div > a {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.spec.open > a {
+    background: transparent;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+
+.rmore {
+    display: none;
+}
+
+}
+
+@media (min-width: 600px) {
+
+.home-card {
+    top: 57vh;
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 80vw;
+    min-height: 200px;
 }
 
 }
