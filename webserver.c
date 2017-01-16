@@ -29,7 +29,8 @@ static struct mg_serve_http_opts s_http_server_opts;
 
 static void ev_handler(struct mg_connection *nc, int ev, void *p) {
   if (ev == MG_EV_HTTP_REQUEST) {
-    mg_serve_http(nc, (struct http_message *) p, s_http_server_opts);
+      struct http_message * m = (struct http_message *) p;
+      mg_serve_http(nc, (struct http_message *) p, s_http_server_opts);
   }
 }
 
