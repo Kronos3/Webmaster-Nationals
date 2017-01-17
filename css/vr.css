@@ -62,6 +62,30 @@ body {
     padding: 10px 12px;
 }
 
+.cover-img {
+    max-width: 600px;
+    width: 56vh;
+    min-width: 500px;
+    height: auto;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+.cover-img {
+    max-width: 800px;
+    width: 56vw;
+    min-width: 500px;
+    height: auto;
+    top: 100px;
+    left: 37%;
+    position: absolute;
+}
+
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -89,7 +113,7 @@ body {
 }
 
 .logo {
-    height: 48px;
+    height: 120px;
     width: auto;
     display: block;
     position: absolute;
@@ -98,8 +122,8 @@ body {
 }
 
 .nav-l {
-    display: inline-block;
-    margin: 0;
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
     position: absolute;
     top: 65vh;
     left: 50vw;
@@ -113,16 +137,20 @@ body {
 
 .spec {
     margin: 0 auto;
-    width: 140px;
+    width: 220px;
     position: absolute;
-    left: 90%;
-    top: calc(-65vh + 12%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(-65vh + 150px);
 }
 
 .nav-item > a {
     color: #fff;
+    width: 100%;
+    text-align: center;
     text-transform: uppercase;
     padding: 10px 12px;
+    font-size: 24px;
 }
 
 .spec > a {
@@ -132,23 +160,23 @@ body {
     margin: 0;
 }
 
-}
-
 .cover-img {
-    max-width: 760px;
-    width: 35vw;
     height: auto;
-    top: 100px;
+    width: 10%;
+    top: 300px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
+}
+
+
 }
 
 @media (min-width: 600px) {
 
 .title {
     position: relative;
-    top: 24vw;
+    top: 36vh;
     max-width: 800px;
     text-align: center;
     margin: 0 auto;
@@ -160,8 +188,8 @@ body {
 
 .title-desc {
     position: relative;
-    top: 24vw;
-    max-width: 800px;
+    top: 37vh;
+    max-width: 80vw;
     text-align: center;
     margin: 0 auto;
     font-size: 22px;
@@ -170,6 +198,34 @@ body {
 
 }
 
+@media (min-width: 900px) {
+cover-img {
+    width: 85vw;
+}
+
+.title {
+    position: relative;
+    top: 45vh;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 64px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.title-desc {
+    position: relative;
+    top: 48vh;
+    max-width: 70vw;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 32px;
+    color: #fff;
+    line-height: 100%;
+}
+}
 
 @media only screen and (max-device-width: 800px) {
 
@@ -179,11 +235,11 @@ body {
 
 .title {
     position: relative;
-    top: 41vh;
+    top: 45vh;
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
-    font-size: 44px;
+    font-size: 64px;
     color: #fff;
     font-weight: 500;
     line-height: 100%;
@@ -191,12 +247,13 @@ body {
 
 .title-desc {
     position: relative;
-    top: 42vh;
-    max-width: 300px;
+    top: 48vh;
+    max-width: 70vw;
     text-align: center;
     margin: 0 auto;
-    font-size: 16px;
+    font-size: 32px;
     color: #fff;
+    line-height: 100%;
 }
 
 }
@@ -206,6 +263,12 @@ body {
     top: 71vh;
     left: 50%;
     transform: translate(-50%);
+}
+
+.rmore > .spec {
+    min-width: 150px;
+    max-width: 200px;
+    width: 20vw;
 }
 
 .spec > a {
@@ -219,8 +282,9 @@ body {
 }
 
 .rmore > div > a {
-    padding-left: 70px;
-    padding-right: 70px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .spec.open > a {
@@ -246,6 +310,71 @@ body {
     max-width: 1400px;
     width: 80vw;
     min-height: 200px;
+}
+
+}
+@media only screen and (max-device-width: 600px) {
+
+.home-card {
+    top: 47vh;
+    z-index: 2;
+    position: relative;
+    margin: 0 auto;
+    width: 75vw;
+    min-height: 200px;
+}
+
+}
+
+.title-extra {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+.title {
+    position: absolute;
+    top: 17vh;
+    max-width: 600px;
+    right: 350px;
+    font-size: 54px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.title-desc {
+    position: absolute;
+    top: 25vh;
+    right: 400px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 22px;
+    color: #fff;
+    line-height: 100%;
+}
+
+.rmore {
+    top: 34vh;
+    right: 200px;
+    left: initial;
+}
+
+.title-extra {
+    display: block;
+    position: absolute;
+    top: 41vh;
+    right: 400px;
+    max-width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+    line-height: 100%;
+}
+
+.home-card {
+    top: 67vh;
 }
 
 }
