@@ -82,8 +82,9 @@ body {
     min-width: 500px;
     height: auto;
     top: 100px;
-    left: 30%;
+    left: 10%;
     position: absolute;
+    transform: none;
 }
 
 }
