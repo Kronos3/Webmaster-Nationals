@@ -64,7 +64,7 @@ body {
 
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-device-width: 600px) {
 
 .landing-back {
     position: absolute;
@@ -171,7 +171,7 @@ body {
 }
 
 
-@media (max-width: 800px) {
+@media only screen and (max-device-width: 800px) {
 
 .cover-img {
     width: 85vw;
@@ -228,7 +228,7 @@ body {
     color: #fff;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-device-width: 600px) {
 
 .rmore {
     display: none;
