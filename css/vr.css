@@ -82,9 +82,8 @@ body {
     min-width: 500px;
     height: auto;
     top: 100px;
-    left: 10%;
+    left: 30%;
     position: absolute;
-    transform: none;
 }
 
 }
@@ -386,9 +385,10 @@ cover-img {
 
 .coverinfo {
     position: absolute;
-    right: 15%;
+    left: 65%;
     top: 20%;
     width: 30%;
+    transform: translateX(-50%);
 }
 
 }
