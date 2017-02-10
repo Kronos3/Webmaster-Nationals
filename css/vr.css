@@ -477,7 +477,7 @@ footer {
 .section-wrapper {
     position: relative;
     background-size: cover;
-    height: 180vh;
+    height: 100vw;
 }
 
 @media (max-device-width: 700px) {
@@ -507,7 +507,7 @@ footer {
 
 @media (min-width: 1500px) {
 .section-wrapper {
-    margin-top: -10vw;
+    margin-top: -12vw;
     margin-bottom: -34vw;
 }
 }
