@@ -34,7 +34,7 @@ body {
     width: 100%;
     top: 0;
     content: '';
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
 }
 
 .top-bar {
@@ -301,7 +301,7 @@ body {
     position: absolute;
     background: #f7f7f7;
     height: 150px;
-    bottom: 0;
+    bottom: -40px;
     left: 0;
     content: '';
     width: 100vw;
