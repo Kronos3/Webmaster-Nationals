@@ -1,1 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900');
 
+body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+}
+
+.lander {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    background-image: url('../img/mk2-test.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.lander::after {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    content: '';
+    background: rgba(0,0,0,0.4);
+}
+
+.top-bar {
+    height: 100px;
+    width: 100%;
+    padding: 0 4.62%;
+    position: relative;
+    z-index: 2;
+}
+
+#logo {
+    height: 38px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav {
+    margin: 0;
+    position: absolute;
+    right: 4.62%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav > li {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-right: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+}
+
+.nav > li::before {
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 4px;
+    content: '';
+    background: #fff;
+    transition: 0.2s ease width;
+}
+
+.nav > li:hover::before {
+    width: 100%;
+    height: 4px;
+}
+
+.nav > li:hover {
+    cursor: pointer;
+}
+
+.chapter-page {
+    position: absolute;
+    width: 4.62%;
+    margin-top: 26px;
+    right: 0;
+    color: #fff;
+    height: 160px;
+}
+
+.chapter-page > i {
+    max-width: 50px;
+    width: 4.62vw;
+    font-size: 1.2rem;
+    max-height: 50px;
+    height: 4.62vw;
+    display: block;
+    margin: 0 auto;
+    line-height: 2.75;
+    text-align: center;
+    background: #ff6161;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.chapter-page > p::before {
+    content: '';
+    border-left: 3px solid #fff;
+    border-right: 0px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    display: block;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chapter-page > p::after {
+    content: '';
+    width: 30%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    height: 2px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chapter-page > p {
+    transform-origin: 2.31vw 50%;
+    transform: rotate(-90deg);
+    width: 110px;
+    display: block;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    height: 4.62vw;
+    line-height: 4.62vw;
+    font-size: 15px;
+}
+
+.intro {
+    position: relative;
+    top: calc(8.5rem + 100px);
+    left: 13%;
+    width: 50%;
+    min-width: 550px;
+    z-index: 2;
+    font-size: 2.7vw;
+}
+
+.intro::after {
+    position: absolute;
+    left: -3%;
+    display: block;
+    top: 0.62em;
+    transform: translateY(-50%);
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.intro::before {
+    position: absolute;
+    left: -26%;
+    width: 23%;
+    height: 3px;
+    display: block;
+    top: 0.62em;
+    content: '';
+    background: #fff;
+    transform: translateY(-50%);
+}
+
+.intro > p {
+    margin: 0 0 3rem 0;
+    font-size: 2.7vw;
+    font-weight: 700;
+    line-height: 1.28;
+    color: #fff;
+}
+
+.intro-readmore {
+    position: relative;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 3em;
+    display: block;
+    width: 8em;
+    height: 3em;
+    color: #fff;
+}
+
+.intro-readmore > span::before {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    height: 3px;
+    background: #fff;
+    transition: 0.2s ease all;
+}
+
+.intro-readmore > span::after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    height: 3px;
+    background: #fff;
+    transition: 0.2s ease all;
+}
+
+.intro-readmore::before {
+    position: absolute;
+    left: -1px;
+    height: calc(100% - 1px);
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 3px;
+    background: #fff;
+    transition: 0.2s ease all;
+}
+
+.intro-readmore::after {
+    position: absolute;
+    right: 0;
+    height: calc(100% - 1px);
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    width: 3px;
+    background: #fff;
+    transition: 0.2s ease all;
+}
+
+.intro-readmore:hover::before,
+.intro-readmore:hover::after {
+    height: 140%;
+}
+.intro-readmore:hover > span::before,
+.intro-readmore:hover > span::after {
+    width: 120%;
+}
+
+.intro-readmore > span {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
