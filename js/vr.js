@@ -7,7 +7,11 @@ String.prototype.format = String.prototype.f = function() {
     }
     return s;
 };
-
+/*
+window.onload = function() {
+     $('#loader').removeClass("loading");
+};
+*/
 $(function() {
     $('.fadein img:gt(0)').hide();
     
