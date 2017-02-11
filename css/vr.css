@@ -470,3 +470,17 @@ body {
 .loading {
     display: block;
 }
+
+@media (max-width: 1100px) {
+.backimg {
+    display: block !important;
+    height: 300px !important;
+    width: calc(100% - 176px) !important;
+}
+
+.section-inner {
+    margin: 300px 0 0 0 !important;
+    max-width: 100%;
+}
+
+}
