@@ -6,6 +6,7 @@ body {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
+    overflow-x: hidden;
 }
 
 .lander {
@@ -13,12 +14,21 @@ body {
     height: 100vh;
     width: 100%;
     display: block;
-    background-image: url('../img/mk2-test.jpg');
     background-size: cover;
     background-position: center center;
 }
 
-.lander::after {
+.lander-background {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.lander-background::after {
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -268,4 +278,86 @@ body {
     width: 100%;
     height: 100%;
     display: block;
+}
+
+.section {
+    position: relative;
+    padding: 110px 88px;
+    display: flex;
+}
+
+.section.left::before {
+    position: absolute;
+    background: #f7f7f7;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 35vw;
+    z-index: -1;
+}
+
+.section::after {
+    position: absolute;
+    background: #f7f7f7;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100vw;
+    z-index: -1;
+}
+
+.section.right::before {
+    position: absolute;
+    background: #f7f7f7;
+    height: 100%;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 35vw;
+    z-index: -1;
+}
+
+.section > .backimg {
+    height: calc(100% - 220px);
+    width: calc(50% - 176px);
+    display: inline-block;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section.left > .backimg {
+    left: 88px;
+}
+
+.section.right > .backimg {
+    right: 88px;
+}
+
+.section-inner {
+    display: inline-block;
+    max-width: 50%;
+}
+
+.section.left > .section-inner {
+    margin-left: 50%;
+}
+
+.section.right > .section-inner {
+    margin-right: 50%;
+}
+
+.section-inner > p {
+    font-size: 1.2rem;
+}
+
+.fadein img {
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
