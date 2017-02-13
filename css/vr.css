@@ -491,6 +491,23 @@ body {
     max-width: 100%;
 }
 
+.intro a {
+    font-size: 2rem;
+}
+
+.intro {
+    width: 80%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.intro p,
+.intro {
+    font-size: 4rem;
+}
+
+.section-inner h3 {
+    margin-top: 60px;
 }
 
 .intro-wrapper {
