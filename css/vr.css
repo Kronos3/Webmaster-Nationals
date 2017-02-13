@@ -630,3 +630,41 @@ body {
   font-size: 14px;
   font-weight: 100;
 }
+
+.go-back {
+    font-size: 1.2rem;
+    width: 100%;
+    display: block;
+    color: #fff;
+    height: 100px;
+    background-image: url('../img/compressed/img2.jpg');
+    position: relative;
+}
+
+.go-back span {
+    z-index:2;
+}
+
+.go-back::before {
+    position: absolute;
+    background: #000;
+    opacity: 0.6;
+    content: 'Go back to home page';
+    text-align: center;
+    line-height: 100px;
+    height: 100%;
+    width: 100%;
+    z-index:0;
+    left: 0;
+    top: 0;
+}
+
+.bib {
+    width: 80vw;
+    max-width: 900px;
+    padding: 60px 80px;
+    position: relative;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
