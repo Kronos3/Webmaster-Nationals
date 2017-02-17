@@ -8,12 +8,77 @@ body {
     height: 100%;
     margin: 0;
     font-size: 2.47vw;
+    font-family: Roboto;
 }
 
 .lander {
     position: relative;
-    width: 100vw;
-    height: 180vh;
+    width: 100%;
+    height: 200vh;
     display: block;
     overflow: hidden; /* Used for the background slider */
+}
+
+.lander-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    margin: 60px;
+    z-index: -1;
+}
+
+.lander-back > div::after {
+    content: '';
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.lander-back > div:last-child { /* Lander image bottom */
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-image: url(../img/compressed-1k/img3.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: calc(100vh - 60px);
+}
+
+.lander-back > div:first-child { /* Lander image top */
+    height: calc(120vh - 60px);
+    width: 100%;
+    top: 0;
+    background-image: url(../img/compressed-1k/img2.jpg);
+    background-position: center top;
+    background-size: cover;
+    position: absolute;
+    -webkit-clip-path: polygon(100% 0, 100% 83.33%, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 100% 83.33%, 0 100%, 0 0);
+    z-index: 2;
+}
+
+.title {
+    color: #fff;
+    margin: 0;
+    display: block;
+    position: absolute;
+    right: 12vw;
+    top: 12vh;
+    font-family: Audiowide;
+}
+
+.lander-content {
+    position: absolute;
+    right: 12vw;
+    top: 65vh;
+    width: 40vw;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 }
