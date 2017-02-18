@@ -15,6 +15,11 @@ a {
     text-decoration: none;
 }
 
+.top-level {
+    position: relative;
+    transition: 0.2s ease all;
+}
+
 .lander {
     width: 100%;
     display: block;
@@ -84,12 +89,18 @@ a {
     margin: 0;
     position: absolute;
     right: 4.62%;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-top: 26px;
+    max-height: 50px;
+    height: 4.62vw;
+    display: flex;
 }
 
 .nav > li a {
     color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
 }
 
 .nav > li {
@@ -99,8 +110,7 @@ a {
     font-weight: 500;
     color: #fff;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
 }
 
 .nav > li::before {
@@ -111,7 +121,7 @@ a {
     height: 4px;
     content: '';
     background: #fff;
-    transition: 0.2s ease width;
+    transition: 0.3s cubic-bezier(0.29, 0.79, 0, 1.37) width;
 }
 
 .nav > li:hover::before {
