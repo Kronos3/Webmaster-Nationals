@@ -1,5 +1,5 @@
 /* Title and title description */
-@import url('https://fonts.googleapis.com/css?family=Audiowide|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Roboto:300,400,700');
 
 body {
     position: relative;
@@ -8,28 +8,29 @@ body {
     height: 100%;
     margin: 0;
     font-size: 2.47vw;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 .lander {
-    position: relative;
     width: 100%;
-    height: 200vh;
     display: block;
-    overflow: hidden; /* Used for the background slider */
 }
 
 .lander-back {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: calc(100% - 120px);
     height: calc(100% - 120px);
     margin: 60px;
-    z-index: -1;
+    z-index: 1;
 }
 
-.lander-back > div::after {
+.chop-img::after {
     content: '';
     background: rgba(0,0,0,0.3);
     width: 100%;
@@ -40,27 +41,158 @@ body {
     z-index: 3;
 }
 
-.lander-back > div:last-child { /* Lander image bottom */
+.chop-img:last-child { /* Lander image bottom */
     height: calc(100vh - 60px);
     width: 100%;
     background-image: url(../img/compressed-1k/img3.jpg);
     background-position: center center;
     background-size: cover;
-    position: absolute;
+    position: relative;
     top: calc(100vh - 60px);
 }
 
-.lander-back > div:first-child { /* Lander image top */
+.chop-img:first-child { /* Lander image top */
     height: calc(120vh - 60px);
     width: 100%;
     top: 0;
     background-image: url(../img/compressed-1k/img2.jpg);
     background-position: center top;
     background-size: cover;
-    position: absolute;
+    position: relative;
     -webkit-clip-path: polygon(100% 0, 100% 83.33%, 0 100%, 0 0);
     clip-path: polygon(100% 0, 100% 83.33%, 0 100%, 0 0);
     z-index: 2;
+}
+
+.top-bar {
+    height: 100px;
+    width: 100%;
+    padding: 0 4.62%;
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+}
+
+#logo {
+    height: 38px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav {
+    margin: 0;
+    position: absolute;
+    right: 4.62%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav > li a {
+    color: #fff;
+}
+
+.nav > li {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin-right: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav > li::before {
+    top: 100%;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 4px;
+    content: '';
+    background: #fff;
+    transition: 0.2s ease width;
+}
+
+.nav > li:hover::before {
+    width: 100%;
+    height: 4px;
+}
+
+.nav > li:hover {
+    cursor: pointer;
+}
+
+.chapter-page {
+    position: absolute;
+    width: 4.62vw;
+    margin-top: 26px;
+    right: 0;
+    color: #fff;
+    height: 160px;
+}
+
+.chapter-page > span {
+    max-width: 50px;
+    width: 4.62vw;
+    max-height: 50px;
+    height: 4.62vw;
+    display: block;
+    margin: 0 auto;
+    background: #ff6161;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
+
+.chapter-page > span > i {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.chapter-page > p::before {
+    content: '';
+    border-left: 3px solid #fff;
+    border-right: 0px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    width: 6px;
+    height: 0px;
+    position: absolute;
+    display: block;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chapter-page > p::after {
+    content: '';
+    width: 30%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    height: 2px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.chapter-page > p {
+    transform-origin: 2.31vw 50%;
+    transform: rotate(-90deg);
+    width: 110px;
+    display: block;
+    margin: 0;
+    bottom: 0;
+    position: absolute;
+    height: 4.62vw;
+    line-height: 4.62vw;
+    font-size: 15px;
 }
 
 .title {
@@ -68,17 +200,219 @@ body {
     margin: 0;
     display: block;
     position: absolute;
-    right: 12vw;
-    top: 12vh;
+    top: 34vh;
     font-family: Audiowide;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
 }
 
 .lander-content {
-    position: absolute;
-    right: 12vw;
-    top: 65vh;
-    width: 40vw;
-    background: #fff;
+    position: relative;
+    left: 50%;
+    top: -30vh;
+    width: 70vw;
+    max-width: 1200px;
+    min-height: 30px;
+    background: rgba(0,0,0,0);
+    /*
     border-radius: 2px;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    */
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+div.intro {
+    background: #fff;
+    padding: 50px;
+}
+
+.intro {
+    margin: 0;
+    text-align: center;
+}
+
+h3.intro {
+    color: #656565;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+p.intro {
+    color: #373737;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@keyframes timeline {
+  from {
+    height: 0; 
+  }
+
+  to {
+    height: calc(calc(calc(100% - 48vh) - 360px) - 80px);
+  }
+}
+
+.timeline-top {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(calc(calc(100% - 48vh) - 360px) - 80px);
+    top: 48vh;
+    background: #eee;
+    z-index: 3;
+    animation-duration: 3s;
+    animation-name: timeline;
+}
+
+.lander-section {
+    position: relative;
+    width: 80%;
+    height: 450px;
+    margin-top: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Audiowide;
+    color: #fff;
+}
+
+.lander-section > h3,
+.lander-section > p {
+    margin: 0;
+    z-index: 2;
+}
+
+.lander-section > h3 {
+    margin: 80px 0 30px 0;
+    max-width: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    position: relative;
+    top: 25%;
+    font-size: 1em;
+    transition: 0.2s ease all;
+    transition-delay: 0.1s;
+}
+
+.lander-section:hover > h3 {
+    top: 0;
+    transition-delay: 0s;
+}
+
+.lander-section:hover > p {
+    transform: translateX(-50%) scale(1);
+    transition-delay: 0.1s;
+}
+
+.lander-section > p {
+    font-size: 0.54em;
+    max-width: 70%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: 0.2s ease all;
+    transition-delay: 0s;
+    text-align: center;
+}
+
+.lander-section img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.footer {
+  position: relative;
+  background-color: #3e3c36;
+  height: 360px;
+  margin-top: 88px;
+  padding: 100px 0 100px 0;
+}
+
+.footer-inner-wrapper {
+  width: 75%;
+  margin: 0 auto 0 auto;
+}
+
+.footer-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.tsa-logo-bottom img {
+  position: absolute;
+  max-width: 200px;
+  width: calc(15vw - 40px);
+  height: auto;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  border-radius: 4px;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.tsa-logo-bottom {
+  position: absolute;
+  max-width: 240px;
+  max-height: 240px;
+  height: 15vw;
+  width: 15vw;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: #FFF;
+  left: 50%;
+  right: 50%;
+  bottom: 42.5%;
+  transform: translateY(50%) translateX(-50%);
+}
+
+.footer-logo {
+  width: auto;
+  height: 20px;
+  margin: 0 0 25px 0;
+}
+
+.contact-info-mail,
+.contact-info-mail a {
+  font-size: 16px;
+  margin: 0;
+  color: #FFF;
+  font-weight: 300;
+}
+
+.contact-info-mail span {
+  color: #ff6161;
+  font-weight: bold;
+}
+
+.address {
+  margin: 0;
+  font-size: 16px;
+  color: #FFF;
+  font-weight: 300;
+}
+
+.footer-motto {
+  position: absolute;
+  left: 70%;
+  top: 0;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.copyright {
+  position: absolute;
+  left: 70%;
+  bottom: 0;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 100;
 }
