@@ -192,7 +192,8 @@ body {
     height: 14px;
     display: block;
     position: absolute;
-    right: 12px;
+    right: 7px;
+    color: #333;
     letter-spacing: 0.3px;
     opacity: 0;
     transition: ease-in-out 0.2s;
