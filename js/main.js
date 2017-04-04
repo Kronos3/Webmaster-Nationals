@@ -8,9 +8,9 @@ function prev (e) {
 
 $( document ).ready(function() {
     $("body").scrollsteps({
-        up: yourUpFunction,
-        down: yourUpFunction,
+        up: prev,
+        down: next,
         transitionDuration: 1000,
         quietPeriodBetweenTwoScrollEvents: 200,
     });
-}
+});

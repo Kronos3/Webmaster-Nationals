@@ -152,7 +152,6 @@ body {
     position: absolute;
     width: 24px;
     display: flex;
-    height: 400px;
     transform: translateX(50%) translateY(-50%);
     top: 50%;
     flex-direction: column;
@@ -190,9 +189,13 @@ body {
     font-size: 12px;
     line-height: 14px;
     height: 14px;
-    display: block;
+    display: inline-block;
     position: absolute;
     right: 7px;
+    transform: translateY(-50%);
+    top: 50%;
+    padding: 6px 14px 6px 0;
+    white-space: nowrap;
     color: #333;
     letter-spacing: 0.3px;
     opacity: 0;
@@ -203,7 +206,7 @@ body {
 .__step-label:hover,
 .__step:hover::before {
     opacity: 1;
-    right: 24px;
+    right: 14px;
 }
 
 .__step:hover {
