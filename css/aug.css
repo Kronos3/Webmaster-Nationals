@@ -217,6 +217,10 @@ body {
     opacity: 1;
 }
 
+.__step:last-child {
+    margin-bottom: 0;
+}
+
 .logo { 
     height: 51px;
     width: auto;
