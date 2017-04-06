@@ -1,9 +1,24 @@
 function next (e) {
+    var i = $('.__step.active').index();
+    if (i == $('.__step').length) {
+        return;
+    }
+    i += 1;
+    $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
+    $('.__step.active').toggleClass ('active');
+    $($('.__step').get(i)).toggleClass('active');
     
 }
 
 function prev (e) {
-    
+    var i = $('.__step.active').index();
+    if (i == 0) {
+        return;
+    }
+    i -= 1;
+    $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
+    $('.__step.active').toggleClass ('active');
+    $($('.__step').get(i)).toggleClass('active');
 }
 
 $( document ).ready(function() {
@@ -24,7 +39,7 @@ $( document ).ready(function() {
     $("body").scrollsteps({
         up: prev,
         down: next,
-        transitionDuration: 1000,
-        quietPeriodBetweenTwoScrollEvents: 400,
+        transitionDuration: 400,
+        quietPeriodBetweenTwoScrollEvents: 200,
     });
 });
