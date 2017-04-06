@@ -230,3 +230,46 @@ body {
     left: 15%;
     position: absolute;
 }
+
+.content {
+    max-width: 1300px;
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    border-left: solid #e5e5e5 1px;
+    border-right: solid #e5e5e5 1px;
+}
+
+.content::before {
+    position: absolute;
+    display: block;
+    left: 50%;
+    border-left: solid #e5e5e5 1px;
+    height: 100%;
+    content: '';
+}
+
+.section {
+    background: #fff;
+    display: block;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-inner {
+    width: 50%;
+    position: relative;
+    display: block;
+}
+
+.section-inner > h3 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.section-inner p {
+    margin: 0 0 10px 55px;
+    text-indent: 42px; 
+}

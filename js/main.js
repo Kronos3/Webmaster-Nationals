@@ -10,6 +10,10 @@ function next (e) {
     
 }
 
+function ret (e) {
+    return;
+}
+
 function prev (e) {
     var i = $('.__step.active').index();
     if (i == 0) {
@@ -22,15 +26,20 @@ function prev (e) {
 }
 
 $( document ).ready(function() {
-    console.log($('.timeline > .__step').length);
     for (var i=0; i != $('.timeline > .__step').length; i++) {
-        console.log ($('.timeline > .__step').get(i));
         $('.timeline > .__step').get(i).addEventListener('click', function (e) {
             var f = $(this).index();
             $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
             $('.__step.active').toggleClass ('active');
             $($('.__step').get(f)).toggleClass('active');
         });
+        $('.timeline > .__step > .__step-label').get(i).addEventListener('click', function (e) {
+            var f = $(this).parent().index();
+            $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
+            $('.__step.active').toggleClass ('active');
+            $($('.__step').get(f)).toggleClass('active');
+        });
+        
     }
 });
 
@@ -39,6 +48,8 @@ $( document ).ready(function() {
     $("body").scrollsteps({
         up: prev,
         down: next,
+        left: ret,
+        right: ret,
         transitionDuration: 400,
         quietPeriodBetweenTwoScrollEvents: 200,
     });
