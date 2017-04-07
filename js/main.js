@@ -1,6 +1,6 @@
 function next (e) {
     var i = $('.__step.active').index();
-    if (i == $('.__step').length) {
+    if (i == $('.__step').length - 1 ) {
         return;
     }
     i += 1;
