@@ -70,7 +70,30 @@ $( document ).ready(function() {
                 $('.__step-label.hover').removeClass('hover');
             })
         });
+    }
+    for (var i = 0; i != $('#shapes-mask > svg').length; i++) {
+        setup_pos ($('#shapes-mask > svg').get(i), (Math.random() * (-0.08 - 0.08) + 0.08).toFixed(4),(Math.random() * (-0.120 - 0.12) + 0.12).toFixed(4));
+    }
+    document.onmousemove = handleMouseMove;
+    function handleMouseMove(event) {
+        var dot, eventDoc, doc, body, pageX, pageY;
+        event = event || window.event;
         
+        if (event.pageX == null && event.clientX != null) {
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+        for (var i = 0; i != $('#shapes-mask > svg').length; i++) {
+            set_pos ($('#shapes-mask > svg').get(i), event.pageX, event.pageY);
+        }
     }
 });
 
@@ -86,6 +109,11 @@ $( document ).ready(function() {
     });
 });
 
-function get_pos (e, x_scale, y_scale) { // Use negative for inverse
-    
+function set_pos (e, x, y) { // Use negative for inverse
+    $(e).css("transform", "matrix(-1, 0, 0, -1, " + $(e).data ('xfactor') * x + " , " + $(e).data ('yfactor') * y + ")");
+}
+
+function setup_pos (e, x_scale, y_scale) {
+    $(e).data ('xfactor', x_scale);
+    $(e).data ('yfactor', y_scale);
 }
