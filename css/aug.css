@@ -4,6 +4,7 @@ html {
     height: 100%;
     position: relative;
     overflow:hidden;
+    background: #1c1d25;
 }
 
 ::selection {
@@ -63,8 +64,9 @@ body {
     max-width: 555px;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
+    background: #1c1d25;
     top: 22%;
+    color: #fff;
 }
 
 .lander-header p.center {
@@ -89,7 +91,7 @@ body {
     width: 100%;
     margin-bottom: 0px;
     font-family: Inconsolata, monospace;
-    color: #5a5a5a;
+    color: #fff;
     font-size: 20px;
     line-height: 30px;
     font-weight: 400;
@@ -169,7 +171,7 @@ body {
     border-radius: 50%;
     transform: translateX(-50%);
     margin-bottom: 30px;
-    background: #fff;
+    background: #1c1d25;
 }
 
 .__step::before {
@@ -196,16 +198,18 @@ body {
     right: 7px;
     transform: translateY(-50%);
     top: 50%;
-    padding: 6px 14px 6px 0;
+    padding: 6px 14px 6px 14px;
     white-space: nowrap;
-    color: #333;
+    color: #fff;
     letter-spacing: 0.3px;
+    background: rgba(28, 29, 37, 0.9);
     opacity: 0;
     transition: ease-in-out 0.2s;
 }
 
 .__step:hover > .__step-label,
 .__step-label:hover,
+.__step-label.hover,
 .__step:hover::before {
     opacity: 1;
     right: 14px;
@@ -250,7 +254,7 @@ body {
 }
 
 .section {
-    background: #fff;
+    background: #1c1d25;
     display: block;
     position: relative;
     font-family: 'Montserrat', sans-serif;
@@ -259,9 +263,10 @@ body {
 }
 
 .section-inner {
-    width: 50%;
+    width: 45%;
     position: relative;
     display: block;
+    color: #fff;
 }
 
 .section-inner > h3 {
@@ -272,4 +277,200 @@ body {
 .section-inner p {
     margin: 0 0 10px 55px;
     text-indent: 42px; 
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    background: #1c1d25;
+    transition: height 0.2s ease-in-out 0.2s;
+    z-index: 4;
+}
+
+.content {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out 0.3s;
+}
+
+.content.active::before {
+    height: 0;
+}
+
+.content.active {
+    opacity: 1;
+}
+
+.section > .backimg {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: calc(100% - 64px);
+    background-position: center center;
+    background-size: cover;
+}
+
+.section.left > .backimg {
+    left: 55%;
+}
+
+.section {
+    padding: 32px;
+}
+
+.section.right > .backimg {
+    right: 55%;
+}
+
+.content > .section > .backimg::before {
+    content: '';
+    left: 0;
+    top: -2px;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #1c1d25;
+    /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0.69) 87%, rgba(255,255,255,0) 100%);*/
+    z-index: 4;
+    transition: none;
+}
+
+.content > .section > .backimg::after {
+    content: '';
+    left: 50%;
+    top: -2px;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0.69) 87%, rgba(255,255,255,0) 100%);*/
+    background: #1c1d25;
+    z-index: 4;
+    transition: none;
+}
+
+.content.active > .section > .backimg::before,
+.content.active > .section > .backimg::after {
+    height: 0;
+}
+
+.content.active > .section > .backimg::before {
+    transition: height 0.4s ease-in-out 0.4s;
+}
+
+.content.active > .section > .backimg::after {
+    transition: height 0.4s ease-in-out 0.5s;
+}
+
+#shapes-mask {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .25s ease .65s;
+    z-index: -3
+}
+
+.no-js #shapes-mask {
+    display: none
+}
+
+#shapes-mask svg path {
+    stroke: inherit;
+    fill: none
+}
+
+#shapes-mask .layer1,#shapes-mask .layer2 {
+    position: absolute;
+    z-index: 1
+}
+
+#shapes-mask .p1 {
+    left: 30%;
+    top: 20%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#shapes-mask .p2 {
+    left: 90%;
+    top: 70%
+}
+
+#shapes-mask .p3 {
+    left: 100%;
+    top: 20%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+#shapes-mask .p4 {
+    left: 70%;
+    top: 20%
+}
+
+#shapes-mask .p5 {
+    left: 5%;
+    top: 80%
+}
+
+#shapes-mask .p5,#shapes-mask .p6 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+#shapes-mask .p6 {
+    left: 2%;
+    top: 20%
+}
+
+#shapes-mask .p7 {
+    left: 50%;
+    bottom: 2%
+}
+
+#shapes-mask .p8 {
+    left: 85%;
+    bottom: 4%
+}
+
+#shapes-mask .p9 {
+    left: 20%;
+    top: 2%;
+    -webkit-transform: rotate(65deg);
+    transform: rotate(65deg)
+}
+
+#shapes-mask .p10 {
+    left: 10%;
+    bottom: 2%;
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg)
+}
+
+#shapes-mask .p11 {
+    left: 90%;
+    top: 2%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg)
+}
+
+#shapes-mask .pink {
+    stroke: #f06449;
+    fill: none
+}
+
+#shapes-mask .yellow {
+    stroke: #ff0;
+    fill: none
+}
+
+#shapes-mask .aqua {
+    stroke: aqua;
+    fill: none
 }

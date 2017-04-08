@@ -4,14 +4,24 @@ function next (e) {
         return;
     }
     i += 1;
+    $('.__step-label.hover').removeClass('hover');
     $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
     $('.__step.active').toggleClass ('active');
     $($('.__step').get(i)).toggleClass('active');
-    
+    $($('.__step').get(i)).children ('.__step-label').addClass('hover');
+    $('.content.active').toggleClass('active');
+    $($('.content').get (i)).toggleClass ('active');
+    sleep(600).then(() => {
+        $('.__step-label.hover').removeClass('hover');
+    })
 }
 
 function ret (e) {
     return;
+}
+
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
 }
 
 function prev (e) {
@@ -20,9 +30,16 @@ function prev (e) {
         return;
     }
     i -= 1;
+    $('.__step-label.hover').removeClass('hover');
     $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
     $('.__step.active').toggleClass ('active');
     $($('.__step').get(i)).toggleClass('active');
+    $($('.__step').get(i)).children ('.__step-label').addClass('hover');
+    $('.content.active').toggleClass('active');
+    $($('.content').get (i)).toggleClass ('active');
+    sleep(600).then(() => {
+        $('.__step-label.hover').removeClass('hover');
+    })
 }
 
 $( document ).ready(function() {
@@ -54,3 +71,7 @@ $( document ).ready(function() {
         quietPeriodBetweenTwoScrollEvents: 200,
     });
 });
+
+function get_pos (e, x_scale, y_scale) { // Use negative for inverse
+    
+}
