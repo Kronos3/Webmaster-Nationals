@@ -46,15 +46,29 @@ $( document ).ready(function() {
     for (var i=0; i != $('.timeline > .__step').length; i++) {
         $('.timeline > .__step').get(i).addEventListener('click', function (e) {
             var f = $(this).index();
+            $('.__step-label.hover').removeClass('hover');
             $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
             $('.__step.active').toggleClass ('active');
             $($('.__step').get(f)).toggleClass('active');
+            $($('.__step').get(f)).children ('.__step-label').addClass('hover');
+            $('.content.active').toggleClass('active');
+            $($('.content').get (f)).toggleClass ('active');
+            sleep(600).then(() => {
+                $('.__step-label.hover').removeClass('hover');
+            })
         });
         $('.timeline > .__step > .__step-label').get(i).addEventListener('click', function (e) {
             var f = $(this).parent().index();
+            $('.__step-label.hover').removeClass('hover');
             $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
             $('.__step.active').toggleClass ('active');
             $($('.__step').get(f)).toggleClass('active');
+            $($('.__step').get(f)).children ('.__step-label').addClass('hover');
+            $('.content.active').toggleClass('active');
+            $($('.content').get (f)).toggleClass ('active');
+            sleep(600).then(() => {
+                $('.__step-label.hover').removeClass('hover');
+            })
         });
         
     }
