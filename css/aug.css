@@ -260,10 +260,19 @@ body {
     font-family: 'Montserrat', sans-serif;
     top: 50%;
     transform: translateY(-50%);
+    margin:
 }
 
 .section-inner {
-    width: 45%;
+    width: 55%;
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+.section.right > .section-inner {
+    width: 50%;
+    left: 50%;
     position: relative;
     display: block;
     color: #fff;
@@ -279,7 +288,7 @@ body {
     text-indent: 42px; 
 }
 
-.content::before {
+.content > .section::before {
     content: '';
     position: absolute;
     display: block;
@@ -292,30 +301,38 @@ body {
     z-index: 4;
 }
 
-.content {
+.content > .section {
     opacity: 0;
     transition: opacity 0.2s ease-in-out 0.3s;
 }
 
-.content.active::before {
+.content > .section.active::before {
     height: 0;
 }
 
-.content.active {
+.content > .section.active {
     opacity: 1;
 }
 
 .section > .backimg {
     display: block;
     position: absolute;
-    width: 40%;
+    width: 37%;
     height: calc(100% - 64px);
     background-position: center center;
     background-size: cover;
 }
 
+.section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    display: block;
+}
+
 .section.left > .backimg {
-    left: 55%;
+    right: 5%;
 }
 
 .section {
@@ -332,7 +349,7 @@ body {
     top: -2px;
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: calc(100% + 2px);
     background: #1c1d25;
     /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0.69) 87%, rgba(255,255,255,0) 100%);*/
     z-index: 4;
@@ -345,23 +362,23 @@ body {
     top: -2px;
     position: absolute;
     width: 50%;
-    height: 100%;
+    height: calc(100% + 2px);
     /*background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,0.69) 87%, rgba(255,255,255,0) 100%);*/
     background: #1c1d25;
     z-index: 4;
     transition: none;
 }
 
-.content.active > .section > .backimg::before,
-.content.active > .section > .backimg::after {
+.content > .section.active > .backimg::before,
+.content > .section.active > .backimg::after {
     height: 0;
 }
 
-.content.active > .section > .backimg::before {
+.content > .section.active > .backimg::before {
     transition: height 0.4s ease-in-out 0.4s;
 }
 
-.content.active > .section > .backimg::after {
+.content > .section.active > .backimg::after {
     transition: height 0.4s ease-in-out 0.5s;
 }
 

@@ -10,7 +10,8 @@ function next (e) {
     $($('.__step').get(i)).toggleClass('active');
     $($('.__step').get(i)).children ('.__step-label').addClass('hover');
     $('.content.active').toggleClass('active');
-    $($('.content').get (i)).toggleClass ('active');
+    $('.section.active').toggleClass ('active');
+    $($('.content > .section').get (i - 1)).toggleClass ('active');
     sleep(600).then(() => {
         $('.__step-label.hover').removeClass('hover');
     })
@@ -36,7 +37,8 @@ function prev (e) {
     $($('.__step').get(i)).toggleClass('active');
     $($('.__step').get(i)).children ('.__step-label').addClass('hover');
     $('.content.active').toggleClass('active');
-    $($('.content').get (i)).toggleClass ('active');
+    $('.section.active').toggleClass ('active');
+    $($('.content > .section').get (i - 1)).toggleClass ('active');
     sleep(600).then(() => {
         $('.__step-label.hover').removeClass('hover');
     })
@@ -52,7 +54,8 @@ $( document ).ready(function() {
             $($('.__step').get(f)).toggleClass('active');
             $($('.__step').get(f)).children ('.__step-label').addClass('hover');
             $('.content.active').toggleClass('active');
-            $($('.content').get (f)).toggleClass ('active');
+            $('.section.active').toggleClass ('active');
+            $($('.content > .section').get (f - 1)).toggleClass ('active');
             sleep(600).then(() => {
                 $('.__step-label.hover').removeClass('hover');
             })
