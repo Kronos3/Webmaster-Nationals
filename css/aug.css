@@ -18,6 +18,11 @@ body {
     height: 100%;
 }
 
+a {
+    color: #fff;
+    font-weight: 600;
+}
+
 .top {
     position: relative;
     width: 100%;
