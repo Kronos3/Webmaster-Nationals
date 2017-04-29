@@ -120,3 +120,18 @@ function setup_pos (e, x_scale, y_scale) {
     $(e).data ('xfactor', x_scale);
     $(e).data ('yfactor', y_scale);
 }
+
+function add_active_world () {
+    $('.__step').addClass('active');
+    $('.content').addClass('active');
+    $('.section').addClass ('active');
+    $('.content > .section').addClass ('active');
+    $("body").scrollsteps({
+        up: ret,
+        down: ret,
+        left: ret,
+        right: ret,
+        transitionDuration: 400,
+        quietPeriodBetweenTwoScrollEvents: 200,
+    });
+}
