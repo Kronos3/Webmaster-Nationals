@@ -252,7 +252,7 @@ a {
 
 .content::before {
     position: absolute;
-    display: block;
+    display: none;
     left: 50%;
     border-left: solid #e5e5e5 1px;
     height: 100%;
@@ -291,6 +291,7 @@ a {
 .section-inner p {
     margin: 0 15px 10px 15px;
     text-indent: 42px; 
+    line-height: 22px;
 }
 
 .content > .section::before {
