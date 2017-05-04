@@ -75,7 +75,7 @@ $( document ).ready(function() {
         });
     }
     for (var i = 0; i != $('#shapes-mask > svg').length; i++) {
-        setup_pos ($('#shapes-mask > svg').get(i), (Math.random() * (-0.08 - 0.08) + 0.08).toFixed(4),(Math.random() * (-0.120 - 0.12) + 0.12).toFixed(4));
+        setup_pos ($('#shapes-mask > svg').get(i), (Math.random() * (-0.18 - 0.18) + 0.08).toFixed(4),(Math.random() * (-0.120 - 0.12) + 0.12).toFixed(4));
     }
     document.onmousemove = handleMouseMove;
     function handleMouseMove(event) {
@@ -102,7 +102,7 @@ $( document ).ready(function() {
 
 
 $( document ).ready(function() {
-    $("body").scrollsteps({
+    $(".scroll").scrollsteps({
         up: prev,
         down: next,
         left: ret,
@@ -126,12 +126,4 @@ function add_active_world () {
     $('.content').addClass('active');
     $('.section').addClass ('active');
     $('.content > .section').addClass ('active');
-    $("body").scrollsteps({
-        up: ret,
-        down: ret,
-        left: ret,
-        right: ret,
-        transitionDuration: 400,
-        quietPeriodBetweenTwoScrollEvents: 200,
-    });
 }

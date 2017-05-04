@@ -43,7 +43,7 @@ a {
 
 .active-sec::before {
     position: absolute;
-    display: block;
+    display: none;
     left: 50%;
     border-left: solid #e5e5e5 1px;
     height: 100%;
@@ -259,22 +259,31 @@ a {
     content: '';
 }
 
+.section > div {
+    position: relative;
+    max-height: 85vh;
+    overflow: auto;
+}
+
 .section {
     background: #1c1d25;
     display: block;
     position: relative;
     font-family: 'Montserrat', sans-serif;
     top: 50%;
+    margin: 0 84px;
     transform: translateY(-50%);
 }
 
 .section-inner {
-    width: 55%;
+    width: 85%;
     position: relative;
     display: block;
     color: #fff;
+    margin: 0 auto 40px auto;
+    max-height: 80%;
 }
-
+/*
 .section.right > .section-inner {
     width: 50%;
     left: 50%;
@@ -282,7 +291,7 @@ a {
     display: block;
     color: #fff;
 }
-
+*/
 .section-inner > h3 {
     font-size: 32px;
     text-align: center;
@@ -320,11 +329,12 @@ a {
     opacity: 1;
 }
 
-.section > .backimg {
+.backimg {
     display: block;
-    position: absolute;
-    width: 37%;
-    height: calc(100% - 64px);
+    position: relative;
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
     background-position: center center;
     background-size: cover;
     border: 8px solid #fff;
@@ -338,6 +348,7 @@ a {
     display: block;
 }
 
+/*
 .section.left > .backimg {
     right: 5%;
 }
@@ -349,6 +360,7 @@ a {
 .section.right > .backimg {
     right: 55%;
 }
+*/
 
 .content > .section > .backimg::before {
     content: '';
@@ -397,40 +409,40 @@ a {
     width: 100%;
     height: 100%;
     transition: opacity .25s ease .65s;
-    z-index: -3
+    z-index: -3;
 }
 
 .no-js #shapes-mask {
-    display: none
+    display: none;
 }
 
 #shapes-mask svg path {
     stroke: inherit;
-    fill: none
+    fill: none;
 }
 
 #shapes-mask .layer1,#shapes-mask .layer2 {
     position: absolute;
-    z-index: 1
+    z-index: 1;
 }
 
 #shapes-mask .p1 {
     left: 30%;
     top: 20%;
     -webkit-transform: rotate(180deg);
-    transform: rotate(180deg)
+    transform: rotate(180deg);
 }
 
 #shapes-mask .p2 {
     left: 90%;
-    top: 70%
+    top: 70%;
 }
 
 #shapes-mask .p3 {
     left: 100%;
     top: 20%;
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 
 #shapes-mask .p4 {
@@ -440,63 +452,63 @@ a {
 
 #shapes-mask .p5 {
     left: 5%;
-    top: 80%
+    top: 80%;
 }
 
 #shapes-mask .p5,#shapes-mask .p6 {
     -webkit-transform: rotate(45deg);
-    transform: rotate(45deg)
+    transform: rotate(45deg);
 }
 
 #shapes-mask .p6 {
     left: 2%;
-    top: 20%
+    top: 20%;
 }
 
 #shapes-mask .p7 {
     left: 50%;
-    bottom: 2%
+    bottom: 2%;
 }
 
 #shapes-mask .p8 {
     left: 85%;
-    bottom: 4%
+    bottom: 4%;
 }
 
 #shapes-mask .p9 {
     left: 20%;
     top: 2%;
     -webkit-transform: rotate(65deg);
-    transform: rotate(65deg)
+    transform: rotate(65deg);
 }
 
 #shapes-mask .p10 {
     left: 10%;
     bottom: 2%;
     -webkit-transform: rotate(85deg);
-    transform: rotate(85deg)
+    transform: rotate(85deg);
 }
 
 #shapes-mask .p11 {
     left: 90%;
     top: 2%;
     -webkit-transform: rotate(180deg);
-    transform: rotate(180deg)
+    transform: rotate(180deg);
 }
 
 #shapes-mask .pink {
     stroke: #f06449;
-    fill: none
+    fill: none;
 }
 
 #shapes-mask .yellow {
     stroke: #ff0;
-    fill: none
+    fill: none;
 }
 
 #shapes-mask .aqua {
     stroke: aqua;
-    fill: none
+    fill: none;
 }
 
 .section-inner {
@@ -504,7 +516,6 @@ a {
     overflow: auto;
     font-size: 0.5em;
 }
-
 
 .section-inner::-webkit-scrollbar-track
 {
@@ -521,4 +532,13 @@ a {
 .section-inner::-webkit-scrollbar-thumb
 {
     background-color: #E57373;
+}
+
+.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
 }
