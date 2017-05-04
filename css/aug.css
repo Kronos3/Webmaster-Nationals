@@ -327,6 +327,7 @@ a {
     height: calc(100% - 64px);
     background-position: center center;
     background-size: cover;
+    border: 8px solid #fff;
 }
 
 .section::after {
