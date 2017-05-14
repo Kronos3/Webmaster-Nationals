@@ -14,7 +14,6 @@ if (!String.prototype.format) {
   };
 }
 
-var asset_tops = []
 var step_tops = []
 
 $( document ).ready(function() {
@@ -68,14 +67,16 @@ function setup_pos (e, x_scale, y_scale) {
 
 var step_colors = [
     '#C0CAAD',
-    '#3B322C',
-    '#9DA9A0',
-    '#654C4F',
+    '#E1717E',
+    '#83D096',
+    '#A9676F',
     '#72BDA3',
     '#B26E63',
     '#CEC075',
     '#507d83',
-    '#507d83',
+    '#EB8A6D',
+    '#D8809C',
+    '#D8809C',
 ]
 
 function hexToRgb(hex) {
