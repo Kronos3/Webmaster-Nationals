@@ -107,8 +107,9 @@ $(window).scroll (function (e) {
     var backcolor = pickHex (step_colors [prev_step], step_colors [prev_step - 1], step_ratio - prev_step);
     $('body').css ('background', 'rgba({0}, {1}, {2}, 1)'.format (backcolor[0], backcolor[1], backcolor[2]));
     
-    for (var i=0; i!=$('.asset').length; i++) {
-        var parent_top = parseInt($($('.asset').get(i)).parent().offset().top, 10);
-        $($('.asset').get(i)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
-    }
+    var parent_top = parseInt($($('.asset').get(prev_step)).parent().offset().top, 10);
+    $($('.asset').get(prev_step)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
+    
+    var parent_top = parseInt($($('.asset').get(prev_step - 1)).parent().offset().top, 10);
+    $($('.asset').get(prev_step - 1)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
 });
