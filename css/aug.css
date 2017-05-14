@@ -31,138 +31,18 @@ a {
     height: 100vh;
     width: 100vw;
     color: #fff;
+    overflow: hidden;
 }
 
 .step h3 {
     margin: 0;
 }
 
-#shapes-mask {
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity .25s ease .65s;
-    z-index: -3;
-}
-
-.no-js #shapes-mask {
-    display: none;
-}
-
-#shapes-mask svg path {
-    stroke: inherit;
-    fill: none;
-}
-
-#shapes-mask .layer1,#shapes-mask .layer2 {
-    position: absolute;
-    z-index: 1;
-}
-
-#shapes-mask .p1 {
-    left: 30%;
-    top: 20%;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-#shapes-mask .p2 {
-    left: 90%;
-    top: 70%;
-}
-
-#shapes-mask .p3 {
-    left: 100%;
-    top: 20%;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-#shapes-mask .p4 {
-    left: 70%;
-    top: 20%
-}
-
-#shapes-mask .p5 {
-    left: 5%;
-    top: 80%;
-}
-
-#shapes-mask .p5,#shapes-mask .p6 {
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-#shapes-mask .p6 {
-    left: 2%;
-    top: 20%;
-}
-
-#shapes-mask .p7 {
-    left: 50%;
-    bottom: 2%;
-}
-
-#shapes-mask .p8 {
-    left: 85%;
-    bottom: 4%;
-}
-
-#shapes-mask .p9 {
-    left: 20%;
-    top: 2%;
-    -webkit-transform: rotate(65deg);
-    transform: rotate(65deg);
-}
-
-#shapes-mask .p10 {
-    left: 10%;
-    bottom: 2%;
-    -webkit-transform: rotate(85deg);
-    transform: rotate(85deg);
-}
-
-#shapes-mask .p11 {
-    left: 90%;
-    top: 2%;
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
-
-#shapes-mask .pink {
-    stroke: #f06449;
-    fill: none;
-}
-
-#shapes-mask .yellow {
-    stroke: #ff0;
-    fill: none;
-}
-
-#shapes-mask .aqua {
-    stroke: aqua;
-    fill: none;
-}
 
 .asset {
     width: 850px;
     height: auto;
     position: absolute;
-}
-
-@keyframes bob {
-    0% {
-        transform: translate(-50%, -50%);
-    }
-    50% {
-        transform: translate(-50%, calc(-50% - 5px));
-    }
-    100% {
-        transform: translate(-50%, -50%);
-    }
 }
 
 #\31 > img {
@@ -202,6 +82,25 @@ a {
     z-index: 2;
     column-count: 2;
     column-width: 350px;
+}
+
+@media screen and (max-width: 1900px) {
+
+
+
+.step > div {
+    max-width: 80vw;
+    column-width: 350px;
+    column-count: 2;
+}
+
+.step img {
+    right: initial !important;
+    transform: translate(-50%, -50%) !important;
+    left: 50% !important;
+    opacity: 0.5;
+}
+
 }
 
 .timeline {

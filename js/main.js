@@ -58,14 +58,28 @@ function setup_pos (e, x_scale, y_scale) {
 }
 
 var step_colors = [
-    [119,108,104],
-    [161,148,129],
-    [138,131,198],
-    [94,119,64],
-    [255,255,255],
+    '#C0CAAD',
+    '#3B322C',
+    '#9DA9A0',
+    '#654C4F',
+    '#72BDA3',
+    '#B26E63',
+    '#CEC075',
+    '#507d83',
+    '#fffff',
 ]
 
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? [parseInt(result[1], 16),
+        parseInt(result[2], 16),
+        parseInt(result[3], 16)] : null;
+}
+
 function pickHex(color1, color2, weight) {
+    color1 = hexToRgb (color1);
+    color2 = hexToRgb (color2);
+    
     var p = weight;
     var w = p * 2 - 1;
     var w1 = (w/1+1) / 2;
@@ -95,7 +109,6 @@ $(window).scroll (function (e) {
     
     for (var i=0; i!=$('.asset').length; i++) {
         var parent_top = parseInt($($('.asset').get(i)).parent().offset().top, 10);
-        if (i == 1) {console.log ((st - parent_top))};
-        $($('.asset').get(i)).css ('top', '{0}%'.format(50 +  -4 * (Math.cbrt ( 0.1 * (st - parent_top)  ))  ));
+        $($('.asset').get(i)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
     }
 });
