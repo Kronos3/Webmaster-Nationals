@@ -61,6 +61,7 @@ var step_colors = [
     [119,108,104],
     [161,148,129],
     [138,131,198],
+    [94,119,64],
     [255,255,255],
 ]
 
@@ -93,11 +94,8 @@ $(window).scroll (function (e) {
     $('body').css ('background', 'rgba({0}, {1}, {2}, 1)'.format (backcolor[0], backcolor[1], backcolor[2]));
     
     for (var i=0; i!=$('.asset').length; i++) {
-        if ( i == 0 ) {
-            $($('.asset').get(i)).css ('top', '{0}px'.format(asset_tops[i] + ($(window).height() * i) + (st * -1.3)));
-        }
-        else {
-            $($('.asset').get(i)).css ('top', '{0}px'.format(asset_tops[i] - (($(window).height() * (i - 1)) * (1.5 ^ (i - 1))) + (st * -1.3) + ($(window).height() * (i)) + ($(window).height() * (i) * 1.5 )) );
-        }
+        var parent_top = parseInt($($('.asset').get(i)).parent().offset().top, 10);
+        if (i == 1) {console.log ((st - parent_top))};
+        $($('.asset').get(i)).css ('top', '{0}%'.format(50 +  -4 * (Math.cbrt ( 0.1 * (st - parent_top)  ))  ));
     }
 });

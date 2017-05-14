@@ -175,10 +175,18 @@ a {
 
 }
 
+#\31 > div {
+    left: 10%;
+    top: calc(50% + 32.5px);
+    transform: translateY(-50%);
+}
+
 .step h3 {
     font-size: 48px;
     font-weight: 300;
-    margin-bottom: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(-100%);
 }
 
 .step p {
@@ -186,13 +194,14 @@ a {
     margin: 0 0 20px 0;
 }
 
-.step div {
+.step > div {
     position: absolute;
-    left: 10%;
-    top: 50%;
+    top: calc(50% + 32.5px);
     transform: translateY(-50%);
-    max-width: 25vw;
+    max-width: 40vw;
     z-index: 2;
+    column-count: 2;
+    column-width: 350px;
 }
 
 .timeline {
@@ -276,16 +285,29 @@ a {
 }
 
 .step.left img {
-    left: 70%;
-    transform: translateX(-50%);
+    right: 25%;
+    transform: translate(50%, -50%);
 }
 
-.step.right div {
-    right: 20%;
+.step.left > div {
+    left: 10%;
+    right: initial;
+}
+
+.step.right > div {
+    right: 10%;
     left: initial;
 }
 
 .step.right img {
-    left: 30%;
-    transform: translateX(-50%);
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1200px) {
+
+.step img {
+    width: 60vw;
+}
+
 }
