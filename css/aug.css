@@ -17,7 +17,7 @@ body {
     position: relative;
     height: 100%;
     font-size: 3.24vh;
-    background: #776c68;
+    background: #C0CAAD;
 }
 
 a {
@@ -28,14 +28,16 @@ a {
 .step {
     display: block;
     position: relative;
-    height: 100vh;
     width: 100vw;
     color: #fff;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .step h3 {
     margin: 0;
+    position: absolute;
+    transform: translateY(calc(-100% - 20px));
 }
 
 
@@ -52,21 +54,15 @@ a {
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-
 }
 
 #\31 > div {
     left: 10%;
-    top: calc(50% + 32.5px);
-    transform: translateY(-50%);
 }
 
 .step h3 {
     font-size: 48px;
     font-weight: 300;
-    position: absolute;
-    top: -20px;
-    transform: translateY(-100%);
 }
 
 .step p {
@@ -75,10 +71,10 @@ a {
 }
 
 .step > div {
-    position: absolute;
-    top: calc(50% + 32.5px);
-    transform: translateY(-50%);
+    position: relative;
     max-width: 40vw;
+    top: 50vh;
+    transform: translateY(-50%);
     z-index: 2;
     column-count: 2;
     column-width: 350px;
@@ -86,12 +82,30 @@ a {
 
 @media screen and (max-width: 1900px) {
 
+.step p {
+    font-size: 2.2vh;
+}
 
+.step h3 {
+    margin: 0;
+    position: static;
+    transform: none !important;
+}
 
 .step > div {
     max-width: 80vw;
-    column-width: 350px;
-    column-count: 2;
+    column-count: 1;
+    left: 10% !important;
+    top: 0;
+    transform: none !important;
+    margin-bottom: 60px;
+}
+
+#\31 > div {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center;
+    top: 150px;
 }
 
 .step img {
@@ -99,6 +113,14 @@ a {
     transform: translate(-50%, -50%) !important;
     left: 50% !important;
     opacity: 0.5;
+    width: 80vh !important;
+}
+
+}
+
+@media handheld and (max-width: 700px) {
+.step p {
+    font-size: 1.2vh;
 }
 
 }
@@ -179,10 +201,6 @@ a {
     transform: translateY(-50%);
 }
 
-.step div {
-    position: absolute;
-}
-
 .step.left img {
     right: 25%;
     transform: translate(50%, -50%);
@@ -194,8 +212,7 @@ a {
 }
 
 .step.right > div {
-    right: 10%;
-    left: initial;
+    left: calc(90% - 40vw);
 }
 
 .step.right img {

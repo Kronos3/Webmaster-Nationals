@@ -15,6 +15,7 @@ if (!String.prototype.format) {
 }
 
 var asset_tops = []
+var step_tops = []
 
 $( document ).ready(function() {
     for (var i = 0; i != $('#shapes-mask > svg').length; i++) {
@@ -42,9 +43,17 @@ $( document ).ready(function() {
         }
     }
     
-    for (var i=0; i!=$('.asset').length; i++) {
-        asset_tops[i] = parseInt($($('.asset').get(i)).css('top'), 10);
+    for (var i=0; i!=$('.step').length; i++) {
+        step_tops[i] = $($('.step').get(i)).offset().top;
     }
+
+    $('.__step').on ('click', function () {
+        var hash = $('.step').get($(this).index());
+        console.log (hash);
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function(){});
+    });
 });
 
 
@@ -66,7 +75,7 @@ var step_colors = [
     '#B26E63',
     '#CEC075',
     '#507d83',
-    '#fffff',
+    '#507d83',
 ]
 
 function hexToRgb(hex) {
@@ -90,11 +99,25 @@ function pickHex(color1, color2, weight) {
     return rgb;
 }
 
+var prev_step;
+
+function get_between (st) {
+    for (var i = 0; i != $('.step').length; i++) {
+        if (st >= step_tops[i] && st < step_tops[i + 1]) {
+            var last = $($('.step').get(i)).offset().top;
+            var next = $($('.step').get(i + 1)).offset().top;
+            return (st - last)/(next - last) + 1 + i;
+        }
+    }
+    var last = $($('.step').get($('.step').length - 1)).offset().top;
+    return (st - last)/last + $('.step').length;
+}
+
 $(window).scroll (function (e) {
     var st = $(this).scrollTop();
     
-    var step_ratio = st / $(window).height() + 1;
-    var prev_step = parseInt(step_ratio, 10);
+    var step_ratio = get_between (st);
+    prev_step = parseInt(step_ratio, 10);
     if ((step_ratio - prev_step) > 0.5) {
         $('.__step.active').toggleClass ('active');
         $($('.__step').get(prev_step)).addClass('active');
@@ -107,9 +130,13 @@ $(window).scroll (function (e) {
     var backcolor = pickHex (step_colors [prev_step], step_colors [prev_step - 1], step_ratio - prev_step);
     $('body').css ('background', 'rgba({0}, {1}, {2}, 1)'.format (backcolor[0], backcolor[1], backcolor[2]));
     
-    var parent_top = parseInt($($('.asset').get(prev_step)).parent().offset().top, 10);
-    $($('.asset').get(prev_step)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
-    
+    try {
+        var parent_top = parseInt($($('.asset').get(prev_step)).parent().offset().top, 10);
+        $($('.asset').get(prev_step)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
+    }
+    catch (e) {
+        
+    }
     var parent_top = parseInt($($('.asset').get(prev_step - 1)).parent().offset().top, 10);
     $($('.asset').get(prev_step - 1)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
 });
