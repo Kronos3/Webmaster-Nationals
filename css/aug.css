@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 html {
     height: 100%;
     position: relative;
-    overflow:hidden;
-    background: #1c1d25;
+    overflow-x:hidden;
 }
 
 ::selection {
@@ -12,11 +12,12 @@ html {
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     position: relative;
     height: 100%;
     font-size: 3.24vh;
+    background: #776c68;
 }
 
 a {
@@ -24,4 +25,267 @@ a {
     font-weight: 600;
 }
 
+.step {
+    display: block;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    color: #fff;
+}
 
+.step h3 {
+    margin: 0;
+}
+
+#shapes-mask {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .25s ease .65s;
+    z-index: -3;
+}
+
+.no-js #shapes-mask {
+    display: none;
+}
+
+#shapes-mask svg path {
+    stroke: inherit;
+    fill: none;
+}
+
+#shapes-mask .layer1,#shapes-mask .layer2 {
+    position: absolute;
+    z-index: 1;
+}
+
+#shapes-mask .p1 {
+    left: 30%;
+    top: 20%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#shapes-mask .p2 {
+    left: 90%;
+    top: 70%;
+}
+
+#shapes-mask .p3 {
+    left: 100%;
+    top: 20%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#shapes-mask .p4 {
+    left: 70%;
+    top: 20%
+}
+
+#shapes-mask .p5 {
+    left: 5%;
+    top: 80%;
+}
+
+#shapes-mask .p5,#shapes-mask .p6 {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#shapes-mask .p6 {
+    left: 2%;
+    top: 20%;
+}
+
+#shapes-mask .p7 {
+    left: 50%;
+    bottom: 2%;
+}
+
+#shapes-mask .p8 {
+    left: 85%;
+    bottom: 4%;
+}
+
+#shapes-mask .p9 {
+    left: 20%;
+    top: 2%;
+    -webkit-transform: rotate(65deg);
+    transform: rotate(65deg);
+}
+
+#shapes-mask .p10 {
+    left: 10%;
+    bottom: 2%;
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg);
+}
+
+#shapes-mask .p11 {
+    left: 90%;
+    top: 2%;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+#shapes-mask .pink {
+    stroke: #f06449;
+    fill: none;
+}
+
+#shapes-mask .yellow {
+    stroke: #ff0;
+    fill: none;
+}
+
+#shapes-mask .aqua {
+    stroke: aqua;
+    fill: none;
+}
+
+.asset {
+    width: 850px;
+    height: auto;
+    position: absolute;
+}
+
+@keyframes bob {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    50% {
+        transform: translate(-50%, calc(-50% - 5px));
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+#\31 > img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+.step h3 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.step p {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+}
+
+.step div {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 25vw;
+    z-index: 2;
+}
+
+.timeline {
+    display: block;
+    position: fixed;
+    width: 40px;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline .__step {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.timeline .__step::before {
+    content: '';
+    position: absolute;
+    width: 5.25px;
+    height: 5.25px;
+    left: 50%;
+    top: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 50%;
+    transition: all 0.24s ease;
+}
+
+.timeline .__step.active::before {
+    width: 15px;
+    height: 15px;
+    box-shadow: 0 0 13px rgba(255, 255, 255, 0.5);
+}
+
+.timeline .__step:hover {
+    cursor: pointer;
+}
+
+.timeline .__step:hover::before {
+    width: 10px;
+    height: 10px;
+}
+
+.timeline .__step.active:hover::before {
+    width: 15px;
+    height: 15px;
+    
+}
+
+.line-top {
+    height: calc(50% - 240px);
+    width: 0px;
+    right: 60px;
+    border-right: 1px solid #ffffff;
+    opacity: 0.3;
+    position: fixed;
+    top: 20px;
+}
+
+.line-bottom {
+    height: calc(50% - 240px);
+    width: 0px;
+    right: 60px;
+    border-right: 1px solid #ffffff;
+    opacity: 0.3;
+    position: fixed;
+    bottom: 20px;
+}
+
+.step img {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.step div {
+    position: absolute;
+}
+
+.step.left img {
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.step.right div {
+    right: 20%;
+    left: initial;
+}
+
+.step.right img {
+    left: 30%;
+    transform: translateX(-50%);
+}

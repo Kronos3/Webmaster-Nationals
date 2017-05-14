@@ -1,79 +1,22 @@
-function next (e) {
-    var i = $('.__step.active').index();
-    if (i == $('.__step').length - 1 ) {
-        return;
-    }
-    i += 1;
-    $('.__step-label.hover').removeClass('hover');
-    $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
-    $('.__step.active').toggleClass ('active');
-    $($('.__step').get(i)).toggleClass('active');
-    $($('.__step').get(i)).children ('.__step-label').addClass('hover');
-    $('.content.active').toggleClass('active');
-    $('.section.active').toggleClass ('active');
-    $($('.content > .section').get (i - 1)).toggleClass ('active');
-    sleep(600).then(() => {
-        $('.__step-label.hover').removeClass('hover');
-    })
-}
-
-function ret (e) {
-    return;
-}
-
 function sleep (time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
 
-function prev (e) {
-    var i = $('.__step.active').index();
-    if (i == 0) {
-        return;
-    }
-    i -= 1;
-    $('.__step-label.hover').removeClass('hover');
-    $('.top').css('transform', 'translateY(' + (-100*i).toString() + '%)');
-    $('.__step.active').toggleClass ('active');
-    $($('.__step').get(i)).toggleClass('active');
-    $($('.__step').get(i)).children ('.__step-label').addClass('hover');
-    $('.content.active').toggleClass('active');
-    $('.section.active').toggleClass ('active');
-    $($('.content > .section').get (i - 1)).toggleClass ('active');
-    sleep(600).then(() => {
-        $('.__step-label.hover').removeClass('hover');
-    })
+if (!String.prototype.format) {
+  String.prototype.format = function() {
+    var args = arguments;
+    return this.replace(/{(\d+)}/g, function(match, number) { 
+      return typeof args[number] != 'undefined'
+        ? args[number]
+        : match
+      ;
+    });
+  };
 }
 
+var asset_tops = []
+
 $( document ).ready(function() {
-    for (var i=0; i != $('.timeline > .__step').length; i++) {
-        $('.timeline > .__step').get(i).addEventListener('click', function (e) {
-            var f = $(this).index();
-            $('.__step-label.hover').removeClass('hover');
-            $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
-            $('.__step.active').toggleClass ('active');
-            $($('.__step').get(f)).toggleClass('active');
-            $($('.__step').get(f)).children ('.__step-label').addClass('hover');
-            $('.content.active').toggleClass('active');
-            $('.section.active').toggleClass ('active');
-            $($('.content > .section').get (f - 1)).toggleClass ('active');
-            sleep(600).then(() => {
-                $('.__step-label.hover').removeClass('hover');
-            })
-        });
-        $('.timeline > .__step > .__step-label').get(i).addEventListener('click', function (e) {
-            var f = $(this).parent().index();
-            $('.__step-label.hover').removeClass('hover');
-            $('.top').css('transform', 'translateY(' + (-100*f).toString() + '%)');
-            $('.__step.active').toggleClass ('active');
-            $($('.__step').get(f)).toggleClass('active');
-            $($('.__step').get(f)).children ('.__step-label').addClass('hover');
-            $('.content.active').toggleClass('active');
-            $($('.content').get (f)).toggleClass ('active');
-            sleep(600).then(() => {
-                $('.__step-label.hover').removeClass('hover');
-            })
-        });
-    }
     for (var i = 0; i != $('#shapes-mask > svg').length; i++) {
         setup_pos ($('#shapes-mask > svg').get(i), (Math.random() * (-0.18 - 0.18) + 0.08).toFixed(4),(Math.random() * (-0.120 - 0.12) + 0.12).toFixed(4));
     }
@@ -98,19 +41,12 @@ $( document ).ready(function() {
             set_pos ($('#shapes-mask > svg').get(i), event.pageX, event.pageY);
         }
     }
+    
+    for (var i=0; i!=$('.asset').length; i++) {
+        asset_tops[i] = parseInt($($('.asset').get(i)).css('top'), 10);
+    }
 });
 
-
-$( document ).ready(function() {
-    $(".scroll").scrollsteps({
-        up: prev,
-        down: next,
-        left: ret,
-        right: ret,
-        transitionDuration: 400,
-        quietPeriodBetweenTwoScrollEvents: 200,
-    });
-});
 
 function set_pos (e, x, y) { // Use negative for inverse
     $(e).css("transform", "matrix(-1, 0, 0, -1, " + $(e).data ('xfactor') * x + " , " + $(e).data ('yfactor') * y + ")");
@@ -121,9 +57,47 @@ function setup_pos (e, x_scale, y_scale) {
     $(e).data ('yfactor', y_scale);
 }
 
-function add_active_world () {
-    $('.__step').addClass('active');
-    $('.content').addClass('active');
-    $('.section').addClass ('active');
-    $('.content > .section').addClass ('active');
+var step_colors = [
+    [119,108,104],
+    [161,148,129],
+    [138,131,198],
+    [255,255,255],
+]
+
+function pickHex(color1, color2, weight) {
+    var p = weight;
+    var w = p * 2 - 1;
+    var w1 = (w/1+1) / 2;
+    var w2 = 1 - w1;
+    var rgb = [Math.round(color1[0] * w1 + color2[0] * w2),
+        Math.round(color1[1] * w1 + color2[1] * w2),
+        Math.round(color1[2] * w1 + color2[2] * w2)];
+    return rgb;
 }
+
+$(window).scroll (function (e) {
+    var st = $(this).scrollTop();
+    
+    var step_ratio = st / $(window).height() + 1;
+    var prev_step = parseInt(step_ratio, 10);
+    if ((step_ratio - prev_step) > 0.5) {
+        $('.__step.active').toggleClass ('active');
+        $($('.__step').get(prev_step)).addClass('active');
+    }
+    if ((step_ratio - prev_step) < 0.5) {
+        $('.__step.active').toggleClass ('active');
+        $($('.__step').get(prev_step - 1)).addClass('active');
+    }
+    
+    var backcolor = pickHex (step_colors [prev_step], step_colors [prev_step - 1], step_ratio - prev_step);
+    $('body').css ('background', 'rgba({0}, {1}, {2}, 1)'.format (backcolor[0], backcolor[1], backcolor[2]));
+    
+    for (var i=0; i!=$('.asset').length; i++) {
+        if ( i == 0 ) {
+            $($('.asset').get(i)).css ('top', '{0}px'.format(asset_tops[i] + ($(window).height() * i) + (st * -1.3)));
+        }
+        else {
+            $($('.asset').get(i)).css ('top', '{0}px'.format(asset_tops[i] - (($(window).height() * (i - 1)) * (1.5 ^ (i - 1))) + (st * -1.3) + ($(window).height() * (i)) + ($(window).height() * (i) * 1.5 )) );
+        }
+    }
+});
