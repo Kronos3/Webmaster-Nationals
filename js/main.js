@@ -76,7 +76,9 @@ var step_colors = [
     '#507d83',
     '#EB8A6D',
     '#D8809C',
-    '#D8809C',
+    '#14C26A',
+    '#14C26A',
+    '#14C26A',
 ]
 
 function hexToRgb(hex) {
@@ -134,10 +136,10 @@ $(window).scroll (function (e) {
     try {
         var parent_top = parseInt($($('.asset').get(prev_step)).parent().offset().top, 10);
         $($('.asset').get(prev_step)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
+        var parent_top = parseInt($($('.asset').get(prev_step - 1)).parent().offset().top, 10);
+        $($('.asset').get(prev_step - 1)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
     }
     catch (e) {
         
     }
-    var parent_top = parseInt($($('.asset').get(prev_step - 1)).parent().offset().top, 10);
-    $($('.asset').get(prev_step - 1)).css ('top', '{0}%'.format(50 + ( (Math.pow ( (st - parent_top) / 12, 3)) / -60)  ));
 });
