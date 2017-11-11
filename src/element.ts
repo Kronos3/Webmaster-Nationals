@@ -16,8 +16,6 @@ export class ElementObject {
     }
     
     add (target: ElementObject) {
-        console.log(this.get());
-        console.log(target.get());
         this.get().appendChild (target.get());
     }
     
