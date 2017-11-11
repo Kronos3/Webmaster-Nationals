@@ -1,9 +1,11 @@
-class Animatable<T extends ElementObject> extends ElementObject {
+import { ElementObject } from './element';
+
+export class Animatable<T extends ElementObject> extends ElementObject {
     child: T;
     animations: Map<string, (el: ElementObject, ..._args: any[]) => void>;
     
     constructor (child: T) {
-        super (child.get()[0]);
+        super ($(child.get()));
         this.child = child;
         this.animations = new Map<string, (el: ElementObject, ..._args: any[]) => void>();
     }

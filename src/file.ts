@@ -1,4 +1,4 @@
-class TSFile {
+export class TSFile {
     path: string;
     private text: string;
     

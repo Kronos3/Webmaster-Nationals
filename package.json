@@ -13,6 +13,8 @@
   "author": "Andrei Tumbar",
   "license": "GPL-3.0",
   "devDependencies": {
-    "@types/jquery": "^3.2.16"
+    "@types/jquery": "^3.2.16",
+    "ts-loader": "^3.1.1",
+    "webpack": "^3.8.1"
   }
 }

@@ -1,4 +1,4 @@
-class TSFile {
+export class TSFile {
     constructor(path) {
         this.path = path;
         var rawFile = new XMLHttpRequest();

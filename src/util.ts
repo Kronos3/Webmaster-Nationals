@@ -1,12 +1,6 @@
-export {}
+/// <reference path="../include/util.d.ts" />
 
-declare global {
-    interface String {
-        format(..._args: any[]): string;
-    }
-}
-
-String.prototype.format = function (..._args: any[]) {
+String.prototype.format = function (..._args) {
     var args = _args;
     return this.replace(/{(\d+)}/g, (match, number) => {
         return typeof args[number] != 'undefined'
@@ -23,7 +17,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
     if (0 === b) return -1;
     a = +e || 0;
     Infinity === Math.abs(a) && (a = 0);
-    if (a >= b) return -;
+    if (a >= b) return -1;
     for (a = Math.max(0 <= a ? a : b - Math.abs(a), 0); a < b;) {
         if (a in c && c[a] === d) return a;
         a++

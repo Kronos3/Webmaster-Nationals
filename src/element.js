@@ -1,5 +1,5 @@
-abstract;
-class ElementObject {
+import './util';
+export class ElementObject {
     constructor(el, _class_str) {
         this.el = el;
         _class_str == null ? _class_str = "element-object" : _class_str = _class_str;
@@ -11,6 +11,8 @@ class ElementObject {
         target.add(this);
     }
     add(target) {
+        console.log(this.get());
+        console.log(target.get());
         this.get().appendChild(target.get());
     }
     get() {

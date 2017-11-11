@@ -1,4 +1,6 @@
-abstract class ElementObject {
+import './util';
+
+export class ElementObject {
     private el: JQuery;
     
     constructor(el: JQuery, _class_str?: string) {
@@ -14,6 +16,8 @@ abstract class ElementObject {
     }
     
     add (target: ElementObject) {
+        console.log(this.get());
+        console.log(target.get());
         this.get().appendChild (target.get());
     }
     

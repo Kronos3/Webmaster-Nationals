@@ -1,4 +1,7 @@
-class SVG extends ElementObject {
+import { ElementObject } from './element';
+import { TSFile } from './file';
+
+export class SVG extends ElementObject {
     file: TSFile;
     
     constructor (file: string) {

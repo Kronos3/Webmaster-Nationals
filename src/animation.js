@@ -1,6 +1,7 @@
-class Animatable extends ElementObject {
+import { ElementObject } from './element';
+export class Animatable extends ElementObject {
     constructor(child) {
-        super(child.get()[0]);
+        super($(child.get()));
         this.child = child;
         this.animations = new Map();
     }

@@ -1,7 +1,4 @@
-declare;
-global;
-{
-}
+/// <reference path="../include/util.d.ts" />
 String.prototype.format = function (..._args) {
     var args = _args;
     return this.replace(/{(\d+)}/g, (match, number) => {
@@ -19,7 +16,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
     a = +e || 0;
     Infinity === Math.abs(a) && (a = 0);
     if (a >= b)
-        return -;
+        return -1;
     for (a = Math.max(0 <= a ? a : b - Math.abs(a), 0); a < b;) {
         if (a in c && c[a] === d)
             return a;
