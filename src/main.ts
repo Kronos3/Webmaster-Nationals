@@ -1,7 +1,6 @@
 import { Animatable } from './animation';
 import { ElementObject } from './element';
 import { Section } from './section';
-import { SectionInner } from './section';
 
 class Main extends ElementObject {
     page_n: number;
@@ -44,6 +43,7 @@ interface obj {
 interface section {
     name: string;
     objects: obj[];
+    inner: boolean;
     next_to?:() => void;
     back_to?:() => void;
 }
@@ -56,7 +56,14 @@ interface website {
 function parse_website (obj: website) {
     var out: Main = new Main ();
     obj.sections.forEach(el => {
-        var SEC = new Section (el.name);
+        var SEC:ElementObject = new Section(el.name);
+        out.add_section(<Section>SEC);
+        var INNER:ElementObject;
+        if (el.inner) {
+            INNER = new ElementObject (null, "section-inner");
+            SEC.objadd ("inner", INNER);
+            SEC = INNER;
+        }
         if (el.objects != null) {
             el.objects.forEach(ob => {
                 var OBJECT = new Animatable(ob.obj);
@@ -69,7 +76,6 @@ function parse_website (obj: website) {
             });
         }
         
-        out.add_section(SEC);
     });
 }
 
@@ -77,12 +83,7 @@ var nationals_site:website = <website>{
     sections: [
         {
             name: "lander",
-            objects: [
-                {
-                    name: "inner",
-                    obj: new SectionInner (null, "section-inner")
-                }
-            ]
+            inner: true
         }
     ]
 }

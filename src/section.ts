@@ -3,7 +3,6 @@ import { ElementObject } from './element';
 import { SVG } from './svg';
 
 export class Section extends ElementObject {
-    private objects: Map<string, Animatable<any> | ElementObject>;
     name: string;
 
     /**
@@ -25,25 +24,6 @@ export class Section extends ElementObject {
         super($($.parseHTML("<div id=\"{0}\" class=\"section\"></div>".format(name))));
         this.next_to = next_to;
         this.back_to = back_to;
-        this.objects = new Map<string, Animatable<any> | ElementObject>();
     }
-
-    /**
-     * Searched for object_name in objects and returns it
-     * @param object_name The name of the object to search for
-     * @return The object in the map
-     */
-    objget(object_name: string): Animatable<any> | ElementObject {
-        return this.objects[object_name];
-    }
-
-    objadd(object_name: string, obj: Animatable<any> | ElementObject) {
-        this.add(obj);
-        this.objects[object_name] = obj;
-    }
-}
-
-export class SectionInner extends ElementObject {
-    
 }
 

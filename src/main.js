@@ -1,7 +1,6 @@
 import { Animatable } from './animation';
 import { ElementObject } from './element';
 import { Section } from './section';
-import { SectionInner } from './section';
 class Main extends ElementObject {
     constructor(scroll) {
         super(null, "main");
@@ -23,6 +22,13 @@ function parse_website(obj) {
     var out = new Main();
     obj.sections.forEach(el => {
         var SEC = new Section(el.name);
+        out.add_section(SEC);
+        var INNER;
+        if (el.inner) {
+            INNER = new ElementObject(null, "section-inner");
+            SEC.objadd("inner", INNER);
+            SEC = INNER;
+        }
         if (el.objects != null) {
             el.objects.forEach(ob => {
                 var OBJECT = new Animatable(ob.obj);
@@ -34,19 +40,13 @@ function parse_website(obj) {
                 SEC.objadd(ob.name, OBJECT);
             });
         }
-        out.add_section(SEC);
     });
 }
 var nationals_site = {
     sections: [
         {
             name: "lander",
-            objects: [
-                {
-                    name: "inner",
-                    obj: new SectionInner(null, "section-inner")
-                }
-            ]
+            inner: true
         }
     ]
 };
