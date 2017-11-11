@@ -45,3 +45,5 @@ class Section extends ElementObject {
         this.objects[object_name] = obj;
     }
 }
+
+//function (obj: )

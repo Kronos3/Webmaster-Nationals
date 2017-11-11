@@ -2,13 +2,9 @@ declare;
 global;
 {
 }
-String.prototype.format = function () {
-    var _args = [];
-    for (var _i = 0; _i < arguments.length; _i++) {
-        _args[_i - 0] = arguments[_i];
-    }
+String.prototype.format = function (..._args) {
     var args = _args;
-    return this.replace(/{(\d+)}/g, function (match, number) {
+    return this.replace(/{(\d+)}/g, (match, number) => {
         return typeof args[number] != 'undefined'
             ? args[number] : match;
     });
@@ -23,7 +19,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
     a = +e || 0;
     Infinity === Math.abs(a) && (a = 0);
     if (a >= b)
-        return -1;
+        return -;
     for (a = Math.max(0 <= a ? a : b - Math.abs(a), 0); a < b;) {
         if (a in c && c[a] === d)
             return a;
@@ -31,3 +27,4 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
     }
     return -1;
 });
+//# sourceMappingURL=util.js.map

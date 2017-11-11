@@ -1,27 +1,25 @@
-var TSFile = (function () {
-    function TSFile(path) {
-        var _this = this;
-        this.readonly = path;
+class TSFile {
+    constructor(path) {
         this.path = path;
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", this.path, false);
-        rawFile.onreadystatechange = function () {
+        rawFile.onreadystatechange = () => {
             if (rawFile.readyState === 4) {
                 if (rawFile.status === 200 || rawFile.status == 0) {
-                    _this.text = rawFile.responseText;
+                    this.text = rawFile.responseText;
                 }
             }
         };
         rawFile.send(null);
     }
-    TSFile.prototype.read = function () {
+    read() {
         return this.text;
-    };
-    TSFile.prototype.readlines = function () {
+    }
+    readlines() {
         return this.text.split("\n");
-    };
-    TSFile.prototype.readobject = function () {
+    }
+    readobject() {
         $.parseHTML(this.read());
-    };
-    return TSFile;
-})();
+    }
+}
+//# sourceMappingURL=file.js.map

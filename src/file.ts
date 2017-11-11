@@ -1,5 +1,5 @@
 class TSFile {
-    readonly path: string;
+    path: string;
     private text: string;
     
     constructor (path: string) {

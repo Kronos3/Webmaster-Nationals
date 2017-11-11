@@ -1,20 +1,20 @@
 abstract;
-var ElementObject = (function () {
-    function ElementObject(el, _class_str) {
+class ElementObject {
+    constructor(el, _class_str) {
         this.el = el;
         _class_str == null ? _class_str = "element-object" : _class_str = _class_str;
         if (el == null) {
             this.el = $($.parseHTML("<div class=\"{0}\"></div>".format(_class_str)));
         }
     }
-    ElementObject.prototype.addto = function (target) {
+    addto(target) {
         target.add(this);
-    };
-    ElementObject.prototype.add = function (target) {
+    }
+    add(target) {
         this.get().appendChild(target.get());
-    };
-    ElementObject.prototype.get = function () {
+    }
+    get() {
         return this.el[0];
-    };
-    return ElementObject;
-})();
+    }
+}
+//# sourceMappingURL=element.js.map

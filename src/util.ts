@@ -1,4 +1,4 @@
-export {};
+export {}
 
 declare global {
     interface String {
@@ -23,7 +23,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
     if (0 === b) return -1;
     a = +e || 0;
     Infinity === Math.abs(a) && (a = 0);
-    if (a >= b) return -1;
+    if (a >= b) return -;
     for (a = Math.max(0 <= a ? a : b - Math.abs(a), 0); a < b;) {
         if (a in c && c[a] === d) return a;
         a++
