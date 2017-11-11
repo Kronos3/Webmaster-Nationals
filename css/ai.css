@@ -1,0 +1,13 @@
+/* Stylesheet for Webmaster Nationals */
+
+html, body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+
+#lander {
+    position: relative;
+    height: 100vh;
+    background-color: #2e3440;
+}

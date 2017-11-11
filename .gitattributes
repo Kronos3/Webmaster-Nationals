@@ -2,3 +2,4 @@ bower_components/* linguist-vendored
 css/animate.css linguist-vendored
 /mongoose.c linguist-vendored
 /mongoose.h linguist-vendored
+*min.js
