@@ -1,6 +1,7 @@
 import { Animatable } from './animation';
 import { ElementObject } from './element';
 import { Section } from './section';
+import { SVG } from './svg';
 
 class Main extends ElementObject {
     page_n: number;
@@ -37,7 +38,7 @@ interface animation_callback {
 interface obj {
     name: string;
     obj: ElementObject;
-    animations: animation_callback[];
+    animations?: animation_callback[];
 }
 
 interface section {
@@ -83,7 +84,13 @@ var nationals_site:website = <website>{
     sections: [
         {
             name: "lander",
-            inner: true
+            inner: true,
+            objects: [
+                {
+                    name: "lander-svg",
+                    obj: new SVG("resources/lander-temp.svg")
+                }
+            ]
         }
     ]
 }

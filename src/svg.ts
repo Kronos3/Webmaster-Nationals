@@ -6,7 +6,7 @@ export class SVG extends ElementObject {
     
     constructor (file: string) {
         let temp_file = new TSFile(file);
-        super($($.parseHTML(temp_file.read())), "SVG");
+        super($($.parseHTML(temp_file.read())));
         this.file = temp_file;
     }
 }
