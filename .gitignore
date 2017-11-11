@@ -1,3 +1,5 @@
 /template
 *.blend1
 node_modules/*
+*.js
+!bundle.js
