@@ -3,7 +3,7 @@ import './util';
 export class ElementObject {
     private el: JQuery;
     private children: Map<string, ElementObject>;
-    static objnum: number = 0;
+    objnum: number;
     
     constructor(el: JQuery, _class_str?: string) {
         this.el = el;
@@ -12,6 +12,7 @@ export class ElementObject {
             this.el = $($.parseHTML("<div class=\"{0}\"></div>".format(_class_str)));
         }
         this.children = new Map<string, ElementObject>();
+        this.objnum = 0;
     }
     
     addto (target: ElementObject) {
@@ -19,8 +20,8 @@ export class ElementObject {
     }
     
     add (target: ElementObject) {
-        ElementObject.objnum++;
-        this.objadd ("{0}".format(ElementObject.objnum), target);
+        this.objnum++;
+        this.objadd("{0}".format(this.objnum), target);
     }
     
     get(): HTMLElement {

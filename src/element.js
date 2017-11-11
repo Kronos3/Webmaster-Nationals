@@ -7,13 +7,14 @@ export class ElementObject {
             this.el = $($.parseHTML("<div class=\"{0}\"></div>".format(_class_str)));
         }
         this.children = new Map();
+        this.objnum = 0;
     }
     addto(target) {
         target.add(this);
     }
     add(target) {
-        ElementObject.objnum++;
-        this.objadd("{0}".format(ElementObject.objnum), target);
+        this.objnum++;
+        this.objadd("{0}".format(this.objnum), target);
     }
     get() {
         return this.el[0];
@@ -31,5 +32,4 @@ export class ElementObject {
         this.children[object_name] = obj;
     }
 }
-ElementObject.objnum = 0;
 //# sourceMappingURL=element.js.map
