@@ -1,6 +1,6 @@
 String.prototype.format = function (..._args) {
     var args = _args;
-    return this.replace(/{(\d+)}/g, (match, number) => {
+    return this.replace(/{(\d+)}/g, function (match, number) {
         return typeof args[number] != 'undefined'
             ? args[number] : match;
     });
@@ -80,26 +80,34 @@ class ElementObject {
     get () {
         return this.element[0];
     }
+    
+    child (filter) {
+        return ElementObject.new_wrap ($($(this.get()).children(filter).prevObject[0]));
+    }
 }
 
 class Logo extends ElementObject {
-    constructor (path) {
+    constructor (path, modifier) {
         var _file = new JSFile (path);
         super (_file.read());
         this.addto (document.body);
+        this.modifier = modifier;
         this.update_load (0);
+        if (this.modifier == undefined) {
+            this.modifier = '';
+        }
     }
     
     get_blue_mask () {
-        return ElementObject.new_wrap ($("#logo-blue-mask"));
+        return ElementObject.new_wrap($("#logo{0}-blue-mask".format (this.modifier)));
     }
     
     get_grey_mask () {
-        return ElementObject.new_wrap ($("#logo-grey-mask"));
+        return ElementObject.new_wrap($("#logo{0}-grey-mask".format (this.modifier)));
     }
     
     update_load (percentage) {
-        this.get_blue_mask ().element.css ("clip-path", "polygon({0}% 0, {0}% 100%, 0 100%, 0 0)".format(percentage));
+        this.get_blue_mask().element.css ("clip-path", "polygon({0}% 0, {0}% 100%, 0 100%, 0 0)".format(percentage));
     }
 }
 
@@ -128,7 +136,7 @@ Image.prototype.load = function (url, parent) {
 class Preload {
     constructor (preload_ar, end_callback) {
         this.preload = preload_ar;
-        this.logo = new Logo ('../resources/logo.svg');
+        this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
         
         this.total_size = 0;
@@ -140,6 +148,13 @@ class Preload {
     
     start () {
         var _this = this;
+        if (this.preload.length == 0) {
+            this.end ();
+            this.loaded_size = 1;
+            this.total_size = 1;
+            this.render ();
+            return;
+        }
         this.preload.forEach (function(file) {
             _this.add_file_size (file, function (size) {
                 _this.total_size += size;
@@ -190,6 +205,8 @@ class Preload {
 var preload;
 
 $(document).ready (function (){
-    preload = new Preload (["resources/yeshi-kangrang-338592.jpg"]);
+    preload = new Preload ([], function () {
+        $(preload.logo.get()).addClass ("loaded");
+    });
     preload.start ();
 });
