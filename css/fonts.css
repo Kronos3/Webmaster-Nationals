@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../resources/fonts/proximanova-light.7a9cd579.eot);
+    src: url(../resources/fonts/proximanova-light.7a9cd579.eot?#iefix) format("embedded-opentype"),url(../resources/fonts/proximanova-light.f0788007.woff2) format("woff2"),url(../resources/fonts/proximanova-light.e3097550.woff) format("woff"),url(../resources/fonts/proximanova-light.f3da5af0.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../resources/fonts/proximanova-semibold.ee373146.eot);
+    src: url(../resources/fonts/proximanova-semibold.ee373146.eot?#iefix) format("embedded-opentype"),url(../resources/fonts/proximanova-semibold.4d6dc7d5.woff2) format("woff2"),url(../resources/fonts/proximanova-semibold.a0bc60ed.woff) format("woff"),url(../resources/fonts/proximanova-semibold.ec46605a.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 400;
+    src: url(../resources/fonts/GothamPro-Light.5679686c.eot) format("eot"),url(../resources/fonts/GothamPro-Light.aab7d221.otf) format("opentype"),url(../resources/fonts/GothamPro-Light.1d125953.woff) format("woff"),url(../resources/fonts/GothamPro-Light.1b1d8c9e.ttf) format("truetype"),url(../resources/fonts/images/GothamPro-Light.svg#GothamPro-Light) format("svg")
+}
+
+@font-face {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../resources/fonts/GothamPro-Medium.99e6bd94.eot) format("eot"),url(../resources/fonts/GothamPro-Medium.dd3d9ca5.otf) format("opentype"),url(../resources/fonts/GothamPro-Medium.e26f778a.woff) format("woff"),url(../resources/fonts/GothamPro-Medium.be1f6965.ttf) format("truetype"),url(../resources/fonts/images/GothamPro-Medium.svg#GothamPro-Medium) format("svg")
+}
+
+@font-face {
+    font-family: Gotham;
+    font-style: normal;
+    font-weight: 700;
+    src: url(../resources/fonts/GothamPro-Bold.f5f5a498.eot) format("eot"),url(../resources/fonts/GothamPro-Bold.3f9c5a2b.otf) format("opentype"),url(../resources/fonts/GothamPro-Bold.fa49a77f.woff) format("woff"),url(../resources/fonts/GothamPro-Bold.a30a1d45.ttf) format("truetype"),url(../resources/fonts/images/GothamPro-Bold.svg#GothamPro-Bold) format("svg")
+}
+
+@font-face {
+    font-family: Stem;
+    font-style: normal;
+    font-weight: 500;
+    src: url(../resources/fonts/Stem-Medium.c127b532.eot?#iefix) format("embedded-opentype"),url(../resources/fonts/Stem-Medium.885b0cf8.woff) format("woff"),url(../resources/fonts/Stem-Medium.85968e40.ttf) format("truetype"),url(../resources/fonts/images/Stem-Medium.svg#Stem-Medium) format("svg")
+}
