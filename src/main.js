@@ -140,7 +140,6 @@ class Preload {
     
     start () {
         var _this = this;
-        console.log (this.preload);
         this.preload.forEach (function(file) {
             _this.add_file_size (file, function (size) {
                 _this.total_size += size;
@@ -180,10 +179,17 @@ class Preload {
     
     render () {
         this.logo.update_load (this.loaded_size / this.total_size * 100);
+        if (this.loaded_size >= this.total_size) {
+            if (this.end != undefined) {
+                this.end ();
+            }
+        }
     }
 }
 
+var preload;
+
 $(document).ready (function (){
-    var preload = new Preload (["resources/yeshi-kangrang-338592.jpg"]);
+    preload = new Preload (["resources/yeshi-kangrang-338592.jpg"]);
     preload.start ();
 });
