@@ -36,11 +36,11 @@ class JSFile {
         }
         rawFile.send(null);
     }
-    
+
     read () {
         return this.text;
     }
-    
+
     readlines () {
         return this.text.split ("\n");
     }
@@ -52,35 +52,35 @@ class ElementObject {
             this.element = $($.parseHTML (_str))
         }
     }
-    
+
     static new_with_class (_str, _class) {
         return new ElementObject ("<div class=\"{0}\">{1}</div>".format (_class, _str));
     }
-    
+
     static new_wrap (el) {
         var out = new ElementObject ('');
         out.element = el;
         return out;
     }
-    
+
     add (target) {
         if (target instanceof ElementObject) {
             target = target.get();
         }
         this.get().appendChild (target);
     }
-    
+
     addto (target) {
         if (target instanceof ElementObject) {
             target = target.get();
         }
         target.appendChild (this.get());
     }
-    
+
     get () {
         return this.element[0];
     }
-    
+
     child (filter) {
         return ElementObject.new_wrap ($($(this.get()).children(filter).prevObject[0]));
     }
@@ -97,15 +97,15 @@ class Logo extends ElementObject {
             this.modifier = '';
         }
     }
-    
+
     get_blue_mask () {
         return ElementObject.new_wrap($("#logo{0}-blue-mask".format (this.modifier)));
     }
-    
+
     get_grey_mask () {
         return ElementObject.new_wrap($("#logo{0}-grey-mask".format (this.modifier)));
     }
-    
+
     update_load (percentage) {
         this.get_blue_mask().element.css ("clip-path", "polygon({0}% 0, {0}% 100%, 0 100%, 0 0)".format(percentage));
     }
@@ -120,7 +120,7 @@ Image.prototype.load = function (url, parent) {
         var blob = new Blob([this.response]);
         thisImg.src = window.URL.createObjectURL(blob);
     };
-    
+
     xmlHTTP.onprogress = function(e) {
         var _new =  e.loaded - thisImg.already;
         thisImg.already = e.loaded;
@@ -138,14 +138,14 @@ class Preload {
         this.preload = preload_ar;
         this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
-        
+
         this.total_size = 0;
         this.size_checked = 0;
         this.loaded_size = 0;
-        
+
         this.called_load = false;
     }
-    
+
     start () {
         var _this = this;
         if (this.preload.length == 0) {
@@ -168,13 +168,13 @@ class Preload {
             });
         });
     }
-    
+
     add_file_size (url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open("HEAD", url, true);
-        
+
         var _this = this
-        
+
         xhr.onreadystatechange = function() {
             if (this.readyState == this.DONE) {
                 callback(parseInt(xhr.getResponseHeader("Content-Length")));
@@ -182,7 +182,7 @@ class Preload {
         };
         xhr.send();
     }
-    
+
     load (url) {
         var img = new Image();
         var _this = this;
@@ -191,7 +191,7 @@ class Preload {
             _this.render ();
         });
     }
-    
+
     render () {
         this.logo.update_load (this.loaded_size / this.total_size * 100);
         if (this.loaded_size >= this.total_size) {
@@ -205,8 +205,8 @@ class Preload {
 var preload;
 
 $(document).ready (function (){
-    preload = new Preload ([], function () {
         $(preload.logo.get()).addClass ("loaded");
+        preload = new Preload ([], function () {
     });
     preload.start ();
 });
