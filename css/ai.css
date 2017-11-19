@@ -1,4 +1,4 @@
-@import fonts.css;
+@import "fonts.css";
 
 body, html {
   position: relative;
@@ -36,3 +36,87 @@ body, html {
 .content.loaded {
   display: block;
 }
+
+.site-grid .line,.site-grid:after,.site-grid:before {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 100vh;
+  transition: background-color .5s;
+  background-color: rgba(0,0,0,.05);
+  content: "";
+  z-index: 999;
+  pointer-events: none
+}
+
+.site-grid .line, .site-grid:after, .site-grid:before {
+  background-color: hsla(0,0%,100%,.1)
+}
+
+.site-grid .line--h {
+  display: none;
+  top: auto;
+  bottom: 42px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: hsla(0,0%,100%,0)
+}
+
+@media (min-width: 960px) {
+  .site-grid .line--h {
+      display:block
+  }
+}
+
+._contrast .site-grid .line--h {
+  background-color: hsla(0,0%,100%,.1)
+}
+
+.site-grid .line-1 {
+  left: 16.66667%
+}
+
+.site-grid .line-2 {
+  left: 33.33333%
+}
+
+.site-grid .line-3 {
+  left: 50%
+}
+
+.site-grid .line-4 {
+  left: 66.66667%
+}
+
+.site-grid .line-5 {
+  left: 83.33333%
+}
+
+.site-grid:before {
+  left: 16px
+}
+
+@media (min-width: 1470px) {
+  .site-grid:before {
+      left:40px
+  }
+}
+
+.site-grid:after {
+  right: 16px
+}
+
+@media (min-width: 1470px) {
+  .site-grid:after {
+      right:40px
+  }
+}
+
+@media (max-width: 1199px) {
+  .hide-l {
+      display:none
+  }
+}
+

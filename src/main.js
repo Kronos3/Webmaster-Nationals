@@ -205,8 +205,9 @@ class Preload {
 var preload;
 
 $(document).ready (function (){
+    preload = new Preload ([], function () {
         $(preload.logo.get()).addClass ("loaded");
-        preload = new Preload ([], function () {
+        $(".content").addClass ("loaded");
     });
     preload.start ();
 });
