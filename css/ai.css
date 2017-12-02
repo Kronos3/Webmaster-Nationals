@@ -8,6 +8,7 @@ body, html {
   overflow: hidden;
   font-family: Proxima Nova,sans-serif;
   font-weight: 400;
+  counter-reset: _slideshow;
 }
 
 @keyframes logo-loaded {
@@ -152,10 +153,6 @@ body, html {
   }
 }
 
-.slideshow {
-  
-}
-
 .landing-animation {
   background: rgba(0, 0, 0, 0.35);
   height: 100%;
@@ -271,7 +268,7 @@ li.active > .timeline-selection {
 
 .long-arrow:after {
   content: '';
-  top: 44px;
+  top: 43px;
   left: calc(50% - 3px);
   border-color: #fff;
   border-width: 1px;
@@ -290,4 +287,56 @@ li.active > .timeline-selection {
 
 .down-arrow:hover {
   cursor: pointer;
+}
+
+.slideshow {
+  right: 16.66667%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slideshow > ol {
+  list-style: none;
+}
+
+.slideshow > ol > li {
+  width: calc(100vw / 5);
+  height: 175px;
+  border-width: 2px;
+  border-color: #fff;
+  border-style: solid;
+  border-bottom-style: none;
+  position: relative;
+}
+
+.slideshow > ol > li:last-child {
+  border-bottom-style: solid;
+}
+
+.slideshow > ol > li > a:before {
+  position: relative;
+  top: 21px;
+  margin-right: 1rem;
+  float: left;
+  font-family: Gotham,sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  content: "0" counter(_slideshow);
+  counter-increment: _slideshow;
+  color: #fff;
+}
+
+.slideshow > ol > li > a > span {
+  font-family: Gotham,sans-serif;
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0;
+  top: 50%;
+  left: 40%;
+  transform: translateY(-50%);
+  font-weight: 500;
+  position: absolute;
+  max-width: calc(100% / 3);
 }
