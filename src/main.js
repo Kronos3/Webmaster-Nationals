@@ -205,7 +205,7 @@ class Preload {
 var preload;
 
 $(document).ready (function (){
-    preload = new Preload ([], function () {
+    preload = new Preload (["/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg"], function () {
         $(preload.logo.get()).addClass ("loaded");
         $(".content").addClass ("loaded");
     });
