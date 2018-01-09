@@ -206,15 +206,17 @@ function timer_loop (betweenMS, callback, max_loops, _while_callback, iter) {
   if (iter == undefined) {
     iter = 0;
   }
-
+  
   if (max_loops == undefined) {
     max_loops = -1;
   }
+  
   if (_while_callback == undefined) {
     _while_callback = function (){return true};
   }
-
+  console.log ("max_loops: " + max_loops);
   if (iter != max_loops && _while_callback ()) {
+    
     setTimeout (callback (), betweenMS);
     timer_loop (betweenMS, callback, max_loops, _while_callback, ++iter);
   }
@@ -225,25 +227,23 @@ class Slideshow extends ElementObject {
     super ('');
     this.element = el;
   }
-
+  
   start () {
     var _this = this;
     var curr = 0;
     var len = this.child("ol").get().getElementsByTagName ("li").length
-    timer_loop (3000, function () {
+    setInterval (function () {
       curr = ++curr % len;
-      _this.child ("#slideshow-hover").element.css ("top", "calc({0}00%/{1});".format (curr, len));
-    });
+      $("#slideshow-hover").css ("top", "calc({0}00%/{1})".format (curr, len));
+    }, 3000);
   }
-
-
 }
 
 var preload;
 var slideshow;
 
 $(document).ready (function (){
-    preload = new Preload (["/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg", "/resources/yeshi-kangrang-338592.jpg"], function () {
+    preload = new Preload ([], function () {
         $(preload.logo.get()).addClass ("loaded");
         $(".content").addClass ("loaded");
     });

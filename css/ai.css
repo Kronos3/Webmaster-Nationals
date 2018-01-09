@@ -298,6 +298,7 @@ li.active > .timeline-selection {
 
 .slideshow > #slideshow-hover {
   position: absolute;
+  top: 0;
   left: 0;
   width: calc(100% - 4px);
   height: 175px;
