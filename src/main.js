@@ -1,15 +1,15 @@
 String.prototype.format = function (..._args) {
-    var args = _args;
+    let args = _args;
     return this.replace(/{(\d+)}/g, function (match, number) {
-        return typeof args[number] != 'undefined'
+        return typeof args[number] !== 'undefined'
             ? args[number] : match;
     });
-}
+};
 
 Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
-    var a;
+    let a;
     if (null == this) throw new TypeError('"this" is null or not defined');
-    var c = Object(this),
+    let c = Object(this),
         b = c.length >>> 0;
     if (0 === b) return -1;
     a = +e || 0;
@@ -25,15 +25,15 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 class JSFile {
     constructor (path) {
         this.path = path;
-        var rawFile = new XMLHttpRequest();
+        let rawFile = new XMLHttpRequest();
         rawFile.open("GET", this.path, false);
         rawFile.onreadystatechange = () => {
             if (rawFile.readyState === 4) {
-                if (rawFile.status === 200 || rawFile.status == 0) {
+                if (rawFile.status === 200 || rawFile.status === 0) {
                     this.text = rawFile.responseText;
                 }
             }
-        }
+        };
         rawFile.send(null);
     }
 
@@ -48,7 +48,7 @@ class JSFile {
 
 class ElementObject {
     constructor (_str) {
-        if (_str != '') {
+        if (_str !== '') {
             this.element = $($.parseHTML (_str))
         }
     }
@@ -58,7 +58,7 @@ class ElementObject {
     }
 
     static new_wrap (el) {
-        var out = new ElementObject ('');
+        let out = new ElementObject ('');
         out.element = el;
         return out;
     }
@@ -88,12 +88,12 @@ class ElementObject {
 
 class Logo extends ElementObject {
     constructor (path, modifier) {
-        var _file = new JSFile (path);
+        let _file = new JSFile (path);
         super (_file.read());
         this.addto (document.body);
         this.modifier = modifier;
         this.update_load (0);
-        if (this.modifier == undefined) {
+        if (this.modifier === undefined) {
             this.modifier = '';
         }
     }
@@ -112,17 +112,17 @@ class Logo extends ElementObject {
 }
 
 Image.prototype.load = function (url, parent) {
-    var thisImg = this;
-    var xmlHTTP = new XMLHttpRequest();
+    let thisImg = this;
+    let xmlHTTP = new XMLHttpRequest();
     xmlHTTP.open('GET', url,true);
     xmlHTTP.responseType = 'arraybuffer';
     xmlHTTP.onload = function(e) {
-        var blob = new Blob([this.response]);
+        let blob = new Blob([this.response]);
         thisImg.src = window.URL.createObjectURL(blob);
     };
 
     xmlHTTP.onprogress = function(e) {
-        var _new =  e.loaded - thisImg.already;
+        let _new =  e.loaded - thisImg.already;
         thisImg.already = e.loaded;
         parent(_new);
     };
@@ -147,8 +147,8 @@ class Preload {
     }
 
     start () {
-        var _this = this;
-        if (this.preload.length == 0) {
+        let _this = this;
+        if (this.preload.length === 0) {
             this.end ();
             this.loaded_size = 1;
             this.total_size = 1;
@@ -170,13 +170,12 @@ class Preload {
     }
 
     add_file_size (url, callback) {
-        var xhr = new XMLHttpRequest();
+        let xhr = new XMLHttpRequest();
         xhr.open("HEAD", url, true);
 
-        var _this = this
-
+        let _this = this;
         xhr.onreadystatechange = function() {
-            if (this.readyState == this.DONE) {
+            if (this.readyState === this.DONE) {
                 callback(parseInt(xhr.getResponseHeader("Content-Length")));
             }
         };
@@ -184,8 +183,8 @@ class Preload {
     }
 
     load (url) {
-        var img = new Image();
-        var _this = this;
+        let img = new Image();
+        let _this = this;
         img.load (url, function (toadd){
             _this.loaded_size += toadd;
             _this.render ();
@@ -195,48 +194,28 @@ class Preload {
     render () {
         this.logo.update_load (this.loaded_size / this.total_size * 100);
         if (this.loaded_size >= this.total_size) {
-            if (this.end != undefined) {
+            if (this.end !== undefined) {
                 this.end ();
             }
         }
     }
 }
 
-function timer_loop (betweenMS, callback, max_loops, _while_callback, iter) {
-  if (iter == undefined) {
-    iter = 0;
-  }
-  
-  if (max_loops == undefined) {
-    max_loops = -1;
-  }
-  
-  if (_while_callback == undefined) {
-    _while_callback = function (){return true};
-  }
-  console.log ("max_loops: " + max_loops);
-  if (iter != max_loops && _while_callback ()) {
-    
-    setTimeout (callback (), betweenMS);
-    timer_loop (betweenMS, callback, max_loops, _while_callback, ++iter);
-  }
-}
-
 class Slideshow extends ElementObject {
-  constructor (el) {
-    super ('');
-    this.element = el;
-  }
-  
-  start () {
-    var _this = this;
-    var curr = 0;
-    var len = this.child("ol").get().getElementsByTagName ("li").length
-    setInterval (function () {
-      curr = ++curr % len;
-      $("#slideshow-hover").css ("top", "calc({0}00%/{1})".format (curr, len));
-    }, 3000);
-  }
+    constructor (el) {
+        super ('');
+        this.element = el;
+    }
+    
+    start () {
+        var _this = this;
+        var curr = 0;
+        var len = this.child("ol").get().getElementsByTagName ("li").length
+        setInterval (function () {
+            curr = ++curr % len;
+            $("#slideshow-hover").css ("top", "calc({0}00%/{1})".format (curr, len));
+        }, 3000);
+    }
 }
 
 var preload;

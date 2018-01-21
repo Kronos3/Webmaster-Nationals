@@ -4,8 +4,7 @@ body, html {
   position: relative;
   display: block;
   margin: 0;
-  min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: Proxima Nova,sans-serif;
   font-weight: 400;
   counter-reset: _slideshow;
@@ -19,7 +18,7 @@ body, html {
     transform: translate(-50%, -50%);
   }
   100%  {
-    left: 16px;
+    left: 24px;
     top: 16px;
     height: 35px;
     transform: translate(0, 0);
@@ -55,7 +54,7 @@ body, html {
 }
 
 #logo-name.loaded {
-  left: 16px;
+  left: 24px;
   top: 16px;
   height: 35px;
   transform: translate(0, 0);
@@ -64,6 +63,8 @@ body, html {
 
 .content {
   display: none;
+  position: relative;
+  height: 100vh;
 }
 
 .content.loaded {
@@ -72,7 +73,7 @@ body, html {
 
 .site-grid .line,.site-grid:after,.site-grid:before {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 1px;
   height: 100vh;
@@ -128,7 +129,7 @@ body, html {
 }
 
 .site-grid:before {
-  left: 16px;
+  left: 24px;
 }
 
 @media (min-width: 1470px) {
@@ -138,7 +139,7 @@ body, html {
 }
 
 .site-grid:after {
-  right: 16px;
+  right: 24px;
 }
 
 @media (min-width: 1470px) {
@@ -161,10 +162,11 @@ body, html {
 }
 
 .timeline {
-  position: absolute;
+  position: fixed;
   display: block;
-  padding-left: 16px;
-  top: 50%;
+  padding-left: 24px;
+  z-index: 6;
+  top: 50vh;
   transform: translateY(-50%);
 }
 
