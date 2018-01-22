@@ -210,10 +210,10 @@ class Slideshow extends ElementObject {
     start () {
         var _this = this;
         var curr = 0;
-        var len = this.child("ol").get().getElementsByTagName ("li").length
-        setInterval (function () {
+        var len = this.child("ol").get().getElementsByTagName("li").length
+        setInterval(function () {
             curr = ++curr % len;
-            $("#slideshow-hover").css ("top", "calc({0}00%/{1})".format (curr, len));
+            $("#slideshow-hover").css("top", "calc({0}00%/{1})".format(curr, len));
         }, 3000);
     }
 }

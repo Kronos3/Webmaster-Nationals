@@ -8,6 +8,7 @@ body, html {
   font-family: Proxima Nova,sans-serif;
   font-weight: 400;
   counter-reset: _slideshow;
+  color: #fff;
 }
 
 @keyframes logo-loaded {
@@ -154,7 +155,7 @@ body, html {
   }
 }
 
-.landing-animation {
+.animation-wrapper {
   background: rgba(0, 0, 0, 0.35);
   height: 100%;
   width: 100%;
@@ -177,9 +178,8 @@ body, html {
 }
 
 .timeline li {
-  margin: 0;
   padding-left: 25px;
-  margin-top: 14px;
+  margin: 14px 0 0 0;
   position: relative;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -317,7 +317,8 @@ li.active > .timeline-selection {
 }
 
 .slideshow > ol > li {
-  width: calc(100vw / 5);
+  width: calc(100vw / 3);
+  max-width: 288px;
   height: 175px;
   border-width: 2px;
   border-color: rgba(255,255,255,.45);
@@ -357,4 +358,102 @@ li.active > .timeline-selection {
   font-weight: 500;
   position: absolute;
   max-width: calc(100% / 3);
+}
+
+@media (max-width: 1000px) {
+
+}
+
+.header-text {
+  font-family: Gotham,sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.info-text {
+  font-family: Gotham,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.info {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  
+  left: 16.66667%;
+  width: 66.66667%
+}
+
+.info > div {
+  display: inline-flex;
+  position:relative;
+  width: 50%;
+  
+}
+
+.vertical.info {
+  display: block;
+  top: 20%;
+}
+
+.vertical.info > .header-text {
+  margin-bottom: 30px;
+}
+
+.keyboard {
+  position: absolute;
+  display: flex;
+  bottom: 42px;
+  left: 16.66667%;
+}
+
+.keyboard > div {
+  position: relative;
+  border: #fff 1px solid;
+  width: 40px;
+  display: inline-flex;
+  height: 40px;
+}
+
+.keyboard > div.left {
+  border-right-width: 0;
+}
+
+.keyboard > p {
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin-left: 16px;
+  font-family: Gotham,sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.keyboard > div.right::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  left: 42%;
+  display: block;
+  position: absolute;
+}
+
+.keyboard > div.left::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateZ(45deg);
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  left: 58%;
+  display: block;
+  position: absolute;
 }
