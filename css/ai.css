@@ -432,28 +432,24 @@ li.active > .timeline-selection {
   text-transform: uppercase;
 }
 
-.keyboard > div.right::before {
+.keyboard > div::before {
   content: '';
   width: 6px;
   height: 6px;
   top: 50%;
   transform: translate(-50%, -50%) rotateZ(45deg);
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  left: 42%;
   display: block;
   position: absolute;
 }
 
+.keyboard > div.right::before {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  left: 42%;
+}
+
 .keyboard > div.left::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  top: 50%;
-  transform: translate(-50%, -50%) rotateZ(45deg);
   border-bottom: 1px solid #fff;
   border-left: 1px solid #fff;
   left: 58%;
-  display: block;
-  position: absolute;
 }
