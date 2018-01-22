@@ -453,3 +453,24 @@ li.active > .timeline-selection {
   border-left: 1px solid #fff;
   left: 58%;
 }
+
+.keyboard > div::after {
+  transition: width .45s cubic-bezier(.4,0,.2,1) 75ms,-webkit-transform .45s cubic-bezier(.4,0,.2,1) 75ms;
+  width: 0px;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+.keyboard > div.left::after {
+  right: 0;
+}
+
+.keyboard > div.rigt::after {
+  left: 0;
+}
+
+.keyboard > div:hover::after {
+  width: 100%;
+}
