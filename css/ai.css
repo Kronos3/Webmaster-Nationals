@@ -9,13 +9,14 @@ body, html {
   font-weight: 400;
   counter-reset: _slideshow;
   color: #fff;
+  min-height: 100vh;
 }
 
 @keyframes logo-loaded {
   0%  {
     height: 35px;
     left: 50%;
-    top: 50%;
+    top: 50vh;
     transform: translate(-50%, -50%);
   }
   100%  {
@@ -46,12 +47,14 @@ body, html {
 #logo-name {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 50vh;
   transform: translate(-50%, -50%);
   width: auto;
   height: 35px;
   animation: logo-loaded ease 1s;
   animation-play-state: paused;
+  z-index: 7;
+  display: block;
 }
 
 #logo-name.loaded {
@@ -192,7 +195,6 @@ body, html {
 }
 
 .timeline > ul > li > span {
-  
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
@@ -384,18 +386,28 @@ li.active > .timeline-selection {
 
 .info {
   position: absolute;
-  top: 40%;
   display: flex;
   
   left: 16.66667%;
-  width: 66.66667%
+  width: 66.66667%;
+  transition: left,top 800ms ease-in-out;
 }
 
-.info > div {
+.info.first {
+  top: 40%;
+}
+
+.info.first  > div {
   display: inline-flex;
   position:relative;
   width: 50%;
-  
+}
+
+.info.second {
+  display: block;
+  position:relative;
+  width: 33%;
+  top: 20%;
 }
 
 .vertical.info {
@@ -420,6 +432,8 @@ li.active > .timeline-selection {
   width: 40px;
   display: inline-flex;
   height: 40px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
 }
 
 .keyboard > div.left {
@@ -500,6 +514,12 @@ li.active > .timeline-selection {
   margin-right: 32px;
 }
 
+
+.timeline-bottom > ul > li > span {
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
 .timeline-bottom > ul > li > .timeline-text {
   position: absolute;
   top: 22px;
@@ -511,4 +531,21 @@ li.active > .timeline-selection {
 .timeline-bottom .timeline-selection {
   left: 50% !important;
   transform: translate(-50%, -50%);
+}
+
+.timeline-bottom li.active {
+  color: #fff;
+}
+
+.timeline-bottom li.active > span {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 5px #fff;
+}
+
+.disabled {
+  pointer-events: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  opacity: 0.6;
+  cursor: default;
 }

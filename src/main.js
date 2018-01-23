@@ -134,8 +134,8 @@ Image.prototype.load = function (url, parent) {
 };
 
 class Preload {
-    constructor (preload_ar, end_callback) {
-        this.preload = preload_ar;
+    constructor (preload_ar_ar, end_callback) {
+        this.preload_ar = preload_ar_ar;
         this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
 
@@ -144,40 +144,43 @@ class Preload {
         this.loaded_size = 0;
 
         this.called_load = false;
+        this.loads = [];
+        
     }
 
     start () {
         let _this = this;
-        if (this.preload.length === 0) {
+        if (this.preload_ar.length === 0) {
             this.end ();
             this.loaded_size = 1;
             this.total_size = 1;
             this.render ();
             return;
         }
-        this.preload.forEach (function(file) {
-            _this.add_file_size (file, function (size) {
-                _this.total_size += size;
-                _this.size_checked++;
-                if (_this.size_checked >= _this.preload.length && !_this.called_load) {
-                    _this.called_load = true;
-                    _this.preload.forEach (function(file) {
-                        _this.load (file);
-                    });
-                }
+        this.preload_ar.forEach (function (ar) {
+            let out_arr = [];
+            ar.forEach (function(file) {
+                _this.add_file_size (file, function (size) {
+                    _this.total_size += size;
+                    _this.size_checked++;
+                    if (_this.size_checked >= ar.length && !_this.called_load) {
+                        _this.called_load = true;
+                        ar.forEach (function(file) {
+                            out_arr.push (_this.load (file));
+                        });
+                    }
+                });
             });
+            _this.loads.push (out_arr);
         });
     }
 
     add_file_size (url, callback) {
         let xhr = new XMLHttpRequest();
         xhr.open("HEAD", url, true);
-
-        let _this = this;
         xhr.onreadystatechange = function() {
-            if (this.readyState === this.DONE) {
+            if (this.readyState === this.DONE)
                 callback(parseInt(xhr.getResponseHeader("Content-Length")));
-            }
         };
         xhr.send();
     }
@@ -185,19 +188,17 @@ class Preload {
     load (url) {
         let img = new Image();
         let _this = this;
-        img.load (url, function (toadd){
+        return img.load (url, function (toadd) {
             _this.loaded_size += toadd;
             _this.render ();
+            if (_this.loaded_size >= _this.total_size)
+                if (_this.end !== undefined)
+                    _this.end ();
         });
     }
 
     render () {
         this.logo.update_load (this.loaded_size / this.total_size * 100);
-        if (this.loaded_size >= this.total_size) {
-            if (this.end !== undefined) {
-                this.end ();
-            }
-        }
     }
 }
 
@@ -218,34 +219,130 @@ class Slideshow extends ElementObject {
     }
 }
 
-function setTimeline () {
+function setTimeline (index) {
     let currActive = $(".timeline > ul > .active");
     $(currActive.get()).removeClass ("active");
-    $(currActive.parent().children ().get($.scrollify.currentIndex())).addClass ("active");
+    $(currActive.parent().children ().get(index)).addClass ("active");
 }
 
 var preload;
 var slideshow;
 
+
+let timeline = {
+    current: 0,
+    steps: [
+        {
+            in: function () {$.scrollify.current().children(".info").addClass ("first");},
+            out: function () {$.scrollify.current().children(".info").removeClass ("first");}
+        },
+        {
+            in: function () {$.scrollify.current().children(".info").addClass ("second");},
+            out: function () {$.scrollify.current().children(".info").removeClass ("second");}
+        }
+    ],
+    setTimeline (index) {
+        let currActive = $.scrollify.current().children (".timeline-bottom").children ("ul").children (".active");
+        $(currActive.get()).removeClass ("active");
+        $(currActive.parent().children ().get(index)).addClass ("active");
+    },
+    next () {
+        if ($.scrollify.current().children(".keyboard").children (".right").hasClass("disabled"))
+            return;
+        
+        $.scrollify.current().children(".keyboard").children (".left").removeClass("disabled");
+        timeline.steps[timeline.current].out();
+        timeline.current++;
+        timeline.steps[timeline.current].in();
+        if (timeline.current + 1 === timeline.steps.length) {
+            $.scrollify.current().children(".keyboard").children (".right").addClass("disabled");
+        }
+        timeline.setTimeline (timeline.current);
+    },
+    back () {
+        if ($.scrollify.current().children(".keyboard").children (".left").hasClass("disabled"))
+            return;
+        $.scrollify.current().children(".keyboard").children (".right").removeClass("disabled");
+        timeline.steps[timeline.current].out();
+        timeline.current--;
+        timeline.steps[timeline.current].in();
+        if (timeline.current === 0) {
+            $.scrollify.current().children(".keyboard").children (".left").addClass("disabled");
+        }
+        timeline.setTimeline (timeline.current);
+    }
+};
+
+class AnimationHandler {
+    static genList (format, number) {
+        let frames = [];
+        for (let i = 0; i <= number; i++)
+            frames.push(sprintf (format, i));
+        return frames;
+    }
+    constructor (parent, format, number, loaded) {
+        this.currentFrame = 0;
+        this.frames = [];
+        this.parent = parent;
+        for (let i = 0; i <= number; i++)
+            this.frames.push(sprintf (format, i));
+        
+    }
+    
+    render (frameNumber) {
+    
+    }
+    
+    play (to, timeMS) {
+        let playNumber = to - this.currentFrame;
+        let interval = playNumber / timeMS;
+        let _this = this;
+        let i = this.currentFrame;
+        let anim = setInterval(function () {
+            _this.render(i);
+            i++;
+            if (i === to)
+                clearInterval (anim);
+        });
+    }
+    
+    rewind (to) {
+    
+    }
+}
+
 $(document).ready (function (){
-    preload = new Preload ([], function () {
+    preload = new Preload ([
+        AnimationHandler.genList ("resources/anim1/%04f.png", 116)
+    ], function () {
         $(preload.logo.get()).addClass ("loaded");
         $(".content").addClass ("loaded");
-    });
-    preload.start ();
-    slideshow = new Slideshow ($(".slideshow"));
-    slideshow.start();
-    $(function() {
-        $.scrollify({
-            easing: "easeInOutCubic",
-            section : ".content",
-            scrollSpeed: 800,
-            touchScroll: false,
-            before:setTimeline,
+        $(function() {
+            $.scrollify({
+                easing: "easeInOutCubic",
+                section : ".content",
+                scrollSpeed: 800,
+                touchScroll: false,
+                before:setTimeline,
+            });
         });
     });
     
-    $(".timeline > ul > li").click(function(){
-        $.scrollify.move($(this).index());
-    });
+    preload.start ();
+    slideshow = new Slideshow ($(".slideshow"));
+    slideshow.start();
+    
+    $(".down-arrow").click ($.scrollify.next);
+    $(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
+    $(".keyboard .left").click(timeline.back);
+    $(".keyboard .right").click(timeline.next);
+});
+
+$(document).keydown(function(e){
+    if (e.keyCode === 37) {
+        timeline.back ();
+    }
+    else if (e.keyCode === 39) {
+        timeline.next();
+    }
 });
