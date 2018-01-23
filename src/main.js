@@ -218,6 +218,12 @@ class Slideshow extends ElementObject {
     }
 }
 
+function setTimeline () {
+    let currActive = $(".timeline > ul > .active");
+    $(currActive.get()).removeClass ("active");
+    $(currActive.parent().children ().get($.scrollify.currentIndex())).addClass ("active");
+}
+
 var preload;
 var slideshow;
 
@@ -229,4 +235,17 @@ $(document).ready (function (){
     preload.start ();
     slideshow = new Slideshow ($(".slideshow"));
     slideshow.start();
+    $(function() {
+        $.scrollify({
+            easing: "easeInOutCubic",
+            section : ".content",
+            scrollSpeed: 800,
+            touchScroll: false,
+            before:setTimeline,
+        });
+    });
+    
+    $(".timeline > ul > li").click(function(){
+        $.scrollify.move($(this).index());
+    });
 });

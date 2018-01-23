@@ -205,8 +205,8 @@ body, html {
 .timeline-selection {
   position: absolute;
   left: -3px;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   transform: translateY(-50%);
   top: 50%;
@@ -215,21 +215,22 @@ body, html {
 
 li.active > .timeline-selection::before {
   position: absolute;
-  left: 1.5px;
-  top: 1.5px;
+  left: 50%;
+  top: 50%;
   width: 3px;
   height: 3px;
   border-radius: 50%;
   border: 1px solid #fff;
   content: '';
   display: block;
+  transform: translate(-50%, -50%);
 }
 
 li.active > .timeline-selection {
   left: -4px;
-  width: 8px;
-  height: 8px;
-  border: #fff solid 2px;
+  width: 9px;
+  height: 9px;
+  border: #fff solid 1px;
 }
 
 .down-arrow {
@@ -267,9 +268,7 @@ li.active > .timeline-selection {
   content: '';
   top: 43px;
   left: calc(50% - 3px);
-  border-color: #fff;
-  border-width: 1px;
-  border-style: solid;
+  border: #fff 1px solid;
   border-right-color: rgba(255, 255, 255, 0);
   border-bottom-color: rgba(255, 255, 255, 0);
   position: absolute;
@@ -299,8 +298,7 @@ li.active > .timeline-selection {
   left: 0;
   width: calc(100% - 4px);
   height: 175px;
-  border: 2px solid;
-  border-color: #fff;
+  border: 2px solid #fff;
   display: block;
   transition: top ease-out .5s;
 }
@@ -315,9 +313,7 @@ li.active > .timeline-selection {
   width: calc(100vw / 3);
   max-width: 288px;
   height: 175px;
-  border-width: 2px;
-  border-color: rgba(255,255,255,.45);
-  border-style: solid;
+  border: 2px solid rgba(255,255,255,.45);
   border-bottom-style: none;
   position: relative;
 }
@@ -472,7 +468,7 @@ li.active > .timeline-selection {
 
 .timeline-bottom {
   position: absolute;
-  bottom: 24px;
+  bottom: 23px;
   transform: translate(-50%, -50%);
   left: 50%;
 }
@@ -488,12 +484,12 @@ li.active > .timeline-selection {
   position: relative;
   width: 22px;
   height: 20px;
-  margin-right: 24px;
+  margin-right: 32px;
 }
 
 .timeline-bottom > ul > li > .timeline-text {
   position: absolute;
-  top: 18px;
+  top: 22px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 14px;
