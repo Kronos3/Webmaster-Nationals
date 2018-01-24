@@ -370,46 +370,6 @@ li.active > .timeline-selection {
 
 }
 
-.header-text {
-  font-family: Gotham,sans-serif;
-  font-size: 45px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.info-text {
-  font-family: Gotham,sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.45;
-}
-
-.info {
-  position: absolute;
-  display: flex;
-  
-  left: 16.66667%;
-  width: 66.66667%;
-  transition: left,top 800ms ease-in-out;
-}
-
-.info.first {
-  top: 40%;
-}
-
-.info.first  > div {
-  display: inline-flex;
-  position:relative;
-  width: 50%;
-}
-
-.info.second {
-  display: block;
-  position:relative;
-  width: 33%;
-  top: 20%;
-}
-
 .vertical.info {
   display: block;
   top: 20%;
@@ -548,4 +508,50 @@ li.active > .timeline-selection {
   box-shadow: none;
   opacity: 0.6;
   cursor: default;
+}
+
+.header-text {
+  font-family: Gotham,sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.info-text {
+  font-family: Gotham,sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.info {
+  position: absolute;
+  
+  left: 16.66667%;
+  width: 66.66667%;
+  transition: left,top 800ms ease-in-out;
+  top: 40%;
+}
+
+.info > .step {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity,transform 800ms ease-in-out;
+}
+
+.info > .step.active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.info > .step {
+  position: absolute;
+  display: flex;
+}
+
+.info > .step > div,
+.info > div:not(.step) {
+  display: inline-flex;
+  position:relative;
+  width: 50%;
 }
