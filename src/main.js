@@ -40,10 +40,6 @@ class JSFile {
     read () {
         return this.text;
     }
-
-    readlines () {
-        return this.text.split ("\n");
-    }
 }
 
 class ElementObject {
@@ -51,10 +47,6 @@ class ElementObject {
         if (_str !== '') {
             this.element = $($.parseHTML (_str))
         }
-    }
-
-    static new_with_class (_str, _class) {
-        return new ElementObject ("<div class=\"{0}\">{1}</div>".format (_class, _str));
     }
 
     static new_wrap (el) {
@@ -102,10 +94,6 @@ class Logo extends ElementObject {
         return ElementObject.new_wrap($("#logo{0}-blue-mask".format (this.modifier)));
     }
 
-    get_grey_mask () {
-        return ElementObject.new_wrap($("#logo{0}-grey-mask".format (this.modifier)));
-    }
-
     update_load (percentage) {
         this.get_blue_mask().element.css ("clip-path", "polygon({0}% 0, {0}% 100%, 0 100%, 0 0)".format(percentage));
     }
@@ -138,62 +126,56 @@ class Preload {
         this.preload_ar = preload_ar_ar;
         this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
-
         this.total_size = 0;
-        this.size_checked = 0;
-        this.loaded_size = 0;
-
-        this.called_load = false;
         this.loads = [];
-        
     }
 
     start () {
-        let _this = this;
-        if (this.preload_ar.length === 0) {
+        this.add_file_size(0, 0, () => {
+            /*console.log (this.total_size);
+            this.load (0, 0, () => {
+                this.end ();
+            });*/
             this.end ();
-            this.loaded_size = 1;
-            this.total_size = 1;
-            this.render ();
-            return;
-        }
-        this.preload_ar.forEach (function (ar) {
-            let out_arr = [];
-            ar.forEach (function(file) {
-                _this.add_file_size (file, function (size) {
-                    _this.total_size += size;
-                    _this.size_checked++;
-                    if (_this.size_checked >= ar.length && !_this.called_load) {
-                        _this.called_load = true;
-                        ar.forEach (function(file) {
-                            out_arr.push (_this.load (file));
-                        });
-                    }
-                });
-            });
-            _this.loads.push (out_arr);
         });
     }
 
-    add_file_size (url, callback) {
+    add_file_size (ar_n, index, final_callback) {
+        if (index >= this.preload_ar[ar_n].length) {
+            ar_n++;
+            index = 0;
+        }
+        
+        if (ar_n >= this.preload_ar.length)
+            return final_callback ();
+    
+        if (index === 0)
+            this.loads.push ([]);
+        
         let xhr = new XMLHttpRequest();
-        xhr.open("HEAD", url, true);
-        xhr.onreadystatechange = function() {
-            if (this.readyState === this.DONE)
-                callback(parseInt(xhr.getResponseHeader("Content-Length")));
-        };
+        xhr.addEventListener("load", () => {
+            this.total_size += parseInt(xhr.getResponseHeader("Content-Length"));
+            this.add_file_size(ar_n, ++index, final_callback)
+        });
+        
+        xhr.open("HEAD", this.preload_ar[ar_n][index]);
         xhr.send();
     }
 
-    load (url) {
+    load (ar_n, index, final_callback) {
+        if (index >= this.preload_ar[ar_n].length) {
+            ar_n++;
+            index = 0;
+        }
+        if (ar_n >= this.preload_ar.length)
+            return final_callback ();
+        
         let img = new Image();
-        let _this = this;
-        return img.load (url, function (toadd) {
-            _this.loaded_size += toadd;
-            _this.render ();
-            if (_this.loaded_size >= _this.total_size)
-                if (_this.end !== undefined)
-                    _this.end ();
+        this.loads[ar_n].push (img);
+        img.load (this.preload_ar[ar_n][index], (toadd) => {
+            this.loaded_size += toadd;
+            this.render();
+            this.load (ar_n, ++index, final_callback);
         });
     }
 
@@ -209,9 +191,8 @@ class Slideshow extends ElementObject {
     }
     
     start () {
-        var _this = this;
-        var curr = 0;
-        var len = this.child("ol").get().getElementsByTagName("li").length
+        let curr = 0;
+        let len = this.child("ol").get().getElementsByTagName("li").length;
         setInterval(function () {
             curr = ++curr % len;
             $("#slideshow-hover").css("top", "calc({0}00%/{1})".format(curr, len));
@@ -225,8 +206,8 @@ function setTimeline (index) {
     $(currActive.parent().children ().get(index)).addClass ("active");
 }
 
-var preload;
-var slideshow;
+let preload;
+let slideshow;
 
 
 let timeline = {
@@ -313,7 +294,7 @@ class AnimationHandler {
 
 $(document).ready (function (){
     preload = new Preload ([
-        AnimationHandler.genList ("resources/anim1/%04f.png", 116)
+        AnimationHandler.genList ("resources/anim1/%04f.png", 125)
     ], function () {
         $(preload.logo.get()).addClass ("loaded");
         $(".content").addClass ("loaded");
@@ -337,6 +318,17 @@ $(document).ready (function (){
     $(".keyboard .left").click(timeline.back);
     $(".keyboard .right").click(timeline.next);
 });
+
+class productStep {
+    constructor (parent, step_arr) {
+        //this.current =
+    }
+    
+    next () {
+    
+    }
+}
+
 
 $(document).keydown(function(e){
     if (e.keyCode === 37) {

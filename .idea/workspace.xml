@@ -2,9 +2,133 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc25f880-b7fb-4854-9633-45abd526af6f" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0117.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0118.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0119.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0120.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0121.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0122.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0123.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0124.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0125.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/ai.css" afterPath="$PROJECT_DIR$/css/ai.css" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0000.png" afterPath="$PROJECT_DIR$/resources/anim1/0000.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0001.png" afterPath="$PROJECT_DIR$/resources/anim1/0001.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0002.png" afterPath="$PROJECT_DIR$/resources/anim1/0002.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0003.png" afterPath="$PROJECT_DIR$/resources/anim1/0003.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0004.png" afterPath="$PROJECT_DIR$/resources/anim1/0004.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0005.png" afterPath="$PROJECT_DIR$/resources/anim1/0005.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0006.png" afterPath="$PROJECT_DIR$/resources/anim1/0006.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0007.png" afterPath="$PROJECT_DIR$/resources/anim1/0007.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0008.png" afterPath="$PROJECT_DIR$/resources/anim1/0008.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0009.png" afterPath="$PROJECT_DIR$/resources/anim1/0009.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0010.png" afterPath="$PROJECT_DIR$/resources/anim1/0010.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0011.png" afterPath="$PROJECT_DIR$/resources/anim1/0011.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0012.png" afterPath="$PROJECT_DIR$/resources/anim1/0012.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0013.png" afterPath="$PROJECT_DIR$/resources/anim1/0013.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0014.png" afterPath="$PROJECT_DIR$/resources/anim1/0014.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0015.png" afterPath="$PROJECT_DIR$/resources/anim1/0015.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0016.png" afterPath="$PROJECT_DIR$/resources/anim1/0016.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0017.png" afterPath="$PROJECT_DIR$/resources/anim1/0017.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0018.png" afterPath="$PROJECT_DIR$/resources/anim1/0018.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0019.png" afterPath="$PROJECT_DIR$/resources/anim1/0019.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0020.png" afterPath="$PROJECT_DIR$/resources/anim1/0020.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0021.png" afterPath="$PROJECT_DIR$/resources/anim1/0021.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0022.png" afterPath="$PROJECT_DIR$/resources/anim1/0022.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0023.png" afterPath="$PROJECT_DIR$/resources/anim1/0023.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0024.png" afterPath="$PROJECT_DIR$/resources/anim1/0024.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0025.png" afterPath="$PROJECT_DIR$/resources/anim1/0025.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0026.png" afterPath="$PROJECT_DIR$/resources/anim1/0026.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0027.png" afterPath="$PROJECT_DIR$/resources/anim1/0027.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0028.png" afterPath="$PROJECT_DIR$/resources/anim1/0028.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0029.png" afterPath="$PROJECT_DIR$/resources/anim1/0029.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0030.png" afterPath="$PROJECT_DIR$/resources/anim1/0030.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0031.png" afterPath="$PROJECT_DIR$/resources/anim1/0031.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0032.png" afterPath="$PROJECT_DIR$/resources/anim1/0032.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0033.png" afterPath="$PROJECT_DIR$/resources/anim1/0033.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0034.png" afterPath="$PROJECT_DIR$/resources/anim1/0034.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0035.png" afterPath="$PROJECT_DIR$/resources/anim1/0035.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0036.png" afterPath="$PROJECT_DIR$/resources/anim1/0036.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0037.png" afterPath="$PROJECT_DIR$/resources/anim1/0037.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0038.png" afterPath="$PROJECT_DIR$/resources/anim1/0038.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0039.png" afterPath="$PROJECT_DIR$/resources/anim1/0039.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0040.png" afterPath="$PROJECT_DIR$/resources/anim1/0040.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0041.png" afterPath="$PROJECT_DIR$/resources/anim1/0041.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0042.png" afterPath="$PROJECT_DIR$/resources/anim1/0042.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0043.png" afterPath="$PROJECT_DIR$/resources/anim1/0043.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0044.png" afterPath="$PROJECT_DIR$/resources/anim1/0044.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0045.png" afterPath="$PROJECT_DIR$/resources/anim1/0045.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0046.png" afterPath="$PROJECT_DIR$/resources/anim1/0046.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0047.png" afterPath="$PROJECT_DIR$/resources/anim1/0047.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0048.png" afterPath="$PROJECT_DIR$/resources/anim1/0048.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0049.png" afterPath="$PROJECT_DIR$/resources/anim1/0049.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0050.png" afterPath="$PROJECT_DIR$/resources/anim1/0050.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0051.png" afterPath="$PROJECT_DIR$/resources/anim1/0051.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0052.png" afterPath="$PROJECT_DIR$/resources/anim1/0052.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0053.png" afterPath="$PROJECT_DIR$/resources/anim1/0053.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0054.png" afterPath="$PROJECT_DIR$/resources/anim1/0054.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0055.png" afterPath="$PROJECT_DIR$/resources/anim1/0055.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0056.png" afterPath="$PROJECT_DIR$/resources/anim1/0056.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0057.png" afterPath="$PROJECT_DIR$/resources/anim1/0057.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0058.png" afterPath="$PROJECT_DIR$/resources/anim1/0058.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0059.png" afterPath="$PROJECT_DIR$/resources/anim1/0059.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0060.png" afterPath="$PROJECT_DIR$/resources/anim1/0060.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0061.png" afterPath="$PROJECT_DIR$/resources/anim1/0061.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0062.png" afterPath="$PROJECT_DIR$/resources/anim1/0062.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0063.png" afterPath="$PROJECT_DIR$/resources/anim1/0063.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0064.png" afterPath="$PROJECT_DIR$/resources/anim1/0064.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0065.png" afterPath="$PROJECT_DIR$/resources/anim1/0065.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0066.png" afterPath="$PROJECT_DIR$/resources/anim1/0066.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0067.png" afterPath="$PROJECT_DIR$/resources/anim1/0067.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0068.png" afterPath="$PROJECT_DIR$/resources/anim1/0068.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0069.png" afterPath="$PROJECT_DIR$/resources/anim1/0069.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0070.png" afterPath="$PROJECT_DIR$/resources/anim1/0070.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0071.png" afterPath="$PROJECT_DIR$/resources/anim1/0071.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0072.png" afterPath="$PROJECT_DIR$/resources/anim1/0072.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0073.png" afterPath="$PROJECT_DIR$/resources/anim1/0073.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0074.png" afterPath="$PROJECT_DIR$/resources/anim1/0074.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0075.png" afterPath="$PROJECT_DIR$/resources/anim1/0075.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0076.png" afterPath="$PROJECT_DIR$/resources/anim1/0076.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0077.png" afterPath="$PROJECT_DIR$/resources/anim1/0077.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0078.png" afterPath="$PROJECT_DIR$/resources/anim1/0078.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0079.png" afterPath="$PROJECT_DIR$/resources/anim1/0079.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0080.png" afterPath="$PROJECT_DIR$/resources/anim1/0080.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0081.png" afterPath="$PROJECT_DIR$/resources/anim1/0081.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0082.png" afterPath="$PROJECT_DIR$/resources/anim1/0082.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0083.png" afterPath="$PROJECT_DIR$/resources/anim1/0083.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0084.png" afterPath="$PROJECT_DIR$/resources/anim1/0084.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0085.png" afterPath="$PROJECT_DIR$/resources/anim1/0085.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0086.png" afterPath="$PROJECT_DIR$/resources/anim1/0086.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0087.png" afterPath="$PROJECT_DIR$/resources/anim1/0087.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0088.png" afterPath="$PROJECT_DIR$/resources/anim1/0088.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0089.png" afterPath="$PROJECT_DIR$/resources/anim1/0089.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0090.png" afterPath="$PROJECT_DIR$/resources/anim1/0090.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0091.png" afterPath="$PROJECT_DIR$/resources/anim1/0091.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0092.png" afterPath="$PROJECT_DIR$/resources/anim1/0092.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0093.png" afterPath="$PROJECT_DIR$/resources/anim1/0093.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0094.png" afterPath="$PROJECT_DIR$/resources/anim1/0094.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0095.png" afterPath="$PROJECT_DIR$/resources/anim1/0095.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0096.png" afterPath="$PROJECT_DIR$/resources/anim1/0096.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0097.png" afterPath="$PROJECT_DIR$/resources/anim1/0097.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0098.png" afterPath="$PROJECT_DIR$/resources/anim1/0098.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0099.png" afterPath="$PROJECT_DIR$/resources/anim1/0099.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0100.png" afterPath="$PROJECT_DIR$/resources/anim1/0100.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0101.png" afterPath="$PROJECT_DIR$/resources/anim1/0101.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0102.png" afterPath="$PROJECT_DIR$/resources/anim1/0102.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0103.png" afterPath="$PROJECT_DIR$/resources/anim1/0103.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0104.png" afterPath="$PROJECT_DIR$/resources/anim1/0104.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0105.png" afterPath="$PROJECT_DIR$/resources/anim1/0105.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0106.png" afterPath="$PROJECT_DIR$/resources/anim1/0106.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0107.png" afterPath="$PROJECT_DIR$/resources/anim1/0107.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0108.png" afterPath="$PROJECT_DIR$/resources/anim1/0108.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0109.png" afterPath="$PROJECT_DIR$/resources/anim1/0109.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0110.png" afterPath="$PROJECT_DIR$/resources/anim1/0110.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0111.png" afterPath="$PROJECT_DIR$/resources/anim1/0111.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0112.png" afterPath="$PROJECT_DIR$/resources/anim1/0112.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0113.png" afterPath="$PROJECT_DIR$/resources/anim1/0113.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0114.png" afterPath="$PROJECT_DIR$/resources/anim1/0114.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0115.png" afterPath="$PROJECT_DIR$/resources/anim1/0115.png" />
+      <change beforePath="$PROJECT_DIR$/resources/anim1/0116.png" afterPath="$PROJECT_DIR$/resources/anim1/0116.png" />
       <change beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,7 +146,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="0">
               <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
               <folding />
             </state>
@@ -32,15 +156,21 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="192" column="23" lean-forward="false" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+            <state relative-caret-position="510">
+              <caret line="138" column="24" lean-forward="false" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
               <folding>
-                <element signature="n#Slideshow#0" expanded="false" />
-                <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-                <element signature="e#6123#8048#0" expanded="false" />
-                <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-                <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+                <element signature="e#5578#7442#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scratch_1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,6 +214,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/css/ai.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
+        <option value="$PROJECT_DIR$/scale-image.py" />
         <option value="$PROJECT_DIR$/src/main.js" />
       </list>
     </option>
@@ -175,6 +307,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -196,12 +329,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/jquery-3.3.1.min.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -213,6 +345,11 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/main.js" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="TEXT" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -256,27 +393,31 @@
       <workItem from="1516624748011" duration="20887000" />
       <workItem from="1516753215151" duration="1692000" />
       <workItem from="1516805119189" duration="5909000" />
-      <workItem from="1516823669696" duration="2301000" />
+      <workItem from="1516823669696" duration="2865000" />
+      <workItem from="1517064476689" duration="467000" />
+      <workItem from="1517345964068" duration="3187000" />
+      <workItem from="1518879704946" duration="43000" />
+      <workItem from="1518879760686" duration="5218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46190000" />
+    <option name="totallyTimeSpent" value="55669000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="35" width="2880" height="1607" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1730361" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17296152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33028224" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15384616" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -295,11 +436,156 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18904">
+          <caret line="556" column="1" lean-forward="false" selection-start-line="556" selection-start-column="1" selection-end-line="556" selection-end-column="1" />
+          <folding>
+            <element signature="e#3834#3994#0" expanded="false" />
+            <element signature="e#4008#4107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11050">
+          <caret line="325" column="0" lean-forward="false" selection-start-line="325" selection-start-column="0" selection-end-line="325" selection-end-column="0" />
+          <folding>
+            <element signature="e#5578#7442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18904">
+          <caret line="556" column="1" lean-forward="false" selection-start-line="556" selection-start-column="1" selection-end-line="556" selection-end-column="1" />
+          <folding>
+            <element signature="e#3834#3994#0" expanded="false" />
+            <element signature="e#4008#4107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="93" column="33" lean-forward="false" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <folding>
+            <element signature="e#5578#7442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18904">
+          <caret line="556" column="1" lean-forward="false" selection-start-line="556" selection-start-column="1" selection-end-line="556" selection-end-column="1" />
+          <folding>
+            <element signature="e#3834#3994#0" expanded="false" />
+            <element signature="e#4008#4107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3162">
+          <caret line="93" column="33" lean-forward="true" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
+          <folding>
+            <element signature="e#5578#7442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18904">
+          <caret line="556" column="1" lean-forward="false" selection-start-line="556" selection-start-column="1" selection-end-line="556" selection-end-column="1" />
+          <folding>
+            <element signature="e#3834#3994#0" expanded="false" />
+            <element signature="e#4008#4107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6698">
+          <caret line="197" column="5" lean-forward="true" selection-start-line="197" selection-start-column="5" selection-end-line="197" selection-end-column="5" />
+          <folding>
+            <element signature="e#5578#7442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/ai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18904">
+          <caret line="556" column="1" lean-forward="false" selection-start-line="556" selection-start-column="1" selection-end-line="556" selection-end-column="1" />
+          <folding>
+            <element signature="e#3834#3994#0" expanded="false" />
+            <element signature="e#4008#4107#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6494">
+          <caret line="191" column="23" lean-forward="false" selection-start-line="191" selection-start-column="23" selection-end-line="191" selection-end-column="23" />
+          <folding>
+            <element signature="e#5578#7442#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -324,11 +610,7 @@
         <state relative-caret-position="4012">
           <caret line="118" column="24" lean-forward="false" selection-start-line="118" selection-start-column="24" selection-end-line="118" selection-end-column="24" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -357,11 +639,7 @@
         <state relative-caret-position="9554">
           <caret line="296" column="8" lean-forward="false" selection-start-line="296" selection-start-column="8" selection-end-line="296" selection-end-column="8" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -390,11 +668,7 @@
         <state relative-caret-position="7616">
           <caret line="239" column="78" lean-forward="true" selection-start-line="239" selection-start-column="78" selection-end-line="239" selection-end-column="78" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -412,11 +686,7 @@
         <state relative-caret-position="6970">
           <caret line="205" column="16" lean-forward="false" selection-start-line="205" selection-start-column="16" selection-end-line="205" selection-end-column="16" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,11 +726,7 @@
         <state relative-caret-position="7650">
           <caret line="225" column="17" lean-forward="false" selection-start-line="225" selection-start-column="17" selection-end-line="225" selection-end-column="17" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -489,11 +755,7 @@
         <state relative-caret-position="7378">
           <caret line="217" column="4" lean-forward="true" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -522,11 +784,7 @@
         <state relative-caret-position="7650">
           <caret line="225" column="36" lean-forward="false" selection-start-line="225" selection-start-column="36" selection-end-line="225" selection-end-column="36" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -566,22 +824,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="0">
           <caret line="10" column="59" lean-forward="false" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scale-image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="13" column="61" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="192" column="23" lean-forward="false" selection-start-line="192" selection-start-column="23" selection-end-line="192" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="138" column="24" lean-forward="false" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
           <folding>
-            <element signature="n#Slideshow#0" expanded="false" />
-            <element signature="n#!!block;n#setTimeline#0" expanded="false" />
-            <element signature="e#6123#8048#0" expanded="false" />
-            <element signature="n#!!block;n#play#0;n#AnimationHandler#0" expanded="false" />
-            <element signature="n#!!block;n#rewind#0;n#AnimationHandler#0" expanded="false" />
+            <element signature="e#5578#7442#0" expanded="false" />
           </folding>
         </state>
       </provider>
