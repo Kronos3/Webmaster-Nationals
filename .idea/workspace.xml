@@ -1,136 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc25f880-b7fb-4854-9633-45abd526af6f" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0117.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0118.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0119.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0120.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0121.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0122.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0123.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0124.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/resources/anim1/0125.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0000.png" afterPath="$PROJECT_DIR$/resources/anim1/0000.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0001.png" afterPath="$PROJECT_DIR$/resources/anim1/0001.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0002.png" afterPath="$PROJECT_DIR$/resources/anim1/0002.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0003.png" afterPath="$PROJECT_DIR$/resources/anim1/0003.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0004.png" afterPath="$PROJECT_DIR$/resources/anim1/0004.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0005.png" afterPath="$PROJECT_DIR$/resources/anim1/0005.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0006.png" afterPath="$PROJECT_DIR$/resources/anim1/0006.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0007.png" afterPath="$PROJECT_DIR$/resources/anim1/0007.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0008.png" afterPath="$PROJECT_DIR$/resources/anim1/0008.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0009.png" afterPath="$PROJECT_DIR$/resources/anim1/0009.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0010.png" afterPath="$PROJECT_DIR$/resources/anim1/0010.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0011.png" afterPath="$PROJECT_DIR$/resources/anim1/0011.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0012.png" afterPath="$PROJECT_DIR$/resources/anim1/0012.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0013.png" afterPath="$PROJECT_DIR$/resources/anim1/0013.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0014.png" afterPath="$PROJECT_DIR$/resources/anim1/0014.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0015.png" afterPath="$PROJECT_DIR$/resources/anim1/0015.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0016.png" afterPath="$PROJECT_DIR$/resources/anim1/0016.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0017.png" afterPath="$PROJECT_DIR$/resources/anim1/0017.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0018.png" afterPath="$PROJECT_DIR$/resources/anim1/0018.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0019.png" afterPath="$PROJECT_DIR$/resources/anim1/0019.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0020.png" afterPath="$PROJECT_DIR$/resources/anim1/0020.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0021.png" afterPath="$PROJECT_DIR$/resources/anim1/0021.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0022.png" afterPath="$PROJECT_DIR$/resources/anim1/0022.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0023.png" afterPath="$PROJECT_DIR$/resources/anim1/0023.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0024.png" afterPath="$PROJECT_DIR$/resources/anim1/0024.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0025.png" afterPath="$PROJECT_DIR$/resources/anim1/0025.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0026.png" afterPath="$PROJECT_DIR$/resources/anim1/0026.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0027.png" afterPath="$PROJECT_DIR$/resources/anim1/0027.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0028.png" afterPath="$PROJECT_DIR$/resources/anim1/0028.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0029.png" afterPath="$PROJECT_DIR$/resources/anim1/0029.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0030.png" afterPath="$PROJECT_DIR$/resources/anim1/0030.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0031.png" afterPath="$PROJECT_DIR$/resources/anim1/0031.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0032.png" afterPath="$PROJECT_DIR$/resources/anim1/0032.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0033.png" afterPath="$PROJECT_DIR$/resources/anim1/0033.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0034.png" afterPath="$PROJECT_DIR$/resources/anim1/0034.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0035.png" afterPath="$PROJECT_DIR$/resources/anim1/0035.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0036.png" afterPath="$PROJECT_DIR$/resources/anim1/0036.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0037.png" afterPath="$PROJECT_DIR$/resources/anim1/0037.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0038.png" afterPath="$PROJECT_DIR$/resources/anim1/0038.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0039.png" afterPath="$PROJECT_DIR$/resources/anim1/0039.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0040.png" afterPath="$PROJECT_DIR$/resources/anim1/0040.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0041.png" afterPath="$PROJECT_DIR$/resources/anim1/0041.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0042.png" afterPath="$PROJECT_DIR$/resources/anim1/0042.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0043.png" afterPath="$PROJECT_DIR$/resources/anim1/0043.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0044.png" afterPath="$PROJECT_DIR$/resources/anim1/0044.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0045.png" afterPath="$PROJECT_DIR$/resources/anim1/0045.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0046.png" afterPath="$PROJECT_DIR$/resources/anim1/0046.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0047.png" afterPath="$PROJECT_DIR$/resources/anim1/0047.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0048.png" afterPath="$PROJECT_DIR$/resources/anim1/0048.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0049.png" afterPath="$PROJECT_DIR$/resources/anim1/0049.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0050.png" afterPath="$PROJECT_DIR$/resources/anim1/0050.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0051.png" afterPath="$PROJECT_DIR$/resources/anim1/0051.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0052.png" afterPath="$PROJECT_DIR$/resources/anim1/0052.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0053.png" afterPath="$PROJECT_DIR$/resources/anim1/0053.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0054.png" afterPath="$PROJECT_DIR$/resources/anim1/0054.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0055.png" afterPath="$PROJECT_DIR$/resources/anim1/0055.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0056.png" afterPath="$PROJECT_DIR$/resources/anim1/0056.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0057.png" afterPath="$PROJECT_DIR$/resources/anim1/0057.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0058.png" afterPath="$PROJECT_DIR$/resources/anim1/0058.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0059.png" afterPath="$PROJECT_DIR$/resources/anim1/0059.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0060.png" afterPath="$PROJECT_DIR$/resources/anim1/0060.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0061.png" afterPath="$PROJECT_DIR$/resources/anim1/0061.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0062.png" afterPath="$PROJECT_DIR$/resources/anim1/0062.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0063.png" afterPath="$PROJECT_DIR$/resources/anim1/0063.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0064.png" afterPath="$PROJECT_DIR$/resources/anim1/0064.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0065.png" afterPath="$PROJECT_DIR$/resources/anim1/0065.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0066.png" afterPath="$PROJECT_DIR$/resources/anim1/0066.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0067.png" afterPath="$PROJECT_DIR$/resources/anim1/0067.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0068.png" afterPath="$PROJECT_DIR$/resources/anim1/0068.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0069.png" afterPath="$PROJECT_DIR$/resources/anim1/0069.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0070.png" afterPath="$PROJECT_DIR$/resources/anim1/0070.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0071.png" afterPath="$PROJECT_DIR$/resources/anim1/0071.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0072.png" afterPath="$PROJECT_DIR$/resources/anim1/0072.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0073.png" afterPath="$PROJECT_DIR$/resources/anim1/0073.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0074.png" afterPath="$PROJECT_DIR$/resources/anim1/0074.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0075.png" afterPath="$PROJECT_DIR$/resources/anim1/0075.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0076.png" afterPath="$PROJECT_DIR$/resources/anim1/0076.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0077.png" afterPath="$PROJECT_DIR$/resources/anim1/0077.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0078.png" afterPath="$PROJECT_DIR$/resources/anim1/0078.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0079.png" afterPath="$PROJECT_DIR$/resources/anim1/0079.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0080.png" afterPath="$PROJECT_DIR$/resources/anim1/0080.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0081.png" afterPath="$PROJECT_DIR$/resources/anim1/0081.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0082.png" afterPath="$PROJECT_DIR$/resources/anim1/0082.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0083.png" afterPath="$PROJECT_DIR$/resources/anim1/0083.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0084.png" afterPath="$PROJECT_DIR$/resources/anim1/0084.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0085.png" afterPath="$PROJECT_DIR$/resources/anim1/0085.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0086.png" afterPath="$PROJECT_DIR$/resources/anim1/0086.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0087.png" afterPath="$PROJECT_DIR$/resources/anim1/0087.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0088.png" afterPath="$PROJECT_DIR$/resources/anim1/0088.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0089.png" afterPath="$PROJECT_DIR$/resources/anim1/0089.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0090.png" afterPath="$PROJECT_DIR$/resources/anim1/0090.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0091.png" afterPath="$PROJECT_DIR$/resources/anim1/0091.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0092.png" afterPath="$PROJECT_DIR$/resources/anim1/0092.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0093.png" afterPath="$PROJECT_DIR$/resources/anim1/0093.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0094.png" afterPath="$PROJECT_DIR$/resources/anim1/0094.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0095.png" afterPath="$PROJECT_DIR$/resources/anim1/0095.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0096.png" afterPath="$PROJECT_DIR$/resources/anim1/0096.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0097.png" afterPath="$PROJECT_DIR$/resources/anim1/0097.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0098.png" afterPath="$PROJECT_DIR$/resources/anim1/0098.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0099.png" afterPath="$PROJECT_DIR$/resources/anim1/0099.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0100.png" afterPath="$PROJECT_DIR$/resources/anim1/0100.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0101.png" afterPath="$PROJECT_DIR$/resources/anim1/0101.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0102.png" afterPath="$PROJECT_DIR$/resources/anim1/0102.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0103.png" afterPath="$PROJECT_DIR$/resources/anim1/0103.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0104.png" afterPath="$PROJECT_DIR$/resources/anim1/0104.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0105.png" afterPath="$PROJECT_DIR$/resources/anim1/0105.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0106.png" afterPath="$PROJECT_DIR$/resources/anim1/0106.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0107.png" afterPath="$PROJECT_DIR$/resources/anim1/0107.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0108.png" afterPath="$PROJECT_DIR$/resources/anim1/0108.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0109.png" afterPath="$PROJECT_DIR$/resources/anim1/0109.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0110.png" afterPath="$PROJECT_DIR$/resources/anim1/0110.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0111.png" afterPath="$PROJECT_DIR$/resources/anim1/0111.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0112.png" afterPath="$PROJECT_DIR$/resources/anim1/0112.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0113.png" afterPath="$PROJECT_DIR$/resources/anim1/0113.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0114.png" afterPath="$PROJECT_DIR$/resources/anim1/0114.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0115.png" afterPath="$PROJECT_DIR$/resources/anim1/0115.png" />
-      <change beforePath="$PROJECT_DIR$/resources/anim1/0116.png" afterPath="$PROJECT_DIR$/resources/anim1/0116.png" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-    </list>
+    <list default="true" id="cc25f880-b7fb-4854-9633-45abd526af6f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -156,8 +27,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="138" column="24" lean-forward="false" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+            <state relative-caret-position="442">
+              <caret line="296" column="55" lean-forward="false" selection-start-line="296" selection-start-column="51" selection-end-line="296" selection-end-column="55" />
               <folding>
                 <element signature="e#5578#7442#0" expanded="false" />
               </folding>
@@ -237,7 +108,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="35" />
     <option name="width" value="2880" />
     <option name="height" value="1607" />
@@ -397,15 +268,15 @@
       <workItem from="1517064476689" duration="467000" />
       <workItem from="1517345964068" duration="3187000" />
       <workItem from="1518879704946" duration="43000" />
-      <workItem from="1518879760686" duration="5218000" />
+      <workItem from="1518879760686" duration="5834000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55669000" />
+    <option name="totallyTimeSpent" value="56285000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="35" width="2880" height="1607" extended-state="7" />
+    <frame x="0" y="35" width="2880" height="1607" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17296152" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -848,8 +719,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="138" column="24" lean-forward="false" selection-start-line="138" selection-start-column="24" selection-end-line="138" selection-end-column="24" />
+        <state relative-caret-position="442">
+          <caret line="296" column="55" lean-forward="false" selection-start-line="296" selection-start-column="51" selection-end-line="296" selection-end-column="55" />
           <folding>
             <element signature="e#5578#7442#0" expanded="false" />
           </folding>
