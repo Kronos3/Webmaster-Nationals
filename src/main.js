@@ -1,7 +1,8 @@
-import {Slideshow} from 'timeline';
-import {setTimeline} from 'timeline';
-import {timeline} from 'timeline';
-import {AnimationHandler} from 'animation';
+import {Slideshow} from './timeline.js';
+import {setTimeline} from './timeline.js';
+import {timeline} from './timeline.js';
+import {Preload} from './preload.js';
+import {PNGAnimation} from "./compression.js";
 
 String.prototype.format = function (..._args) {
     let args = _args;
@@ -31,8 +32,14 @@ let preload;
 let slideshow;
 
 $(document).ready (function (){
+    let compression_handler = function (ab, next) {
+        return new PNGAnimation(ab, next);
+    };
+    
     preload = new Preload ([
-        AnimationHandler.genList ("resources/anim1/%04f.png", 125)
+        ["/resources/anim1/anim1.cpng"]
+    ],[
+        compression_handler
     ], function () {
         $(preload.logo.get()).addClass ("loaded");
         $(".content").addClass ("loaded");
@@ -57,6 +64,7 @@ $(document).ready (function (){
     $(".keyboard .right").click(timeline.next);
 });
 
+/*
 class productStep {
     constructor (parent, step_arr) {
         //this.current =
@@ -66,7 +74,7 @@ class productStep {
     
     }
 }
-
+*/
 $(document).keydown(function(e){
     if (e.keyCode === 37) {
         timeline.back ();

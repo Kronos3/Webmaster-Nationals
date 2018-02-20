@@ -1,46 +1,21 @@
-import {Logo} from 'logo';
-
-/* The following will be obsolete after implementation
-    PNG compression algorithm.
- */
-Image.prototype.load = function (url, parent) {
-    let thisImg = this;
-    let xmlHTTP = new XMLHttpRequest();
-    xmlHTTP.open('GET', url,true);
-    xmlHTTP.responseType = 'arraybuffer';
-    xmlHTTP.onload = function(e) {
-        let blob = new Blob([this.response]);
-        thisImg.src = window.URL.createObjectURL(blob);
-    };
-    
-    xmlHTTP.onprogress = function(e) {
-        let _new =  e.loaded - thisImg.already;
-        thisImg.already = e.loaded;
-        parent(_new);
-    };
-    xmlHTTP.onloadstart = function() {
-        thisImg.already = 0;
-        parent(0);
-    };
-    xmlHTTP.send();
-};
+import {Logo} from './logo.js';
 
 export class Preload {
-    constructor (preload_ar_ar, end_callback) {
+    constructor (preload_ar_ar, construtor_ar, end_callback) {
         this.preload_ar = preload_ar_ar;
+        this.constructor_ar = construtor_ar;
         this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
         this.total_size = 0;
         this.loads = [];
+        this.loads.length = preload_ar_ar.length;
     }
     
     start () {
         this.add_file_size(0, 0, () => {
-            /*console.log (this.total_size);
             this.load (0, 0, () => {
                 this.end ();
-            });*/
-            this.end ();
+            });
         });
     }
     
@@ -73,14 +48,33 @@ export class Preload {
         }
         if (ar_n >= this.preload_ar.length)
             return final_callback ();
+        if (index === 0) {
+            this.loads[index] = [];
+            this.loads[index].length = this.preload_ar[ar_n].length;
+        }
+    
+        let xmlHTTP = new XMLHttpRequest();
+        xmlHTTP.open('GET', this.preload_ar[ar_n][index], true);
+        xmlHTTP.responseType = 'arraybuffer';
         
-        let img = new Image();
-        this.loads[ar_n].push (img);
-        img.load (this.preload_ar[ar_n][index], (toadd) => {
-            this.loaded_size += toadd;
-            this.render();
-            this.load (ar_n, ++index, final_callback);
-        });
+        let _this = this;
+        xmlHTTP.onload = function () {
+            _this.loads[ar_n][index] = _this.constructor_ar[ar_n] (this.response, function () {
+                _this.load (ar_n, ++index, final_callback);
+            });
+        };
+    
+        xmlHTTP.onprogress = function(e) {
+            let _new =  e.loaded - this.already;
+            this.already = e.loaded;
+            _this.loaded_size += _new;
+            _this.render ();
+        };
+        
+        xmlHTTP.onloadstart = function() {
+            this.already = 0;
+        };
+        xmlHTTP.send();
     }
     
     render () {

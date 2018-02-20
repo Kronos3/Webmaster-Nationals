@@ -1,4 +1,4 @@
-import {ElementObject} from "./element";
+import {ElementObject} from "./element.js";
 
 export class Slideshow extends ElementObject {
     constructor (el) {

@@ -25,11 +25,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//void write_pngs (char* fmt, int num, char* outfile, int width, int height) {
 void write_pngs (char* fmt, int num, char* outfile) {
 	FILE* f = fopen (outfile, "w+");
 	FILE* fp_t;
 	
-	fwrite (&num, 4, 1, f);
+	//fwrite (&width, sizeof (width), 1, f);
+	//fwrite (&height, sizeof (height), 1, f);
+	fwrite (&num, sizeof (num), 1, f);
 	char fn[32];
 	for (int i = 0; i != num; i++) {
 		sprintf (fn, fmt, i);
@@ -54,6 +57,12 @@ void write_pngs (char* fmt, int num, char* outfile) {
 
 int main(int argc, char **argv)
 {
+	/*if (argc != 3) {
+		printf ("Exactly two arguments must be provided:\nusage:\n./compress_png width height\n");
+		return 1;
+	}*/
+	
+	//write_pngs ("%04d.png", 126, "anim1.cpng", atoi (argv[1]), atoi(argv[2]));
 	write_pngs ("%04d.png", 126, "anim1.cpng");
 	return 0;
 }
