@@ -18,7 +18,6 @@ export class PNGAnimation {
             return;
         }
         let img_size = this.parent_data_view.getInt32(offset, true);
-        console.log (img_size);
         let b = new Uint8ClampedArray (this.parent_buffer, offset + 4, img_size);
         this.images[i] = new Blob([b], { type: "image/png" });
         this.read_png(offset + 4 + img_size, ++i);

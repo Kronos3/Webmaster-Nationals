@@ -7,6 +7,7 @@ export class Preload {
         this.logo = new Logo ('../resources/logo.svg', 'name');
         this.end = end_callback;
         this.total_size = 0;
+        this.loaded_size = 0;
         this.loads = [];
         this.loads.length = preload_ar_ar.length;
     }
@@ -68,6 +69,7 @@ export class Preload {
             let _new =  e.loaded - this.already;
             this.already = e.loaded;
             _this.loaded_size += _new;
+            console.log (_new);
             _this.render ();
         };
         
@@ -78,6 +80,7 @@ export class Preload {
     }
     
     render () {
+        console.log (this.loaded_size);
         this.logo.update_load (this.loaded_size / this.total_size * 100);
     }
 }
