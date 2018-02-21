@@ -1,4 +1,5 @@
 /template
 *.blend1
-/.idea/workspace.xml
+.idea/workspace.xml
+.idea/*
 resources/anim1/compress_png
