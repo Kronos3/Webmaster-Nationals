@@ -1,6 +1,6 @@
-import {ElementObject} from "./element.js";
+//import {ElementObject} from "./element.js";
 
-export class Slideshow extends ElementObject {
+class Slideshow extends ElementObject {
     constructor (el) {
         super ('');
         this.element = el;
@@ -16,13 +16,13 @@ export class Slideshow extends ElementObject {
     }
 }
 
-export function setTimeline (index) {
+function setTimeline (index) {
     let currActive = $(".timeline > ul > .active");
     $(currActive.get()).removeClass ("active");
     $(currActive.parent().children ().get(index)).addClass ("active");
 }
 
-export let timeline = {
+let timeline = {
     current: 0,
     steps: [
         {

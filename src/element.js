@@ -1,4 +1,4 @@
-export class JSFile {
+class JSFile {
     constructor (path) {
         this.path = path;
         let rawFile = new XMLHttpRequest();
@@ -18,7 +18,7 @@ export class JSFile {
     }
 }
 
-export class ElementObject {
+class ElementObject {
     constructor (_str) {
         if (_str !== '') {
             this.element = $($.parseHTML (_str))

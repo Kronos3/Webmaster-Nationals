@@ -1,4 +1,4 @@
-export class PNGAnimation {
+class PNGAnimation {
     constructor (arrayb, finish) {
         this.parent_buffer = arrayb;
         

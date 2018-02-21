@@ -1,4 +1,4 @@
-export class AnimationHandler {
+class AnimationHandler {
     static genList (format, number) {
         let frames = [];
         for (let i = 0; i <= number; i++)

@@ -1,9 +1,9 @@
-import {Slideshow} from './timeline.js';
+/*import {Slideshow} from './timeline.js';
 import {setTimeline} from './timeline.js';
 import {timeline} from './timeline.js';
 import {Preload} from './preload.js';
 import {PNGAnimation} from "./compression.js";
-
+*/
 String.prototype.format = function (..._args) {
     let args = _args;
     return this.replace(/{(\d+)}/g, function (match, number) {
@@ -31,7 +31,8 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 let preload;
 let slideshow;
 
-$(document).ready (function (){
+window.onload = function () {
+
     let compression_handler = function (ab, next) {
         return new PNGAnimation(ab, next);
     };
@@ -62,7 +63,7 @@ $(document).ready (function (){
     $(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
     $(".keyboard .left").click(timeline.back);
     $(".keyboard .right").click(timeline.next);
-});
+};
 
 /*
 class productStep {

@@ -1,6 +1,6 @@
-import {Logo} from './logo.js';
+//import {Logo} from './logo.js';
 
-export class Preload {
+class Preload {
     constructor (preload_ar_ar, construtor_ar, end_callback) {
         this.preload_ar = preload_ar_ar;
         this.constructor_ar = construtor_ar;

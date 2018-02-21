@@ -1,6 +1,6 @@
-import {ElementObject, JSFile} from "./element.js";
+//import {ElementObject, JSFile} from "./element.js";
 
-export class Logo extends ElementObject {
+class Logo extends ElementObject {
     constructor (path, modifier) {
         let _file = new JSFile (path);
         super (_file.read());
