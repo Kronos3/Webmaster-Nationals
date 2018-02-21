@@ -32,7 +32,7 @@ body, html {
     0%  {
       height: 35px;
       left: 50%;
-      top: 50%;
+      top: 50vh;
       transform: translate(-50%, -50%);
     }
     100%  {
@@ -58,7 +58,6 @@ body, html {
 }
 
 #logo-name.loaded {
-  left: 24px;
   top: 16px;
   height: 35px;
   transform: translate(0, 0);
