@@ -7,7 +7,9 @@ class PNGAnimation {
         this.finish = finish;
         this.img_n = this.parent_data_view.getInt32(0, true);
         this.images = [];
+        this.urls = [];
         this.images.length = this.img_n;
+        this.urls.length = this.img_n;
         
         this.read_png(4, 0);
     }
@@ -20,6 +22,7 @@ class PNGAnimation {
         let img_size = this.parent_data_view.getInt32(offset, true);
         let b = new Uint8ClampedArray (this.parent_buffer, offset + 4, img_size);
         this.images[i] = new Blob([b], { type: "image/png" });
+        this.urls[i] = URL.createObjectURL(this.images[i]);
         this.read_png(offset + 4 + img_size, ++i);
     }
 }

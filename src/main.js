@@ -3,7 +3,10 @@ import {setTimeline} from './timeline.js';
 import {timeline} from './timeline.js';
 import {Preload} from './preload.js';
 import {PNGAnimation} from "./compression.js";
+<<<<<<< Updated upstream
+import {AnimationHandler} from "./animation";
 */
+
 String.prototype.format = function (..._args) {
     let args = _args;
     return this.replace(/{(\d+)}/g, function (match, number) {
@@ -30,6 +33,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 
 let preload;
 let slideshow;
+let animation;
 
 window.onload = function () {
 
@@ -53,6 +57,7 @@ window.onload = function () {
                 before:setTimeline,
             });
         });
+        animation = new AnimationHandler (preload.loads[0][0].urls, 24)
     });
     
     preload.start ();

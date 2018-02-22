@@ -24,14 +24,16 @@ function setTimeline (index) {
 
 let timeline = {
     current: 0,
+    class_iter: ["first", "second"],
+    target_el: function () {return $.scrollify.current().children(".info")},
     steps: [
         {
-            in: function () {$.scrollify.current().children(".info").addClass ("first");},
-            out: function () {$.scrollify.current().children(".info").removeClass ("first");}
+            in: function () {},
+            out: function () {}
         },
         {
-            in: function () {$.scrollify.current().children(".info").addClass ("second");},
-            out: function () {$.scrollify.current().children(".info").removeClass ("second");}
+            in: function () {},
+            out: function () {}
         }
     ],
     setTimeline (index) {
@@ -44,9 +46,16 @@ let timeline = {
             return;
         
         $.scrollify.current().children(".keyboard").children (".left").removeClass("disabled");
-        timeline.steps[timeline.current].out();
+        
+        timeline.target_el ().removeClass (timeline.class_iter[timeline.current]);
+        if (timeline.steps[timeline.current].out !== undefined)
+            timeline.steps[timeline.current].out();
+        
         timeline.current++;
-        timeline.steps[timeline.current].in();
+        timeline.target_el ().addClass (timeline.class_iter[timeline.current]);
+        if (timeline.steps[timeline.current].in !== undefined)
+            timeline.steps[timeline.current].in ();
+        
         if (timeline.current + 1 === timeline.steps.length) {
             $.scrollify.current().children(".keyboard").children (".right").addClass("disabled");
         }
@@ -56,9 +65,14 @@ let timeline = {
         if ($.scrollify.current().children(".keyboard").children (".left").hasClass("disabled"))
             return;
         $.scrollify.current().children(".keyboard").children (".right").removeClass("disabled");
-        timeline.steps[timeline.current].out();
+    
+        timeline.target_el ().removeClass (timeline.class_iter[timeline.current]);
+        if (timeline.steps[timeline.current].out !== undefined)
+            timeline.steps[timeline.current].out();
         timeline.current--;
-        timeline.steps[timeline.current].in();
+        timeline.target_el ().addClass (timeline.class_iter[timeline.current]);
+        if (timeline.steps[timeline.current].in !== undefined)
+            timeline.steps[timeline.current].in ();
         if (timeline.current === 0) {
             $.scrollify.current().children(".keyboard").children (".left").addClass("disabled");
         }
