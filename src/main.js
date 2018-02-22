@@ -43,7 +43,7 @@ window.onload = function () {
     };
     
     preload = new Preload ([
-        ["/resources/anim1/anim1.cpng"]
+        ["/resources/anim1/anim1_1200_675.cpng"]
     ],[
         compression_handler
     ], function () {
@@ -67,7 +67,7 @@ window.onload = function () {
         {next: function () {animation.play(40)}},
         {
             next: function () {animation.play(80)},
-            back: function () {animation.rewind(1)}
+            back: function () {animation.rewind(0)}
         },
         {back: function () {animation.rewind(40)}}
     ], function () {return $.scrollify.current().children(".info")});

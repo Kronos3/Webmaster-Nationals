@@ -5,6 +5,7 @@ class AnimationHandler {
         this.parent = parent;
         this.fpms = 1000 / fps;
         this.frames = frames;
+        this.anim = undefined;
         
         this.context = parent.getContext('2d');
         this.img = new Image();
@@ -14,7 +15,9 @@ class AnimationHandler {
             this.context.clearRect(0, 0, this.parent.width, this.parent.height);
             this.context.drawImage (this.img, 0, 0);
             this.context.restore();
-        }
+        };
+        
+        this.render (0);
     }
     
     render (frameNumber) {
@@ -23,25 +26,33 @@ class AnimationHandler {
     }
     
     play (to) {
+        if (this.anim !== undefined)
+            clearInterval(this.anim);
         let _this = this;
         let i = this.currentFrame;
-        
-        let anim = setInterval(function () {
+    
+        this.anim = setInterval(function () {
             _this.render(i);
             i++;
-            if (i >= to)
-                clearInterval (anim);
+            if (i >= to) {
+                clearInterval (_this.anim);
+                _this.anim = undefined;
+            }
         }, this.fpms);
     }
     
     rewind (to) {
+        if (this.anim !== undefined)
+            clearInterval(this.anim);
         let _this = this;
         let i = this.currentFrame;
-        let anim = setInterval(function () {
+        this.anim = setInterval(function () {
             _this.render(i);
             i--;
-            if (i <= to)
-                clearInterval (anim);
+            if (i <= to) {
+                clearInterval (_this.anim);
+                _this.anim = undefined;
+            }
         }, this.fpms);
     }
 }

@@ -47,8 +47,7 @@ class Timeline {
             return;
     
         keyboard.children (".left").removeClass("disabled");
-    
-        console.log (this.target);
+        
         this.target().removeClass (this.current.toString ());
         if (this.steps[this.current].out !== undefined)
             this.steps[this.current].out();
