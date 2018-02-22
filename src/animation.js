@@ -15,8 +15,6 @@ class AnimationHandler {
             this.context.drawImage (this.img, 0, 0);
             this.context.restore();
         }
-        
-        
     }
     
     render (frameNumber) {

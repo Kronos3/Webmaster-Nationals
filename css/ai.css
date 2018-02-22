@@ -165,8 +165,15 @@ body, html {
     }
 }
 
-.animation {
+.animation-wrapper {
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+.animation {
+    width: 100vw;
     position: absolute;
 }
 

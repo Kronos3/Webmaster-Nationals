@@ -28,7 +28,6 @@ class Timeline {
         this.steps = steps;
         this.current = 0;
         this.target = target;
-        console.log (this.target);
     }
     
     static setStep(index) {
@@ -42,7 +41,6 @@ class Timeline {
     }
     
     next() {
-        console.log (this);
         let keyboard = $.scrollify.current().children(".keyboard");
         
         if (keyboard.children (".right").hasClass("disabled"))
