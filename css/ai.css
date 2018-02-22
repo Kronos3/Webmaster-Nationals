@@ -48,6 +48,10 @@ body, html {
     transition: clip-path 200ms linear;
 }
 
+.darken {
+    background: rgba(0, 0, 0, 0.35);
+}
+
 #logo-name {
     position: absolute;
     left: 50%;
@@ -161,10 +165,8 @@ body, html {
     }
 }
 
-.animation-wrapper {
-    background: rgba(0, 0, 0, 0.35);
-    height: 100%;
-    width: 100%;
+.animation {
+    height: 100vh;
     position: absolute;
 }
 

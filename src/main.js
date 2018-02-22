@@ -34,6 +34,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 let preload;
 let slideshow;
 let animation;
+let timeline;
 
 window.onload = function () {
 
@@ -57,17 +58,26 @@ window.onload = function () {
                 before:setTimeline,
             });
         });
-        animation = new AnimationHandler (preload.loads[0][0].urls, 24)
+        animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'));
     });
     
     preload.start ();
+    
+    timeline = new Timeline ([
+        {next: function () {animation.play(40)}},
+        {
+            next: function () {animation.play(80)},
+            back: function () {animation.rewind(1)}
+        },
+        {back: function () {animation.rewind(40)}}
+    ], function () {return $.scrollify.current().children(".info")});
     slideshow = new Slideshow ($(".slideshow"));
     slideshow.start();
     
     $(".down-arrow").click ($.scrollify.next);
     $(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
-    $(".keyboard .left").click(timeline.back);
-    $(".keyboard .right").click(timeline.next);
+    $(".keyboard .left").click(function () {timeline.back ()});
+    $(".keyboard .right").click(function () {timeline.next ()});
 };
 
 /*

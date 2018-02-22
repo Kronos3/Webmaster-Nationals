@@ -60,7 +60,8 @@ class Preload {
         
         let _this = this;
         xmlHTTP.onload = function () {
-            _this.loads[ar_n][index] = _this.constructor_ar[ar_n] (this.response, function () {
+            _this.constructor_ar[ar_n] (this.response, function () {
+                _this.loads[ar_n][index] = this;
                 _this.load (ar_n, ++index, final_callback);
             });
         };
@@ -69,7 +70,6 @@ class Preload {
             let _new =  e.loaded - this.already;
             this.already = e.loaded;
             _this.loaded_size += _new;
-            console.log (_new);
             _this.render ();
         };
         
@@ -80,7 +80,6 @@ class Preload {
     }
     
     render () {
-        console.log (this.loaded_size);
         this.logo.update_load (this.loaded_size / this.total_size * 100);
     }
 }
