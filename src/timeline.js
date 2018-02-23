@@ -16,14 +16,20 @@ class Slideshow extends ElementObject {
     }
 }
 
-function setTimeline (index) {
-    let currActive = $(".timeline > ul > .active");
-    $(currActive.get()).removeClass ("active");
-    $(currActive.parent().children ().get(index)).addClass ("active");
+class Timeline {
+    constructor (handlers) {
+        this.handlers = handlers;
+    }
+    
+    scroll (index) {
+        let currActive = $(".timeline > ul > .active");
+        $(currActive.get()).removeClass ("active");
+        $(currActive.parent().children ().get(index)).addClass ("active");
+        this.handlers[index] ();
+    }
 }
 
-class Timeline {
-    
+class SubTimeline {
     constructor(steps, target) {
         this.steps = steps;
         this.current = 0;
@@ -31,7 +37,7 @@ class Timeline {
     }
     
     static setStep(index) {
-        let currActive = Timeline.getScroll();
+        let currActive = SubTimeline.getScroll();
         $(currActive.get()).removeClass("active");
         $(currActive.parent().children().get(index)).addClass("active");
     }
@@ -62,7 +68,7 @@ class Timeline {
         if (this.current + 1 >= this.steps.length) {
             keyboard.children (".right").addClass("disabled");
         }
-        Timeline.setStep(this.current);
+        SubTimeline.setStep(this.current);
     }
     
     back () {
@@ -87,6 +93,6 @@ class Timeline {
         if (this.current <= 0) {
             keyboard.children (".left").addClass("disabled");
         }
-        Timeline.setStep(this.current);
+        SubTimeline.setStep(this.current);
     }
 }

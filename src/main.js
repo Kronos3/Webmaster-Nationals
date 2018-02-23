@@ -34,6 +34,7 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 let preload;
 let slideshow;
 let animation;
+let subtimeline;
 let timeline;
 
 window.onload = function () {
@@ -55,21 +56,32 @@ window.onload = function () {
                 section : ".content",
                 scrollSpeed: 800,
                 touchScroll: false,
-                before:setTimeline,
+                before: function (index){timeline.scroll(index)},
             });
         });
-        animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'));
+        animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'), [0, -60]);
     });
+    
+    timeline = new Timeline([function () {
+        $(".timeline > ul").removeClass ("timeline-dark");
+        $(".site-grid").removeClass ("dark");
+    }, function () {
+        $(".timeline > ul").removeClass ("timeline-dark");
+        $(".site-grid").removeClass ("dark");
+    }, function () {
+        $(".timeline > ul").addClass ("timeline-dark");
+        $(".site-grid").addClass ("dark");
+    }]);
     
     preload.start ();
     
-    timeline = new Timeline ([
-        {next: function () {animation.play(40)}},
+    subtimeline = new SubTimeline ([
+        {next: function () {animation.play(24)}},
         {
-            next: function () {animation.play(80)},
+            next: function () {animation.play(57)},
             back: function () {animation.rewind(0)}
         },
-        {back: function () {animation.rewind(40)}}
+        {back: function () {animation.rewind(24)}}
     ], function () {return $.scrollify.current().children(".info")});
     slideshow = new Slideshow ($(".slideshow"));
     slideshow.start();
@@ -93,9 +105,9 @@ class productStep {
 */
 $(document).keydown(function(e){
     if (e.keyCode === 37) {
-        timeline.back ();
+        subtimeline.back ();
     }
     else if (e.keyCode === 39) {
-        timeline.next();
+        subtimeline.next();
     }
 });

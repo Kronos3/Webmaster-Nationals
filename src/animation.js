@@ -1,5 +1,5 @@
 class AnimationHandler {
-    constructor (frames, fps, parent) {
+    constructor (frames, fps, parent, renderSettings) {
         this.currentFrame = 0;
         
         this.parent = parent;
@@ -9,11 +9,13 @@ class AnimationHandler {
         
         this.context = parent.getContext('2d');
         this.img = new Image();
+        if (renderSettings === undefined)
+            renderSettings = [0, 0];
         
         this.img.onload = () => {
             this.context.save ();
             this.context.clearRect(0, 0, this.parent.width, this.parent.height);
-            this.context.drawImage (this.img, 0, 0);
+            this.context.drawImage (this.img, renderSettings[0], renderSettings[1]);
             this.context.restore();
         };
         
