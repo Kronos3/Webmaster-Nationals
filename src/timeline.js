@@ -30,10 +30,11 @@ class Timeline {
 }
 
 class SubTimeline {
-    constructor(steps, target) {
+    constructor(steps, target, activeIndex) {
         this.steps = steps;
         this.current = 0;
         this.target = target;
+        this.activeIndex = activeIndex;
     }
     
     static setStep(index) {
@@ -47,6 +48,8 @@ class SubTimeline {
     }
     
     next() {
+        if (this.activeIndex !== $.scrollify.current().index() - 2)
+            return;
         let keyboard = $.scrollify.current().children(".keyboard");
         
         if (keyboard.children (".right").hasClass("disabled"))
@@ -72,6 +75,8 @@ class SubTimeline {
     }
     
     back () {
+        if (this.activeIndex !== $.scrollify.current().index() - 2)
+            return;
         let keyboard = $.scrollify.current().children(".keyboard");
     
         if (keyboard.children (".left").hasClass("disabled"))

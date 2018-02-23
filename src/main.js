@@ -65,6 +65,7 @@ window.onload = function () {
     timeline = new Timeline([function () {
         $(".timeline > ul").removeClass ("timeline-dark");
         $(".site-grid").removeClass ("dark");
+        $(".keyboard")
     }, function () {
         $(".timeline > ul").removeClass ("timeline-dark");
         $(".site-grid").removeClass ("dark");
@@ -82,7 +83,7 @@ window.onload = function () {
             back: function () {animation.rewind(0)}
         },
         {back: function () {animation.rewind(24)}}
-    ], function () {return $.scrollify.current().children(".info")});
+    ], function () {return $.scrollify.current().children(".info")}, 1);
     slideshow = new Slideshow ($(".slideshow"));
     slideshow.start();
     
@@ -92,18 +93,7 @@ window.onload = function () {
     $(".keyboard .right").click(function () {timeline.next ()});
 };
 
-/*
-class productStep {
-    constructor (parent, step_arr) {
-        //this.current =
-    }
-    
-    next () {
-    
-    }
-}
-*/
-$(document).keydown(function(e){
+$(document).keydown(function(e) {
     if (e.keyCode === 37) {
         subtimeline.back ();
     }
