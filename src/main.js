@@ -89,8 +89,8 @@ window.onload = function () {
     
     $(".down-arrow").click ($.scrollify.next);
     $(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
-    $(".keyboard .left").click(function () {timeline.back ()});
-    $(".keyboard .right").click(function () {timeline.next ()});
+    $(".keyboard .left").click(function () {subtimeline.back ()});
+    $(".keyboard .right").click(function () {subtimeline.next ()});
 };
 
 $(document).keydown(function(e) {
