@@ -51,7 +51,7 @@ class AnimationHandler {
         this.anim = setInterval(function () {
             _this.render(i);
             i--;
-            if (i <= to) {
+            if (i < to) {
                 clearInterval (_this.anim);
                 _this.anim = undefined;
             }
