@@ -1,0 +1,54 @@
+@import "fonts.css";
+
+@media (max-aspect-ratio: 12/9) {
+	.slideshow {
+		display: none;
+	}
+	
+	.info {
+		left: 10%;
+		width: 80%;
+		top: 50% !important;
+		transform: translateY(-50%);
+	}
+	
+	.vertical.info > .header-text {
+		margin-bottom: .5em;
+		text-align: center;
+		font-size: 8vw;
+		width: initial;
+	}
+	
+	.info > .step > div, .info > div:not(.step) {
+		width: initial;
+		font-size: 3.5vw;
+		text-align: center;
+	}
+	
+	.timeline li > span.timeline-selection {
+		display: none;
+	}
+	
+	.timeline {
+		transform: translateX(-50%) rotate(90deg);
+		left: 1.5vh;
+	}
+	
+	.timeline li.active {
+		background: #494949;
+		color: #fff;
+	}
+	.timeline > ul > li {
+		font-size: 2vh;
+		display: inline;
+		position: relative;
+		background: #fff;
+		padding: .25em;
+		color: #6f6f6f;
+	}
+	
+	.down-arrow {
+		width: 8vh;
+		height: 8vh;
+	}
+}
