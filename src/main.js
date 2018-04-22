@@ -93,8 +93,8 @@ window.onload = function () {
 		return new PNGAnimation(ab, next);
 	};
 	
-	preload = new Preload ([[]
-		//["/resources/anim1/anim1_1200_675.cpng"]
+	preload = new Preload ([
+		["/resources/anim1/anim1_1200_675.cpng"]
 	],[
 		compression_handler
 	], function () {
@@ -109,7 +109,7 @@ window.onload = function () {
 				before: function (index){timeline.scroll(index)},
 			});
 		});
-		//animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'), [0, -60]);
+		animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'), [0, -60]);
 	});
 	
 	timeline = new Timeline([function () {

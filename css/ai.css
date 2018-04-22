@@ -430,23 +430,29 @@ li.active > .timeline-selection {
 
 .keyboard > div::before {
 	content: '';
-	width: 6px;
-	height: 6px;
+	width: 15%;
+	height: 15%;
 	top: 50%;
 	transform: translate(-50%, -50%) rotateZ(45deg);
 	display: block;
 	position: absolute;
 }
 
+.keyboard > div,
+.keyboard > div::before {
+	font-size: 100%;
+	border-width: .15em;
+}
+
 .keyboard > div.right::before {
-	border-top: 1px solid #fff;
-	border-right: 1px solid #fff;
+	border-top: solid #fff;
+	border-right: solid #fff;
 	left: 42%;
 }
 
 .keyboard > div.left::before {
-	border-bottom: 1px solid #fff;
-	border-left: 1px solid #fff;
+	border-bottom: solid #fff;
+	border-left: solid #fff;
 	left: 58%;
 }
 
@@ -516,7 +522,7 @@ li.active > .timeline-selection {
 
 .timeline-bottom li.active > span {
 	-webkit-font-smoothing: antialiased;
-	text-shadow: 0 0 5px #fff;
+	font-weight: bold;
 }
 
 .disabled {
@@ -554,16 +560,14 @@ li.active > .timeline-selection {
 	opacity: 0;
 	transform: translateY(30px);
 	transition: opacity, transform 800ms ease-in-out;
+	position: absolute;
 }
 
 .info > .step.active {
 	opacity: 1;
-	transform: translateY(0px);
-}
-
-.info > .step {
-	position: absolute;
+	transform: initial;
 	display: flex;
+	position: relative;
 }
 
 .info > .step > div,
