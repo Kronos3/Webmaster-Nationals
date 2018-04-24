@@ -116,6 +116,7 @@ window.onload = function () {
 		});
 		animation = new AnimationHandler (preload.loads[0].urls, 24, document.getElementById('anim1'), [0, -60]);
 		animation_model = new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('model'));
+		animation_model.loop (0, 71);
 	});
 	
 	timeline = new Timeline([function () {

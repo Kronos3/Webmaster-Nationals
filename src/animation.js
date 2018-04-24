@@ -81,4 +81,22 @@ class AnimationHandler {
 			}
 		}, this.fpms);
 	}
+	
+	loop (from, to) {
+		this.render (from);
+		
+		let len = to - from;
+		
+		let _this = this;
+		let i = 0;
+		this.anim = setInterval(function () {
+			i = (i + 1) % len;
+			_this.render (i + from);
+		}, this.fpms);
+	}
+	
+	stopLoop () {
+		if (this.anim !== undefined)
+			clearInterval(this.anim);
+	}
 }
