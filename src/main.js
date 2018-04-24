@@ -33,7 +33,10 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 
 let preload;
 let slideshow;
+
 let animation;
+let animation_model;
+
 let subtimeline;
 let timeline;
 let head  = document.getElementsByTagName('head')[0];
@@ -94,8 +97,10 @@ window.onload = function () {
 	};
 	
 	preload = new Preload ([
-		["/resources/anim1/anim1_1200_675.cpng"]
+		["/resources/anim_anim1/anim1_1200_675.cpng"],
+		["/resources/anim_model/model.cpng"]
 	],[
+		compression_handler,
 		compression_handler
 	], function () {
 		$(preload.logo.get()).addClass ("loaded");
@@ -109,7 +114,8 @@ window.onload = function () {
 				before: function (index){timeline.scroll(index)},
 			});
 		});
-		animation = new AnimationHandler (preload.loads[0][0].urls, 24, document.getElementById('anim1'), [0, -60]);
+		animation = new AnimationHandler (preload.loads[0].urls, 24, document.getElementById('anim1'), [0, -60]);
+		animation_model = new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('model'));
 	});
 	
 	timeline = new Timeline([function () {

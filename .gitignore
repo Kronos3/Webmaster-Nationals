@@ -2,4 +2,5 @@
 *.blend1
 .idea/workspace.xml
 .idea/*
-resources/anim1/compress_png
+programs/compress_png
+resources/anim_*/*.png

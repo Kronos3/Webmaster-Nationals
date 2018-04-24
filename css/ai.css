@@ -596,3 +596,7 @@ li.active > .timeline-selection {
 .timeline-dark li.active > .timeline-selection::before {
 	border: 1px solid #000;
 }
+
+.code {
+	font-family: MONOSPACE;
+}

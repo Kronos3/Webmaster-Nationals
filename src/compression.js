@@ -10,7 +10,7 @@ class PNGAnimation {
         this.urls = [];
         this.images.length = this.img_n;
         this.urls.length = this.img_n;
-        
+        console.log (this.img_n);
         this.read_png(4, 0);
     }
     

@@ -25,16 +25,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//void write_pngs (char* fmt, int num, char* outfile, int width, int height) {
-void write_pngs (char* fmt, int num, char* outfile) {
+void write_pngs (char* fmt, int start, int end, char* outfile) {
 	FILE* f = fopen (outfile, "w+");
+	if (!f) {
+		printf ("failed to open file '%s'", outfile);
+		return;
+	}
 	FILE* fp_t;
 	
+	int num = end - start;
+
 	//fwrite (&width, sizeof (width), 1, f);
 	//fwrite (&height, sizeof (height), 1, f);
 	fwrite (&num, sizeof (num), 1, f);
 	char fn[32];
-	for (int i = 0; i != num; i++) {
+	for (int i = start; i <= end; i++) {
 		sprintf (fn, fmt, i);
 		printf ("%s ", fn);
 		fp_t = fopen (fn, "rb");
@@ -62,8 +67,9 @@ int main(int argc, char **argv)
 		return 1;
 	}*/
 	
-	//write_pngs ("%04d.png", 126, "anim1.cpng", atoi (argv[1]), atoi(argv[2]));
-	write_pngs ("%04d.png", 126, "anim1.cpng");
+
+	write_pngs ("%04d.png", atoi (argv[1]), atoi (argv[2]), argv[3]);
+	//write_pngs ("%04d.png", 126, "anim1.cpng");
 	return 0;
 }
 
