@@ -37,6 +37,8 @@ let slideshow;
 let animation;
 let animation_model;
 
+let dots_one;
+
 let subtimeline;
 let timeline;
 let head  = document.getElementsByTagName('head')[0];
@@ -115,14 +117,16 @@ window.onload = function () {
 			});
 		});
 		animation = new AnimationHandler (preload.loads[0].urls, 24, document.getElementById('anim1'), [0, -60]);
-		animation_model = new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('model'));
-		animation_model.loop (0, 71);
+		//animation_model = new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('model'));
+		//animation_model.loop (0, 71);
+		
+		dots_one = new ConnectDots ($("#points_one")[0]);
+		dots_one.run();
 	});
 	
 	timeline = new Timeline([function () {
-		$(".timeline > ul").removeClass ("timeline-dark");
-		$(".site-grid").removeClass ("dark");
-		$(".keyboard")
+		$(".timeline > ul").addClass ("timeline-dark");
+		$(".site-grid").addClass ("dark");
 	}, function () {
 		$(".timeline > ul").removeClass ("timeline-dark");
 		$(".site-grid").removeClass ("dark");
@@ -141,8 +145,6 @@ window.onload = function () {
 		},
 		{back: function () {animation.rewind(24)}}
 	], function () {return $.scrollify.current().children(".info")}, 1);
-	slideshow = new Slideshow ($(".slideshow"));
-	slideshow.start();
 	
 	$(".down-arrow").click ($.scrollify.next);
 	$(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});

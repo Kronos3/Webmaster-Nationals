@@ -7,9 +7,9 @@
 	
 	.info {
 		left: 10%;
-		width: 80%;
 		top: 50% !important;
 		transform: translateY(-50%);
+		width: 80%;
 	}
 	
 	.header-text {
