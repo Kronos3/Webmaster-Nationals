@@ -1,16 +1,14 @@
 class Color {
-	
-	constructor (min) {
-		min = min || 0;
-		this.r = Color.value(min);
-		this.g = Color.value(min);
-		this.b = Color.value(min);
+	constructor () {
+		this.r = Color.value();
+		this.g = Color.value();
+		this.b = Color.value();
 		this.style = "rgba(" + this.r + "," + this.g + "," + this.b + ",1)";
 		//this.style = "rgba(233,72,152,1)";
 	}
 	
-	static value (min) {
-		return Math.floor(Math.random() * 255 + min);
+	static value () {
+		return Math.floor(Math.random() * 255);
 	}
 }
 
@@ -19,8 +17,11 @@ class Dot {
 		this.parent = parent;
 		this.x = Math.random() * this.parent.parent.width;
 		this.y = Math.random() * this.parent.parent.height;
+		
+		// Speed of Dots (+- 0.5)
 		this.vx = Math.random() - 0.5;
 		this.vy = Math.random() - 0.5;
+		
 		this.radius = Math.random() * 2;
 		this.color = new Color();
 	}
