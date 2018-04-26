@@ -17,7 +17,12 @@ class AnimationHandler {
 		this.img.onload = () => {
 			let hRatio = this.parent.width / this.img.width;
 			let vRatio = this.parent.height / this.img.height;
-			let ratio  = Math.max ( hRatio, vRatio );
+			
+			let ratio = 1;
+			if (AnimationHandler.check_mobile())
+				ratio = Math.min ( hRatio, vRatio );
+			else
+				ratio = Math.max ( hRatio, vRatio );
 			
 			this.context.save();
 			this.context.clearRect(0, 0, this.parent.width, this.parent.height);
