@@ -46,6 +46,7 @@ class SubTimeline {
 		let currActive = SubTimeline.getScroll();
 		$(currActive.get()).removeClass("active");
 		$(currActive.parent().children().get(index)).addClass("active");
+		this.current = index;
 		this.every (index);
 	}
 	
@@ -63,14 +64,8 @@ class SubTimeline {
 		
 		keyboard.children(".left").removeClass("disabled");
 		
-		this.target().removeClass(this.current.toString());
-		
 		this.current++;
 		this.hnext(this.steps[this.current]);
-		
-		this.target().addClass(this.current.toString());
-		if (this.steps[this.current].in !== undefined)
-			this.steps[this.current].in();
 		
 		if (this.current + 1 >= this.steps.length) {
 			keyboard.children(".right").addClass("disabled");
@@ -88,13 +83,8 @@ class SubTimeline {
 		
 		keyboard.children(".right").removeClass("disabled");
 		
-		this.target().removeClass(this.current.toString());
 		this.current--;
 		this.hback(this.steps[this.current]);
-		
-		this.target().addClass(this.current.toString());
-		if (this.steps[this.current].in !== undefined)
-			this.steps[this.current].in();
 		
 		if (this.current <= 0) {
 			keyboard.children(".left").addClass("disabled");

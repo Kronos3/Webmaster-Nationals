@@ -142,7 +142,7 @@ window.onload = function () {
 				animation.render(0);
 				animation.play(24);
 				subtimeline.setStep(0);
-			}, 400);
+			}, 50);
 	}, function () {
 		$(".timeline > ul").addClass ("timeline-dark");
 		$(".site-grid").addClass ("dark");
