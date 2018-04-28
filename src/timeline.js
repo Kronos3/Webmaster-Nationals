@@ -47,6 +47,17 @@ class SubTimeline {
 		$(currActive.get()).removeClass("active");
 		$(currActive.parent().children().get(index)).addClass("active");
 		this.current = index;
+		
+		let keyboard = $.scrollify.current().children(".keyboard");
+		
+		keyboard.children(".right").removeClass ("disabled");
+		keyboard.children(".left").removeClass ("disabled");
+		
+		if (index + 1 >= this.steps.length)
+			keyboard.children(".right").addClass ("disabled");
+		else if (index - 1 < 0)
+			keyboard.children(".left").addClass ("disabled");
+		
 		this.every (index);
 	}
 	
@@ -57,38 +68,14 @@ class SubTimeline {
 	next() {
 		if (this.activeIndex !== $.scrollify.current().index() - 2)
 			return;
-		let keyboard = $.scrollify.current().children(".keyboard");
-		
-		if (keyboard.children(".right").hasClass("disabled"))
-			return;
-		
-		keyboard.children(".left").removeClass("disabled");
-		
-		this.current++;
-		this.hnext(this.steps[this.current]);
-		
-		if (this.current + 1 >= this.steps.length) {
-			keyboard.children(".right").addClass("disabled");
-		}
-		this.setStep(this.current);
+		this.hnext(this.steps[this.current + 1]);
+		this.setStep(++this.current);
 	}
 	
 	back() {
 		if (this.activeIndex !== $.scrollify.current().index() - 2)
 			return;
-		let keyboard = $.scrollify.current().children(".keyboard");
-		
-		if (keyboard.children(".left").hasClass("disabled"))
-			return;
-		
-		keyboard.children(".right").removeClass("disabled");
-		
-		this.current--;
-		this.hback(this.steps[this.current]);
-		
-		if (this.current <= 0) {
-			keyboard.children(".left").addClass("disabled");
-		}
-		this.setStep(this.current);
+		this.hback(this.steps[this.current - 1]);
+		this.setStep(--this.current);
 	}
 }
