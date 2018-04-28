@@ -271,7 +271,7 @@ li.active > .timeline-selection {
 	width: 68px;
 	height: 68px;
 	font-size: 100%;
-	border: #fff .075em solid;
+	border: #222422 .075em solid;
 	display: block;
 	position: absolute;
 	left: 50%;
@@ -292,7 +292,7 @@ li.active > .timeline-selection {
 	font-size: 100%;
 	width: .075em;
 	height: 52.38%;
-	background-color: #fff;
+	background-color: #222422;
 	display: block;
 	left: 50%;
 	top: 48.5%;
@@ -305,7 +305,7 @@ li.active > .timeline-selection {
 	top: 63.2%;
 	left: 50%;
 	font-size: 100%;
-	border: #fff .075em solid;
+	border: #222422 .075em solid;
 	border-right-color: rgba(255, 255, 255, 0);
 	border-bottom-color: rgba(255, 255, 255, 0);
 	position: absolute;
@@ -623,4 +623,16 @@ li.active > .timeline-selection {
 
 .content-header {
 	display: inline-flex;
+}
+
+.keyboard.dark > div,
+.keyboard.dark > div::before {
+	border-color: #222422;
+	
+}
+
+.timeline-bottom.dark span,
+.timeline-bottom.dark span::before {
+	border-color: #222422;
+	color: #222422 !important;
 }

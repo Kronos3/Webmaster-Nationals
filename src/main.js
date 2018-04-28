@@ -32,12 +32,12 @@ Array.prototype.indexOf || (Array.prototype.indexOf = function (d, e) {
 });
 
 let preload;
-let slideshow;
 
 let animation;
-let animation_model;
 
 let dots_one;
+let dots_two;
+let dots_three;
 
 let subtimeline;
 let timeline;
@@ -94,6 +94,8 @@ function handle_screen_change (i) {
 }*/
 
 let templates;
+let templates_two;
+let templates_three;
 
 window.onload = function () {
 	let compression_handler = function (ab, next) {
@@ -105,11 +107,47 @@ window.onload = function () {
 		document.getElementById("_____text"),
 		"content/step.txt");
 	
+	templates_two = new TemplateHandler (
+		document.getElementById("_____header_two"),
+		document.getElementById("_____text_two"),
+		"content/ai.txt");
+	
+	templates_three = new TemplateHandler (
+		document.getElementById("_____header_three"),
+		document.getElementById("_____text_three"),
+		"content/purchase.txt");
+	
+	timeline = new Timeline([function () {
+		$(".timeline > ul").addClass ("timeline-dark");
+		$(".site-grid").addClass ("dark");
+	}, function () {
+		$(".timeline > ul").removeClass ("timeline-dark");
+		$(".site-grid").removeClass ("dark");
+		setTimeout(() => {
+			templates.renderStep(0);
+			animation.render(0);
+			animation.play(24);
+			subtimeline.setStep(0);
+		}, 50);
+	}, function () {
+		$(".timeline > ul").addClass ("timeline-dark");
+		$(".site-grid").addClass ("dark");
+		templates_two.renderStep(0);
+		subtimeline.setStep(0);
+	}, function () {
+		$(".timeline > ul").addClass ("timeline-dark");
+		$(".site-grid").addClass ("dark");
+		templates_three.renderStep(0);
+		subtimeline.setStep(0);
+	}]);
+	
 	preload = new Preload ([
 		["/resources/anim_anim1/anim1_1200_675.cpng"],
-		["/resources/anim_model/model.cpng"]
+		//["/resources/anim_turntable/turntable.cpng"],
+		["/resources/anim_model/model.cpng"],
 	],[
 		compression_handler,
+		//compression_handler,
 		compression_handler
 	], function () {
 		$(preload.logo.get()).addClass ("loaded");
@@ -120,38 +158,40 @@ window.onload = function () {
 				section : ".content",
 				scrollSpeed: 800,
 				touchScroll: false,
-				before: function (index){timeline.scroll(index)},
+				before: function (index){timeline.scroll(index); subtimeline.activeIndex = index; subtimeline.updateKeyboard ();},
 			});
 		});
 		animation = new AnimationHandler (preload.loads[0].urls, 24, document.getElementById('anim1'), [0, -60]);
+		//new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('anim2')).loop (0, 71);
 		//animation_model = new AnimationHandler (preload.loads[1].urls, 24, document.getElementById('model'));
 		//animation_model.loop (0, 71);
 		
 		dots_one = new ConnectDots ($("#points_one")[0]);
+		dots_two = new ConnectDots ($("#points_two")[0]);
+		dots_three = new ConnectDots ($("#points_three")[0]);
 		dots_one.run();
+		dots_two.run();
+		dots_three.run();
 	});
-	
-	timeline = new Timeline([function () {
-		$(".timeline > ul").addClass ("timeline-dark");
-		$(".site-grid").addClass ("dark");
-	}, function () {
-		$(".timeline > ul").removeClass ("timeline-dark");
-		$(".site-grid").removeClass ("dark");
-		setTimeout(() => {
-				templates.renderStep(0);
-				animation.render(0);
-				animation.play(24);
-				subtimeline.setStep(0);
-			}, 50);
-	}, function () {
-		$(".timeline > ul").addClass ("timeline-dark");
-		$(".site-grid").addClass ("dark");
-	}]);
-	
 	preload.start ();
 	
-	subtimeline = new SubTimeline ((k) => animation.play(k), (k) => animation.rewind(k), [24, 57, 118],
-		function () {return $.scrollify.current().children(".info")}, 1, (i) => templates.renderStep (i));
+	let anim_1_steps = [24, 57, 104, 118];
+	
+	subtimeline = new SubTimeline ([0, 4, 4, 4], 1, function (i, isNext) {
+			if (this.activeIndex === 1) {
+				if (isNext)
+					animation.play (anim_1_steps[i]);
+				else
+					animation.rewind(anim_1_steps[i]);
+				templates.renderStep (i);
+			}
+			else if (this.activeIndex === 2) {
+				templates_two.renderStep(i);
+			}
+			else if (this.activeIndex === 3) {
+				templates_three.renderStep(i);
+			}
+	});
 	
 	$(".down-arrow").click ($.scrollify.next);
 	$(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
