@@ -18,6 +18,7 @@
 	<script src="src/compression.js"></script>
 	<script src="src/animation.js"></script>
 	<script src="src/connect_dots.js"></script>
+	<script src="src/template.js"></script>
 	<script src="src/main.js"></script>
 	
 	<link href="css/ai.css" rel="stylesheet">
@@ -41,7 +42,7 @@
 		</li>
 		<li>
 			<span class="timeline-selection"></span>
-			<span>Products</span>
+			<span>Product</span>
 		</li>
 		<li>
 			<span class="timeline-selection"></span>
@@ -56,11 +57,9 @@
 
 <div class="home content">
 	<canvas class="points" id="points_one"></canvas>
-	<div class="info vertical first">
+	<div class="info vertical">
 		<div class="content-header header-text">
-			<span class="code">Neural
-			Intuitive
-			Network-based
+			<span class="code">Neural Intuitive Network-based
 				Automobile</span>
 		</div>
 		<div class="content-info info-text">
@@ -78,34 +77,9 @@
 	<div class="animation-wrapper">
 		<canvas class="animation" id="anim1" height="675" width="1200"></canvas>
 	</div>
-	<div class="info first">
-		<div class="step active">
-			<div class="content-header header-text">
-				Our first product name or a phrase about it.
-			</div>
-			<div class="content-info info-text">
-				Some description about the features of product.
-				Make this about the length of a paragraph. Maybe another sentence
-				here and there. Just give a broad description.
-				Some description about the features of product.
-				Make this about the length of a paragraph. Maybe another sentence
-				here and there. Just give a broad description.
-			</div>
-		</div>
-		<div class="step">
-			<div class="content-header header-text">
-				Second heading IDK what to say hear.
-			</div>
-			<div class="content-info info-text">
-				Some description about the features of product.
-				Make this about the length of a paragraph. Maybe another sentence
-				here and there. Just give a broad description.
-				Some description about the features of product.
-				Make this about the length of a paragraph. Maybe another sentence
-				here and there. Just give a broad description.
-			</div>
-		</div>
-	
+	<div class="step anim">
+		<div class="content-header header-text" id="_____header"></div>
+		<div class="content-info info-text" id="_____text"></div>
 	</div>
 	<div class="keyboard">
 		<div class="left disabled"></div>

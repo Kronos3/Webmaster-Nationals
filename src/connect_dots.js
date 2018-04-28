@@ -67,11 +67,6 @@ class ConnectDots {
 			this.connectArea.x = e.pageX;
 			this.connectArea.y = e.pageY;
 		});
-		
-		$(this.parent).on ("mouseleave", (e) => {
-			this.connectArea.x = 50 * this.parent.width / 100;
-			this.connectArea.y = 50 * this.parent.height / 100;
-		});
 	}
 	
 	static mixComponents(comp1, comp2, weight1, weight2) {
@@ -79,7 +74,6 @@ class ConnectDots {
 	}
 	
 	updateSize () {
-		console.log ("resize");
 		this.parent.width = Math.min ($(this.parent).parent().width(), window.innerWidth);
 		this.parent.height = Math.min ($(this.parent).parent().height(), window.innerHeight);
 		this.parent.style.display = 'block';

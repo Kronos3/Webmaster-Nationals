@@ -1,0 +1,11 @@
+--Project N.I.N.A.
+-Hyperion has produced a solution that uses revolutionary artificial intelligence technology designed to get you from Point A to Point B faster, cheaper, and safer than ever before. NINA is a state-of-the-art transportation system that provides unrivaled privacy and comfort. The AI allows efficient communication between cars to regulate traffic and adapts to your daily routine. More importantly, it is built with eco-friendly materials and emits zero greenhouse gases. NINA offers the comfort of personal vehicles with the convenience of public transport, creating a transportation system fit for the modern age.
+---
+--Interior
+-Public transportation is infamous for being dirty. Mice run amuck in subway systems and bed bugs can infiltrate any bus seat. NINA makes sure that every customer travels in clean conditions by using cutting-edge UV rays to kill germs. In contrast to traditional cleaning products that can irritate skin, UV rays are emitted between rides to make sure every germ in every inch of the vehicle is killed.
+---
+--Traffic Detection
+-The worst part about commuting to and from work everyday is the unpredictability of traffic. NINA resolves this problem by monitoring traffic along busy highways to precisely calculate how much time you will need to get to work. As you use NINA more, it adapts to your daily routine to create the fastest route. Additionally, it will send you a reminder to leave soon in order to arrive on time. NINA eliminates the most stressful part of the workday and makes sure that you can hit the ground running when you arrive at your destination.
+---
+--Eco Friendly
+-NINA takes advantage of many technologies designed to eliminate emissions and save energy. Inside the hood, a high-performance electric motor allows for efficient, zero-emission travel. NINA uses a start-stop feedback system that turns off the engine when stopped and restarts it when the cars starts to move again. Regenerative braking recovers lost energy from braking. This allows NINA to have a greater mileage capacity that traditional minivans. The AI adapts to the car’s activity to improve energy efficiency. Over thousands of rides a day, these technologies amount to significant cuts in energy use and environmental emissions.

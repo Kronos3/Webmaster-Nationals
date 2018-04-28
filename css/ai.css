@@ -430,6 +430,7 @@ li.active > .timeline-selection {
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	text-transform: uppercase;
+	color: #fff;
 }
 
 .keyboard > div::before {
@@ -513,6 +514,7 @@ li.active > .timeline-selection {
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 14px;
+	color: #fff;
 }
 
 .timeline-bottom .timeline-selection {
@@ -560,21 +562,25 @@ li.active > .timeline-selection {
 	top: 40%;
 }
 
-.info > .step {
-	opacity: 0;
-	transform: translateY(30px);
-	transition: opacity, transform 800ms ease-in-out;
+.step {
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	opacity: 0;
 }
 
-.info > .step.active {
+@keyframes step_animation {
+	0% {opacity: 0; top: 53%;}
+	100% {opacity: 1; top: 50%;}
+}
+
+.step.anim {
+	animation: step_animation 1s;
 	opacity: 1;
-	transform: initial;
-	display: flex;
-	position: relative;
 }
 
-.info > .step > div,
+.step > div,
 .info > div:not(.step) {
 	display: inline-flex;
 	position: relative;
@@ -608,4 +614,13 @@ li.active > .timeline-selection {
 	position: absolute;
 	width: 100%;
 	height: 100%;
+}
+
+.text-area.left {
+	width: 66.66666%;
+	
+}
+
+.content-header {
+	display: inline-flex;
 }

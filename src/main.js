@@ -93,10 +93,17 @@ function handle_screen_change (i) {
 	handle_screen_change(++i);
 }*/
 
+let templates;
+
 window.onload = function () {
 	let compression_handler = function (ab, next) {
 		return new PNGAnimation(ab, next);
 	};
+	
+	templates = new TemplateHandler (
+		document.getElementById("_____header"),
+		document.getElementById("_____text"),
+		"content/step.txt");
 	
 	preload = new Preload ([
 		["/resources/anim_anim1/anim1_1200_675.cpng"],
@@ -130,6 +137,12 @@ window.onload = function () {
 	}, function () {
 		$(".timeline > ul").removeClass ("timeline-dark");
 		$(".site-grid").removeClass ("dark");
+		setTimeout(() => {
+				templates.renderStep(0);
+				animation.render(0);
+				animation.play(24);
+				subtimeline.setStep(0);
+			}, 400);
 	}, function () {
 		$(".timeline > ul").addClass ("timeline-dark");
 		$(".site-grid").addClass ("dark");
@@ -137,14 +150,8 @@ window.onload = function () {
 	
 	preload.start ();
 	
-	subtimeline = new SubTimeline ([
-		{next: function () {animation.play(24)}},
-		{
-			next: function () {animation.play(57)},
-			back: function () {animation.rewind(0)}
-		},
-		{back: function () {animation.rewind(24)}}
-	], function () {return $.scrollify.current().children(".info")}, 1);
+	subtimeline = new SubTimeline ((k) => animation.play(k), (k) => animation.rewind(k), [24, 57, 118],
+		function () {return $.scrollify.current().children(".info")}, 1, (i) => templates.renderStep (i));
 	
 	$(".down-arrow").click ($.scrollify.next);
 	$(".timeline > ul > li").click(function(){$.scrollify.move($(this).index());});
