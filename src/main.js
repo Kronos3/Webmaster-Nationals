@@ -144,7 +144,7 @@ window.onload = function () {
 	preload = new Preload ([
 		["/resources/anim_anim1/anim1_1200_675.cpng"],
 		//["/resources/anim_turntable/turntable.cpng"],
-		["/resources/anim_model/model.cpng"],
+		//["/resources/anim_model/model.cpng"],
 	],[
 		compression_handler,
 		//compression_handler,
